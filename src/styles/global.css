@@ -1,0 +1,62 @@
+/* src/styles/global.css */
+:root {
+    --cor-fundo: #ffffff;
+    --cor-fundo-suave: #fdf5f7;
+    --cor-texto: #2d2d2d;
+    --cor-texto-suave: #666666;
+    --cor-destaque: #e6007e;
+    --cor-destaque-hover: #b30062;
+    --fonte-principal: system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Botões Globais */
+.botao-principal {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cor-destaque);
+}
+
+.botao-principal:hover {
+    background-color: transparent;
+    color: var(--cor-destaque);
+}
+
+.botao-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-destaque);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border: 2px solid var(--cor-destaque);
+    transition: all 0.3s ease;
+}
+
+.botao-secundario:hover {
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+}

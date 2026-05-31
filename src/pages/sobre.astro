@@ -1,0 +1,287 @@
+---
+// src/pages/sobre.astro
+import LayoutBase from "../layouts/LayoutBase.astro";
+import { Image } from "astro:assets";
+
+// Importa as tuas imagens da pasta assets
+import imgSobre1 from "../assets/foto.jpeg";
+import imgSobre2 from "../assets/foto.jpeg";
+import imgSobre3 from "../assets/foto.jpeg";
+---
+
+<LayoutBase titulo="Sobre a Klassy - O Seu Centro de Estética">
+  <!-- SECÇÃO 1: História e Valores (Inspirada na 1ª imagem) -->
+  <section class="sobre-intro">
+    <div class="container-split">
+      <div class="texto-intro">
+        <h1>Sobre a Klassy</h1>
+        <p class="destaque-texto">
+          Gerida por uma mulher apaixonada pela área, há <strong
+            >mais de 10 anos</strong
+          >, o nosso centro de estética tem sido o destino preferido para quem
+          procura realçar a beleza natural com segurança e mestria.
+        </p>
+
+        <div class="bloco-valor">
+          <h3>Diversidade de tratamentos</h3>
+          <p>
+            Os nossos serviços são cuidadosamente selecionados para proporcionar
+            uma experiência única. Aliamos técnicas tradicionais às inovações do
+            setor para garantir resultados reais que fidelizam clientes há uma
+            década.
+          </p>
+        </div>
+
+        <div class="bloco-valor">
+          <h3>Foco na qualidade</h3>
+          <p>
+            A sua beleza merece o melhor cuidado. Não usamos atalhos nem
+            produtos de segunda linha. Estamos aqui para proporcionar momentos
+            de bem-estar com absoluta transparência.
+          </p>
+        </div>
+
+        <a href="#agendar" class="botao-principal mt-2">Agende Connosco</a>
+      </div>
+
+      <div class="imagens-sobrepostas">
+        <div class="moldura-imagem img-tras">
+          <Image
+            src={imgSobre1}
+            alt="Profissional a preparar tratamento estético"
+            class="foto-preenchimento"
+          />
+        </div>
+        <div class="moldura-imagem img-frente">
+          <Image
+            src={imgSobre2}
+            alt="Cliente a receber tratamento facial"
+            class="foto-preenchimento"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 2: A Filosofia (Inspirada na 2ª imagem) -->
+  <section class="sobre-filosofia">
+    <div class="fundo-decorativo"></div>
+    <!-- Fundo dividido visualmente -->
+    <div class="container-filosofia">
+      <div class="imagem-destaque">
+        <Image
+          src={imgSobre3}
+          alt="Rosto relaxado após tratamento de estética"
+          class="foto-preenchimento"
+        />
+      </div>
+
+      <div class="caixa-decorada">
+        <div class="borda-fina">
+          <h2>Trate bem de si...</h2>
+          <p>
+            Descubra o oásis perfeito para a beleza e bem-estar no coração da
+            cidade. Unhas com a estética que deseja, sobrancelhas perfeitas,
+            massagens relaxantes e depilação a laser de última geração.
+          </p>
+          <p>
+            Mime-se e deixe-nos realçar a sua beleza natural enquanto se entrega
+            a momentos de puro relaxamento e renovação.
+          </p>
+          <a href="#agendar" class="botao-secundario mt-2">Agende Connosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</LayoutBase>
+
+<style>
+  /* ==========================================================
+       ESTILOS GERAIS DA PÁGINA SOBRE
+       ========================================================== */
+  .mt-2 {
+    margin-top: 1.5rem;
+  }
+
+  .foto-preenchimento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ==========================================================
+       SECÇÃO 1: INTRODUÇÃO E IMAGENS SOBREPOSTAS
+       ========================================================== */
+  .sobre-intro {
+    padding: 6rem 2rem;
+    background-color: var(--cor-fundo);
+  }
+
+  .container-split {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .texto-intro h1 {
+    font-size: 2.8rem;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+    font-family: serif; /* Dá um toque clássico e elegante, como nas tuas fotos */
+  }
+
+  .destaque-texto {
+    font-size: 1.1rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .bloco-valor {
+    margin-bottom: 2rem;
+  }
+
+  .bloco-valor h3 {
+    color: var(--cor-destaque);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .bloco-valor p {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+  }
+
+  /* Efeito de Imagens Sobrepostas */
+  .imagens-sobrepostas {
+    position: relative;
+    height: 550px;
+    width: 100%;
+  }
+
+  .moldura-imagem {
+    position: absolute;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .img-tras {
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 75%;
+  }
+
+  .img-frente {
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 65%;
+    border: 8px solid var(--cor-fundo); /* Borda branca para separar da imagem de trás */
+  }
+
+  /* ==========================================================
+       SECÇÃO 2: FILOSOFIA E CAIXA DECORADA
+       ========================================================== */
+  .sobre-filosofia {
+    position: relative;
+    padding: 6rem 2rem;
+    background-color: #fafafa;
+  }
+
+  /* Cria aquele efeito de duas cores de fundo da 2ª imagem */
+  .fundo-decorativo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(
+      --cor-fundo-suave
+    ); /* O tom de rosa pálido definido no global.css */
+    z-index: 0;
+  }
+
+  .container-filosofia {
+    position: relative;
+    z-index: 1; /* Mantém o conteúdo acima do fundo decorativo */
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0; /* Tiramos o gap para as caixas se tocarem */
+    align-items: center;
+  }
+
+  .imagem-destaque {
+    height: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .caixa-decorada {
+    background-color: var(--cor-fundo);
+    padding: 3rem;
+    margin-left: -50px; /* Faz a caixa sobrepor-se à imagem ligeiramente */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  /* A linha fina decorativa ao redor do texto */
+  .borda-fina {
+    border: 1px solid rgba(230, 0, 126, 0.3); /* Linha magenta subtil */
+    padding: 3rem 2rem;
+  }
+
+  .borda-fina h2 {
+    font-size: 2.2rem;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+    font-family: serif;
+  }
+
+  .borda-fina p {
+    color: var(--cor-texto-suave);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  /* ==========================================================
+       RESPONSIVIDADE (TELEMÓVEIS)
+       ========================================================== */
+  @media (max-width: 900px) {
+    .container-split,
+    .container-filosofia {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .imagens-sobrepostas {
+      height: 450px;
+      margin-top: 2rem;
+    }
+
+    .fundo-decorativo {
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      top: auto;
+    }
+
+    .imagem-destaque {
+      height: 400px;
+    }
+
+    .caixa-decorada {
+      margin-left: 0;
+      margin-top: -50px; /* Sobrepõe verticalmente no telemóvel */
+      padding: 1.5rem;
+    }
+  }
+</style>

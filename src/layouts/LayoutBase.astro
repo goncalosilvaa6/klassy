@@ -1,0 +1,23 @@
+---
+// src/layouts/LayoutBase.astro
+import '../styles/global.css';
+import Cabecalho from '../components/Cabecalho.astro';
+import Rodape from '../components/Rodape.astro';
+
+const { titulo } = Astro.props;
+---
+
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo}</title>
+</head>
+<body>
+    <Cabecalho /> <main>
+        <slot />
+    </main>
+
+    <Rodape />
+</body>
+</html>

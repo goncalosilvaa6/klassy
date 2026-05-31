@@ -1,0 +1,65 @@
+---
+// src/components/Cabecalho.astro
+---
+<header class="cabecalho-principal">
+    <div class="container-cabecalho">
+        <a href="/" class="logo">Klassy</a>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="/sobre">Sobre a Klassy</a></li>
+                <li><a href="/servicos">Serviços</a></li>
+            </ul>
+        </nav>
+
+        <a href="#marcar" class="botao-principal botao-pequeno">Marcar</a>
+    </div>
+</header>
+
+<style>
+    .cabecalho-principal {
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid #eaeaea;
+        position: sticky;
+        top: 0;
+        z-index: 100; /* Garante que o menu fica sempre por cima ao fazer scroll */
+    }
+
+    .container-cabecalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--cor-destaque);
+        text-decoration: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: var(--cor-texto);
+        font-weight: 500;
+    }
+
+    .menu a:hover {
+        color: #000;
+    }
+
+    .botao-pequeno {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+</style>

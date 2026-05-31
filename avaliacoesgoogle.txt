@@ -1,0 +1,268 @@
+<section class="prova-social-google">
+        <div class="cabecalho-seccao">
+            <h2>Saiba o que os nossos clientes dizem de nós</h2>
+        </div>
+
+        <div class="container-google">
+            
+            <div class="resumo-clinica">
+                <div class="perfil-clinica">
+                    <div class="foto-perfil-clinica"></div> 
+                    <div class="info-clinica">
+                        <h3>[Nome da Clínica]</h3>
+                        <div class="estrelas-resumo">
+                            <span class="cor-estrela">★★★★★</span>
+                            <span class="nota-numero">5.0</span>
+                        </div>
+                        <p class="total-avaliacoes">223 avaliações no Google</p> 
+                    </div>
+                </div>
+                <a href="https://g.page/r/teu-link-aqui/review" target="_blank" rel="noopener" class="botao-avaliar">
+                    Escreva sua avaliação
+                </a>
+            </div>
+
+            <div class="lista-avaliacoes">
+                
+                <div class="cartao-google">
+                    <div class="topo-cartao">
+                        <div class="perfil-cliente">
+                            <div class="avatar">C</div>
+                            <div class="dados-cliente">
+                                <h4>Cátia Rodrigues</h4>
+                                <span>1 ano atrás</span>
+                            </div>
+                        </div>
+                        <div class="icone-google">G</div>
+                    </div>
+                    <div class="estrelas-cartao">★★★★★</div>
+                    <p class="texto-avaliacao">Espaço super acolhedor e a profissional para além de ser muito simpática tem umas mãos de fada! Aconselho a 100%.</p>
+                </div>
+
+                <div class="cartao-google">
+                    <div class="topo-cartao">
+                        <div class="perfil-cliente">
+                            <div class="avatar">M</div>
+                            <div class="dados-cliente">
+                                <h4>Marina Pinho</h4>
+                                <span>1 ano atrás</span>
+                            </div>
+                        </div>
+                        <div class="icone-google">G</div>
+                    </div>
+                    <div class="estrelas-cartao">★★★★★</div>
+                    <p class="texto-avaliacao">Experiência maravilhosa. Além de ótima profissional, é muito receptiva e solícita. Recomendo muito!</p>
+                </div>
+
+                <div class="cartao-google">
+                    <div class="topo-cartao">
+                        <div class="perfil-cliente">
+                            <div class="avatar">S</div>
+                            <div class="dados-cliente">
+                                <h4>Sara Mendes</h4>
+                                <span>2 meses atrás</span>
+                            </div>
+                        </div>
+                        <div class="icone-google">G</div>
+                    </div>
+                    <div class="estrelas-cartao">★★★★★</div>
+                    <p class="texto-avaliacao">A melhor limpeza de pele. Os resultados são visíveis imediatamente e a transparência nos preços é fantástica.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    ----
+
+    /* --- SECÇÃO PROVA SOCIAL GOOGLE --- */
+    .prova-social-google {
+        padding: 6rem 2rem;
+        background-color: #ffffff; /* Fundo branco limpo, como o Google */
+    }
+
+    .cabecalho-seccao h2 {
+        text-align: center;
+        font-family: serif;
+        font-size: 2.2rem;
+        color: var(--cor-texto);
+        margin-bottom: 4rem;
+    }
+
+    .container-google {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr; /* Coluna da esquerda mais pequena */
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Resumo da Clínica (Esquerda) */
+    .resumo-clinica {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .perfil-clinica {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .foto-perfil-clinica {
+        width: 60px;
+        height: 60px;
+        background-color: #eee;
+        border-radius: 4px; /* Quadrado com bordas suaves, como na tua foto */
+    }
+
+    .info-clinica h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .estrelas-resumo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .cor-estrela, .estrelas-cartao {
+        color: #fbbc04; /* Amarelo exato do Google */
+        letter-spacing: 2px;
+    }
+
+    .nota-numero {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .total-avaliacoes {
+        font-size: 0.85rem;
+        color: #5f6368;
+    }
+
+    .botao-avaliar {
+        display: block;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        border: 1px solid #dadce0;
+        border-radius: 4px;
+        color: #1a73e8; /* Azul do Google */
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .botao-avaliar:hover {
+        background-color: #f8f9fa;
+    }
+
+    /* O Carrossel sem JavaScript (Direita) */
+    .lista-avaliacoes {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto; /* Permite deslizar na horizontal */
+        scroll-snap-type: x mandatory; /* Obriga a parar certinho num cartão */
+        padding-bottom: 1.5rem; /* Espaço para a barra de scroll */
+        scrollbar-width: thin; /* Estiliza a barra de scroll no Firefox */
+    }
+
+    /* Esconde a barra de scroll feia no Chrome/Safari mas mantém a funcionalidade */
+    .lista-avaliacoes::-webkit-scrollbar {
+        height: 6px;
+    }
+    .lista-avaliacoes::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        border-radius: 4px;
+    }
+    .lista-avaliacoes::-webkit-scrollbar-thumb {
+        background: #ccc; 
+        border-radius: 4px;
+    }
+
+    .cartao-google {
+        flex: 0 0 350px; /* Impede que o cartão encolha, definindo uma largura fixa */
+        scroll-snap-align: start; /* Ponto de paragem do scroll */
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        background-color: white;
+    }
+
+    .topo-cartao {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+
+    .perfil-cliente {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1a73e8; /* Azul genérico */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .dados-cliente h4 {
+        font-size: 0.95rem;
+        margin: 0;
+        color: #202124;
+    }
+
+    .dados-cliente span {
+        font-size: 0.8rem;
+        color: #70757a;
+    }
+
+    .icone-google {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #4285F4;
+    }
+
+    .estrelas-cartao {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .texto-avaliacao {
+        font-size: 0.95rem;
+        color: #3c4043;
+        line-height: 1.5;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+        .container-google {
+            grid-template-columns: 1fr; /* Empilha o resumo em cima das avaliações no telemóvel */
+            gap: 2rem;
+        }
+        
+        .resumo-clinica {
+            align-items: center;
+            text-align: center;
+        }
+        
+        .perfil-clinica {
+            flex-direction: column;
+        }
+
+        .cartao-google {
+            flex: 0 0 280px; /* Cartões ligeiramente mais pequenos no telemóvel */
+        }
+    }

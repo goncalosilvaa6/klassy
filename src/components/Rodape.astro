@@ -1,0 +1,78 @@
+---
+// src/components/Rodape.astro
+const anoAtual = new Date().getFullYear();
+---
+<footer class="rodape-principal">
+    <div class="container-rodape">
+        <div class="coluna">
+            <h3>[Nome da Clínica]</h3>
+            <p>Estética e beleza com resultados reais e transparência total.</p>
+        </div>
+        <div class="coluna">
+            <h3>Contactos</h3>
+            <p>📍 Rua Exemplo, 123, Cidade</p>
+            <p>📞 <a href="tel:+351912345678">912 345 678</a></p>
+            <p>📱 <a href="https://instagram.com/teulink" target="_blank">Instagram</a></p>
+        </div>
+        <div class="coluna">
+            <h3>Horário</h3>
+            <p>Seg - Sex: 09:00 - 19:00</p>
+            <p>Sáb: 09:00 - 13:00</p>
+            <p>Dom: Encerrado</p>
+        </div>
+    </div>
+    <div class="direitos">
+        <p>&copy; {anoAtual} [Nome da Clínica]. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<style>
+    .rodape-principal {
+        background-color: #1a1a1a; /* Cinza quase preto, elegante */
+        color: white;
+        padding: 4rem 2rem 1rem;
+        margin-top: 5rem;
+    }
+
+    .container-rodape {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .coluna h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        color: white;
+    }
+
+    /* O toque da marca no título principal do rodapé */
+    .coluna:first-child h3 {
+        color: var(--cor-destaque);
+        font-size: 1.5rem;
+    }
+
+    .coluna p, .coluna a {
+        color: #aaaaaa;
+        text-decoration: none;
+        margin-bottom: 0.8rem;
+        display: block;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+    }
+
+    .coluna a:hover {
+        color: var(--cor-destaque); /* Efeito hover subtil na cor da marca */
+    }
+
+    .direitos {
+        text-align: center;
+        border-top: 1px solid #333;
+        padding-top: 1.5rem;
+        font-size: 0.8rem;
+        color: #666;
+    }
+</style>

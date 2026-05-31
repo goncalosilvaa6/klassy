@@ -1,0 +1,38 @@
+---
+// src/components/CartaoServico.astro
+const { categoria, nome, preco, duracao } = Astro.props;
+---
+
+<article class="cartao-servico">
+    <span class="etiqueta-categoria">{categoria}</span>
+    <h3>{nome}</h3>
+    <div class="detalhes-servico">
+        <span class="preco">Desde {preco}€</span>
+        <span class="duracao">{duracao}</span>
+    </div>
+</article>
+
+<style>
+    .cartao-servico {
+        border: 1px solid #eee;
+        padding: 1.5rem;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .etiqueta-categoria {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #888;
+        letter-spacing: 1px;
+    }
+
+    .detalhes-servico {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: var(--cor-texto);
+    }
+</style>

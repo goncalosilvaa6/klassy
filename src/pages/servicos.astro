@@ -1,0 +1,335 @@
+---
+// src/pages/servicos.astro
+import LayoutBase from "../layouts/LayoutBase.astro";
+import { Image } from "astro:assets";
+
+// Importa a imagem de fundo para a secção de workshop
+import imgAluguer from "../assets/foto.jpeg";
+---
+
+<LayoutBase titulo="Menu de Serviços - Klassy">
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="cabecalho-servicos">
+    <span class="etiqueta-topo">Serviços</span>
+    <h1>
+      Descubra mais acerca dos nossos<br />Tratamentos de Estética e Beleza
+    </h1>
+  </header>
+
+  <!-- LISTA DE SERVIÇOS (2 Colunas) -->
+  <section class="menu-detalhado">
+    <div class="coluna-servicos coluna-esq">
+      <div class="bloco-servico">
+        <h3>Depilação Laser de Díodo</h3>
+        <ul>
+          <li>Diversas partes do corpo isoladas</li>
+          <li>Corpo inteiro</li>
+          <li>Zonas específicas do corpo incluindo cara</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Depilação Linha</h3>
+        <ul>
+          <li>Sobrancelhas e Buço</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Tratamento Facial e Harmonização</h3>
+        <ul>
+          <li>Rosto, pescoço e colo</li>
+          <li>Preenchimento labial com Ácido Hialurónico</li>
+          <li>Tratamento por zona (testa, glabela e pés de galinha)</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Pedicure Verniz Gel</h3>
+        <ul>
+          <li>Pedicure com verniz gel</li>
+          <li>Remoção verniz gel pés + base de tratamento</li>
+          <li>Tratamento parafina pés esfoliação + hidratação</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico sem-borda-mobile">
+        <h3>Unhas de Gel</h3>
+        <ul>
+          <li>Verniz gel com manicure</li>
+          <li>Remoção gel / verniz gel + base de tratamento</li>
+          <li>Manutenção de gel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Linha divisória central visível apenas no computador -->
+    <div class="divisor-vertical"></div>
+
+    <div class="coluna-servicos coluna-dir">
+      <div class="bloco-servico">
+        <h3>Depilação Cera Feminina & Masculina</h3>
+        <ul>
+          <li>Diversas partes do corpo isoladas</li>
+          <li>Corpo inteiro</li>
+          <li>Zonas específicas do corpo</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Lifting de Pestanas</h3>
+        <ul>
+          <li>Lifting e coloração de pestanas</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Plástica dos Pés</h3>
+        <ul>
+          <li>Estimulação da circulação sanguínea</li>
+          <li>Pele mais macia e alívio das calosidades</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico">
+        <h3>Massagens de Bem-Estar</h3>
+        <ul>
+          <li>Massagem relaxante com técnicas terapêuticas</li>
+          <li>Drenagem linfática manual</li>
+          <li>Massagem anticelulite / modeladora</li>
+        </ul>
+      </div>
+
+      <div class="bloco-servico sem-borda">
+        <h3>Extensão e Manicure Básica</h3>
+        <ul>
+          <li>Extensão em Gel e Molde F1</li>
+          <li>Manicure com francesinha</li>
+          <li>SPA das mãos + tratamento luvas de seda</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO ALUGUER DE ESPAÇO (Workshop) -->
+  <section class="aluguer-espaco">
+    <div class="imagem-fundo-wrapper">
+      <Image
+        src={imgAluguer}
+        alt="Detalhe de trabalho de unhas"
+        class="foto-preenchimento"
+      />
+      <div class="camada-escura"></div>
+    </div>
+
+    <div class="caixa-aluguer">
+      <span class="etiqueta-aluguer">Aluguer de Espaço</span>
+      <h2>Sabia que...</h2>
+      <p>Pode alugar a nossa sala de Workshop de Nails e Lash Lifting?</p>
+      <a href="#agendar" class="botao-principal">Contacte-nos</a>
+    </div>
+  </section>
+</LayoutBase>
+
+<style>
+  /* ==========================================================
+       CABEÇALHO
+       ========================================================== */
+  .cabecalho-servicos {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    background-color: var(--cor-fundo);
+  }
+
+  .etiqueta-topo {
+    color: var(--cor-texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .cabecalho-servicos h1 {
+    font-family: serif;
+    font-size: 2.5rem;
+    color: var(--cor-texto);
+    line-height: 1.2;
+  }
+
+  /* ==========================================================
+       MENU DETALHADO (COLUNAS E LISTAS)
+       ========================================================== */
+  .menu-detalhado {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+    display: flex;
+    position: relative;
+  }
+
+  .coluna-servicos {
+    flex: 1;
+  }
+
+  .coluna-esq {
+    padding-right: 3rem;
+  }
+
+  .coluna-dir {
+    padding-left: 3rem;
+  }
+
+  /* O traço fino a separar as colunas no meio */
+  .divisor-vertical {
+    width: 1px;
+    background-color: #e0e0e0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bloco-servico {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  /* Remove a borda do último elemento para ficar limpo */
+  .sem-borda {
+    border-bottom: none;
+  }
+
+  .bloco-servico h3 {
+    font-family: serif;
+    font-size: 1.2rem;
+    color: var(
+      --cor-texto
+    ); /* Substituímos o verde das fotos pelo nosso tom base para manter coerência */
+    margin-bottom: 1rem;
+  }
+
+  .bloco-servico ul {
+    list-style: none; /* Removemos a bolinha feia do browser */
+    padding-left: 0;
+  }
+
+  .bloco-servico li {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+  }
+
+  /* Criamos uma bolinha (bullet) customizada mais elegante */
+  .bloco-servico li::before {
+    content: "•";
+    color: var(--cor-destaque); /* A bolinha fica na cor da marca (magenta) */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+
+  /* ==========================================================
+       SECÇÃO DE ALUGUER (WORKSHOP)
+       ========================================================== */
+  .aluguer-espaco {
+    position: relative;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .imagem-fundo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .foto-preenchimento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Uma película semitransparente sobre a foto para o texto ser legível */
+  .camada-escura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 180, 190, 0.4); /* Tom suave sobre a imagem */
+    z-index: -1;
+  }
+
+  .caixa-aluguer {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.95
+    ); /* Fundo branco com ligeira transparência */
+    padding: 4rem;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  .etiqueta-aluguer {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor-texto-suave);
+  }
+
+  .caixa-aluguer h2 {
+    font-family: serif;
+    font-size: 2.2rem;
+    margin: 1rem 0;
+    color: var(--cor-texto);
+  }
+
+  .caixa-aluguer p {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  /* ==========================================================
+       RESPONSIVIDADE (TELEMÓVEIS)
+       ========================================================== */
+  @media (max-width: 900px) {
+    .menu-detalhado {
+      flex-direction: column;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .coluna-esq,
+    .coluna-dir {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .divisor-vertical {
+      display: none; /* Esconde o traço vertical no telemóvel */
+    }
+
+    .sem-borda-mobile {
+      border-bottom: 1px solid #e0e0e0; /* Repõe a borda que liga a coluna esquerda à direita no mobile */
+    }
+
+    .caixa-aluguer {
+      padding: 2.5rem 1.5rem;
+      width: 90%;
+    }
+  }
+</style>
