@@ -2,77 +2,285 @@
 // src/components/Rodape.astro
 const anoAtual = new Date().getFullYear();
 ---
-<footer class="rodape-principal">
-    <div class="container-rodape">
-        <div class="coluna">
-            <h3>[Nome da Clínica]</h3>
-            <p>Estética e beleza com resultados reais e transparência total.</p>
-        </div>
-        <div class="coluna">
-            <h3>Contactos</h3>
-            <p>📍 Rua Exemplo, 123, Cidade</p>
-            <p>📞 <a href="tel:+351912345678">912 345 678</a></p>
-            <p>📱 <a href="https://instagram.com/teulink" target="_blank">Instagram</a></p>
-        </div>
-        <div class="coluna">
-            <h3>Horário</h3>
-            <p>Seg - Sex: 09:00 - 19:00</p>
-            <p>Sáb: 09:00 - 13:00</p>
-            <p>Dom: Encerrado</p>
-        </div>
+
+<footer class="rodape-klassy-premium">
+  <!-- Efeito de luz suave magenta no fundo esquerdo -->
+  <div class="glow-decorativo"></div>
+
+  <div class="container-rodape">
+    <!-- ZONA 1: CTA de Impacto -->
+    <div class="rodape-cta">
+      <h2 class="texto-fluido">A sua melhor versão <em>começa aqui.</em></h2>
+      <a href="/contactos" class="btn-rodape-luxo">Agendar Avaliação</a>
     </div>
-    <div class="direitos">
-        <p>&copy; {anoAtual} [Nome da Clínica]. Todos os direitos reservados.</p>
+
+    <!-- ZONA 2: Grelha de Navegação -->
+    <div class="rodape-grelha">
+      <div class="coluna-marca">
+        <h3>KLASSY</h3>
+        <p>
+          Elevamos a estética a um padrão de excelência. Tratamentos premium,
+          resultados reais e uma experiência focada no seu bem-estar.
+        </p>
+      </div>
+
+      <div class="coluna-links">
+        <h4>Navegação</h4>
+        <nav>
+          <a href="/servicos">Serviços e Preçário</a>
+          <a href="/sobre">Sobre a Clínica</a>
+          <a href="/contactos">Contactos</a>
+          <a href="/galeria">Galeria de Resultados</a>
+        </nav>
+      </div>
+
+      <div class="coluna-links">
+        <h4>Informação</h4>
+        <nav>
+          <a href="/termos">Termos e Condições</a>
+          <a href="/privacidade">Política de Privacidade</a>
+          <a
+            href="https://www.livroreclamacoes.pt/"
+            target="_blank"
+            rel="noopener">Livro de Reclamações</a
+          >
+        </nav>
+      </div>
+
+      <div class="coluna-contacto">
+        <h4>Linha Direta</h4>
+        <a href="mailto:geral@klassy.pt" class="link-destaque"
+          >geral@klassy.pt</a
+        >
+        <a href="tel:+351912345678" class="link-destaque">+351 912 345 678</a>
+        <address>
+          Rua de Exemplo, 12<br />
+          4000-000 Porto, Portugal
+        </address>
+      </div>
     </div>
+
+    <!-- ZONA 3: Base e Redes Sociais -->
+    <div class="rodape-base">
+      <p>&copy; {anoAtual} Klassy Estética. Todos os direitos reservados.</p>
+
+      <div class="redes-sociais">
+        <a href="#">Instagram</a>
+        <span class="ponto">•</span>
+        <a href="#">Facebook</a>
+        <span class="ponto">•</span>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
-    .rodape-principal {
-        background-color: #1a1a1a; /* Cinza quase preto, elegante */
-        color: white;
-        padding: 4rem 2rem 1rem;
-        margin-top: 5rem;
-    }
+  /* FUNDO E GLOW */
+  .rodape-klassy-premium {
+    position: relative;
+    background-color: #0a0a0a; /* Preto profundo, muito suave */
+    color: #ffffff;
+    overflow: hidden;
+    margin-top: 5rem;
+  }
 
-    .container-rodape {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 3rem;
-        margin-bottom: 3rem;
-    }
+  .glow-decorativo {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(
+      circle,
+      rgba(230, 0, 126, 0.05) 0%,
+      transparent 60%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
 
-    .coluna h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: white;
-    }
+  .container-rodape {
+    position: relative;
+    z-index: 1;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+  }
 
-    /* O toque da marca no título principal do rodapé */
-    .coluna:first-child h3 {
-        color: var(--cor-destaque);
-        font-size: 1.5rem;
-    }
+  /* ZONA 1: CTA */
+  .rodape-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
 
-    .coluna p, .coluna a {
-        color: #aaaaaa;
-        text-decoration: none;
-        margin-bottom: 0.8rem;
-        display: block;
-        font-size: 0.9rem;
-        transition: color 0.3s ease;
-    }
+  .texto-fluido {
+    font-family: var(--fonte-principal, sans-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: -1px;
+    max-width: 600px;
+    line-height: 1.1;
+  }
 
-    .coluna a:hover {
-        color: var(--cor-destaque); /* Efeito hover subtil na cor da marca */
-    }
+  .texto-fluido em {
+    font-family: serif;
+    color: var(--cor-destaque);
+    font-style: italic;
+  }
 
-    .direitos {
-        text-align: center;
-        border-top: 1px solid #333;
-        padding-top: 1.5rem;
-        font-size: 0.8rem;
-        color: #666;
+  .btn-rodape-luxo {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+  }
+
+  .btn-rodape-luxo:hover {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+  }
+
+  /* ZONA 2: GRELHA */
+  .rodape-grelha {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .coluna-marca h3 {
+    font-family: serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .coluna-marca p {
+    color: #888888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .coluna-links h4,
+  .coluna-contacto h4 {
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .coluna-links nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .coluna-links a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .coluna-links a:hover {
+    color: var(--cor-destaque);
+  }
+
+  .coluna-contacto .link-destaque {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .coluna-contacto .link-destaque:hover {
+    color: var(--cor-destaque);
+  }
+
+  .coluna-contacto address {
+    font-style: normal;
+    color: #888888;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* ZONA 3: BASE */
+  .rodape-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    color: #555555;
+    font-size: 0.85rem;
+  }
+
+  .redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .redes-sociais a {
+    color: #888888;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .redes-sociais a:hover {
+    color: #ffffff;
+  }
+
+  .ponto {
+    color: #333333;
+  }
+
+  /* RESPONSIVIDADE */
+  @media (max-width: 1024px) {
+    .rodape-cta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
     }
+    .rodape-grelha {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rodape-grelha {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .rodape-base {
+      flex-direction: column-reverse;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .redes-sociais {
+      justify-content: center;
+    }
+  }
 </style>
