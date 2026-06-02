@@ -1,11 +1,17 @@
 /* src/styles/global.css */
 :root {
-    --cor-fundo: #ffffff;
-    --cor-fundo-suave: #fdf5f7;
+--cor-fundo: #ffffff;
+    /* Substituímos o rosa bebé por um verde menta/gelo ultra pálido para os fundos das secções */
+    --cor-fundo-suave: #f2f7f4;
     --cor-texto: #2d2d2d;
     --cor-texto-suave: #666666;
-    --cor-destaque: #e6007e;
-    --cor-destaque-hover: #b30062;
+
+    /* O teu novo "Verde Claro Bonito" (Verde Sálvia Premium) */
+    --cor-destaque: #7ed19e;
+
+    /* Um tom mais escuro da mesma família para quando o rato passa por cima (Hover) */
+    --cor-destaque-hover: #3b634b;
+
     --fonte-principal: system-ui, -apple-system, sans-serif;
 }
 

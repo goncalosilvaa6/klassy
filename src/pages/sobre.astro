@@ -10,52 +10,52 @@ import imgSobre3 from "../assets/foto.jpeg";
 ---
 
 <LayoutBase titulo="Sobre a Klassy - O Seu Centro de Estética">
-  <!-- SECÇÃO 1: História e Valores (Inspirada na 1ª imagem) -->
   <section class="sobre-intro">
     <div class="container-split">
-      <div class="texto-intro">
+      <div class="texto-intro animar-fade-up">
         <h1>Sobre a Klassy</h1>
         <p class="destaque-texto">
-          Gerida por uma mulher apaixonada pela área, há <strong
+          Criado por uma mulher apaixonada pela área, há <strong
             >mais de 10 anos</strong
-          >, o nosso centro de estética tem sido o destino preferido para quem
-          procura realçar a beleza natural com segurança e mestria.
+          >, o nosso espaço tem sido o refúgio de eleição para quem procura
+          realçar a sua beleza natural com elegância e dedicação.
         </p>
 
         <div class="bloco-valor">
-          <h3>Diversidade de tratamentos</h3>
+          <h3>Cuidados à sua medida</h3>
           <p>
-            Os nossos serviços são cuidadosamente selecionados para proporcionar
-            uma experiência única. Aliamos técnicas tradicionais às inovações do
-            setor para garantir resultados reais que fidelizam clientes há uma
-            década.
+            Cada serviço é desenhado para lhe proporcionar uma experiência única
+            de relaxamento. Aliamos o toque humano aos melhores rituais de
+            beleza para garantir resultados que elevam a sua autoestima todos os
+            dias.
           </p>
         </div>
 
         <div class="bloco-valor">
-          <h3>Foco na qualidade</h3>
+          <h3>Excelência em cada detalhe</h3>
           <p>
-            A sua beleza merece o melhor cuidado. Não usamos atalhos nem
-            produtos de segunda linha. Estamos aqui para proporcionar momentos
-            de bem-estar com absoluta transparência.
+            O seu bem-estar merece o melhor. Trabalhamos exclusivamente com
+            marcas de prestígio para que cada visita seja um momento de puro
+            mimo, num ambiente onde se sente verdadeiramente em casa e
+            valorizada.
           </p>
         </div>
 
-        <a href="#agendar" class="botao-principal mt-2">Agende Connosco</a>
+        <a href="/contactos" class="botao-principal mt-2">Agende Connosco</a>
       </div>
 
-      <div class="imagens-sobrepostas">
+      <div class="imagens-sobrepostas animar-fade-up-atraso">
         <div class="moldura-imagem img-tras">
           <Image
             src={imgSobre1}
-            alt="Profissional a preparar tratamento estético"
+            alt="Profissional a preparar cuidado de beleza"
             class="foto-preenchimento"
           />
         </div>
         <div class="moldura-imagem img-frente">
           <Image
             src={imgSobre2}
-            alt="Cliente a receber tratamento facial"
+            alt="Cliente a desfrutar de um momento de relaxamento"
             class="foto-preenchimento"
           />
         </div>
@@ -63,32 +63,34 @@ import imgSobre3 from "../assets/foto.jpeg";
     </div>
   </section>
 
-  <!-- SECÇÃO 2: A Filosofia (Inspirada na 2ª imagem) -->
   <section class="sobre-filosofia">
     <div class="fundo-decorativo"></div>
-    <!-- Fundo dividido visualmente -->
+
     <div class="container-filosofia">
-      <div class="imagem-destaque">
+      <div class="imagem-destaque animar-fade-up">
         <Image
           src={imgSobre3}
-          alt="Rosto relaxado após tratamento de estética"
+          alt="Rosto sereno após momento de cuidado pessoal"
           class="foto-preenchimento"
         />
       </div>
 
-      <div class="caixa-decorada">
+      <div class="caixa-decorada animar-fade-up-atraso">
         <div class="borda-fina">
-          <h2>Trate bem de si...</h2>
+          <h2>Tempo para si...</h2>
           <p>
-            Descubra o oásis perfeito para a beleza e bem-estar no coração da
-            cidade. Unhas com a estética que deseja, sobrancelhas perfeitas,
-            massagens relaxantes e depilação a laser de última geração.
+            Descubra o seu novo oásis de beleza e paz no coração da cidade.
+            Desde o cuidado meticuloso da sua manicura e do seu olhar, até às
+            massagens revigorantes e cuidados de pele avançados, tudo aqui gira
+            em torno do seu conforto.
           </p>
           <p>
-            Mime-se e deixe-nos realçar a sua beleza natural enquanto se entrega
-            a momentos de puro relaxamento e renovação.
+            Faça uma pausa na rotina, mime-se e deixe-nos realçar a sua essência
+            enquanto se entrega a momentos de pura renovação e tranquilidade.
           </p>
-          <a href="#agendar" class="botao-secundario mt-2">Agende Connosco</a>
+          <a href="/contactos" class="botao-secundario mt-2"
+            >O seu momento começa aqui</a
+          >
         </div>
       </div>
     </div>
@@ -96,6 +98,29 @@ import imgSobre3 from "../assets/foto.jpeg";
 </LayoutBase>
 
 <style>
+  /* ==========================================================
+       ANIMAÇÕES GLOBAIS (CSS PURO)
+       ========================================================== */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animar-fade-up {
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  .animar-fade-up-atraso {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
+  }
+
   /* ==========================================================
        ESTILOS GERAIS DA PÁGINA SOBRE
        ========================================================== */
@@ -108,13 +133,14 @@ import imgSobre3 from "../assets/foto.jpeg";
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   /* ==========================================================
        SECÇÃO 1: INTRODUÇÃO E IMAGENS SOBREPOSTAS
        ========================================================== */
   .sobre-intro {
-    padding: 6rem 2rem;
+    padding: 8rem 2rem 6rem;
     background-color: var(--cor-fundo);
   }
 
@@ -123,30 +149,49 @@ import imgSobre3 from "../assets/foto.jpeg";
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
   }
 
   .texto-intro h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     color: var(--cor-texto);
     margin-bottom: 1.5rem;
-    font-family: serif; /* Dá um toque clássico e elegante, como nas tuas fotos */
+    font-family: serif;
+    line-height: 1.1;
   }
 
   .destaque-texto {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--cor-texto-suave);
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     line-height: 1.8;
   }
 
+  .destaque-texto strong {
+    color: var(--cor-destaque);
+  }
+
   .bloco-valor {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  /* Linha decorativa verde sálvia ao lado dos valores */
+  .bloco-valor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
   }
 
   .bloco-valor h3 {
-    color: var(--cor-destaque);
+    color: var(--cor-texto);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
@@ -155,36 +200,48 @@ import imgSobre3 from "../assets/foto.jpeg";
 
   .bloco-valor p {
     color: var(--cor-texto-suave);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   /* Efeito de Imagens Sobrepostas */
   .imagens-sobrepostas {
     position: relative;
-    height: 550px;
+    height: 600px;
     width: 100%;
   }
 
   .moldura-imagem {
     position: absolute;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .moldura-imagem:hover .foto-preenchimento {
+    transform: scale(1.05); /* Zoom suave na foto ao passar o rato */
   }
 
   .img-tras {
     top: 0;
     right: 0;
-    width: 75%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
   }
 
   .img-frente {
     bottom: 0;
     left: 0;
-    width: 65%;
-    height: 65%;
-    border: 8px solid var(--cor-fundo); /* Borda branca para separar da imagem de trás */
+    width: 60%;
+    height: 60%;
+    border: 10px solid var(--cor-fundo);
+    transition: transform 0.4s ease;
+  }
+
+  /* Interatividade 3D: A imagem da frente eleva-se quando passamos o rato */
+  .imagens-sobrepostas:hover .img-frente {
+    transform: translate(-10px, -10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
   }
 
   /* ==========================================================
@@ -192,64 +249,84 @@ import imgSobre3 from "../assets/foto.jpeg";
        ========================================================== */
   .sobre-filosofia {
     position: relative;
-    padding: 6rem 2rem;
-    background-color: #fafafa;
+    padding: 8rem 2rem;
+    background-color: #faf9f6; /* Bege super claro que combina bem com o verde sálvia */
   }
 
-  /* Cria aquele efeito de duas cores de fundo da 2ª imagem */
+  /* Fundo dividido visualmente */
   .fundo-decorativo {
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 45%;
     height: 100%;
     background-color: var(
       --cor-fundo-suave
-    ); /* O tom de rosa pálido definido no global.css */
+    ); /* O nosso Verde Gelo/Menta pálido */
     z-index: 0;
   }
 
   .container-filosofia {
     position: relative;
-    z-index: 1; /* Mantém o conteúdo acima do fundo decorativo */
+    z-index: 1;
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0; /* Tiramos o gap para as caixas se tocarem */
+    gap: 0;
     align-items: center;
   }
 
   .imagem-destaque {
-    height: 600px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 650px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .imagem-destaque:hover .foto-preenchimento {
+    transform: scale(1.03);
   }
 
   .caixa-decorada {
     background-color: var(--cor-fundo);
     padding: 3rem;
-    margin-left: -50px; /* Faz a caixa sobrepor-se à imagem ligeiramente */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    margin-left: -60px; /* Sobrepõe a imagem */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
     position: relative;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
   }
 
-  /* A linha fina decorativa ao redor do texto */
+  /* Interatividade: A caixa levanta subtilmente */
+  .caixa-decorada:hover {
+    transform: translateY(-5px);
+  }
+
+  /* A linha fina decorativa ao redor do texto - CORRIGIDA PARA VERDE SÁLVIA */
   .borda-fina {
-    border: 1px solid rgba(230, 0, 126, 0.3); /* Linha magenta subtil */
-    padding: 3rem 2rem;
+    border: 1px solid rgba(119, 156, 133, 0.4); /* Linha Verde Sálvia subtil */
+    padding: 3.5rem 2.5rem;
+    transition: border-color 0.4s ease;
+  }
+
+  .caixa-decorada:hover .borda-fina {
+    border-color: var(--cor-destaque);
   }
 
   .borda-fina h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--cor-texto);
     margin-bottom: 1.5rem;
     font-family: serif;
+    line-height: 1.2;
   }
 
   .borda-fina p {
     color: var(--cor-texto-suave);
     margin-bottom: 1.5rem;
     line-height: 1.7;
+    font-size: 1.05rem;
   }
 
   /* ==========================================================
@@ -269,19 +346,23 @@ import imgSobre3 from "../assets/foto.jpeg";
 
     .fundo-decorativo {
       width: 100%;
-      height: 50%;
+      height: 60%;
       bottom: 0;
       top: auto;
     }
 
     .imagem-destaque {
-      height: 400px;
+      height: 450px;
     }
 
     .caixa-decorada {
       margin-left: 0;
-      margin-top: -50px; /* Sobrepõe verticalmente no telemóvel */
+      margin-top: -80px;
       padding: 1.5rem;
+    }
+
+    .borda-fina {
+      padding: 2rem 1.5rem;
     }
   }
 </style>

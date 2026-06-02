@@ -1,0 +1,52 @@
+---
+import LayoutBase from "../layouts/LayoutBase.astro";
+---
+
+<LayoutBase titulo="Termos e Condições | Klassy">
+  <section class="pagina-legal">
+    <h1>Termos e Condições</h1>
+
+    <h2>1. Marcações e Cancelamentos</h2>
+    <p>
+      Agradecemos que nos informe sobre qualquer cancelamento ou alteração de
+      marcação com pelo menos 24 horas de antecedência. Desta forma, conseguimos
+      gerir a nossa agenda de forma eficiente para todas as clientes.
+    </p>
+
+    <h2>2. Pagamentos</h2>
+    <p>
+      Os pagamentos devem ser efetuados no final de cada sessão, sendo aceite
+      o método de pagamento númerario. 
+    </p>
+
+    <h2>3. Pontualidade</h2>
+    <p>
+      Pedimos a gentileza de chegar 5 minutos antes da hora marcada. Atrasos
+      superiores a 15 minutos poderão implicar a redução do tempo do serviço ou
+      a necessidade de remarcação.
+    </p>
+  </section>
+</LayoutBase>
+
+<style>
+  .pagina-legal {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  h1 {
+    font-family: serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    color: var(--cor-destaque);
+  }
+  p {
+    color: var(--cor-texto-suave);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+</style>

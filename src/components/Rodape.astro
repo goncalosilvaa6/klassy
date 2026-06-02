@@ -4,22 +4,19 @@ const anoAtual = new Date().getFullYear();
 ---
 
 <footer class="rodape-klassy-premium">
-  <!-- Efeito de luz suave magenta no fundo esquerdo -->
   <div class="glow-decorativo"></div>
 
   <div class="container-rodape">
-    <!-- ZONA 1: CTA de Impacto -->
     <div class="rodape-cta">
       <h2 class="texto-fluido">A sua melhor versão <em>começa aqui.</em></h2>
-      <a href="/contactos" class="btn-rodape-luxo">Agendar Avaliação</a>
+      <a href="/contactos" class="btn-rodape-luxo">Agendar serviço</a>
     </div>
 
-    <!-- ZONA 2: Grelha de Navegação -->
     <div class="rodape-grelha">
       <div class="coluna-marca">
         <h3>KLASSY</h3>
         <p>
-          Elevamos a estética a um padrão de excelência. Tratamentos premium,
+          Elevamos a estética a um padrão de excellence. Tratamentos premium,
           resultados reais e uma experiência focada no seu bem-estar.
         </p>
       </div>
@@ -28,7 +25,7 @@ const anoAtual = new Date().getFullYear();
         <h4>Navegação</h4>
         <nav>
           <a href="/servicos">Serviços e Preçário</a>
-          <a href="/sobre">Sobre a Clínica</a>
+          <a href="/sobre">Sobre a Klassy</a>
           <a href="/contactos">Contactos</a>
           <a href="/galeria">Galeria de Resultados</a>
         </nav>
@@ -52,31 +49,38 @@ const anoAtual = new Date().getFullYear();
         <a href="mailto:geral@klassy.pt" class="link-destaque"
           >geral@klassy.pt</a
         >
-        <a href="tel:+351912345678" class="link-destaque">+351 912 345 678</a>
+        <a href="tel:+351919786224" class="link-destaque">+351 919 786 224</a>
         <address>
-          Rua de Exemplo, 12<br />
-          4000-000 Porto, Portugal
+          Av. 5 Outubro, 72 - Loja N | Edifício Vallis Longus<br />
+          4440-503 Valongo, Porto
         </address>
       </div>
     </div>
 
-    <!-- ZONA 3: Base e Redes Sociais -->
     <div class="rodape-base">
-      <p>&copy; {anoAtual} Klassy Estética. Todos os direitos reservados.</p>
+      <p>
+        &copy; {anoAtual} Klassy. Desenvolvido por
+        <a
+          href="https://github.com/goncalosilvaa6"
+          target="_blank"
+          rel="noopener"
+          class="link-dev">Gonçalo Silva</a
+        >.
+      </p>
 
       <div class="redes-sociais">
-        <a href="#">Instagram</a>
+        <a href="https://www.instagram.com/klassy.pt/">Instagram</a>
         <span class="ponto">•</span>
         <a href="#">Facebook</a>
         <span class="ponto">•</span>
-        <a href="#">WhatsApp</a>
+        <a href="tel:+351919786224">WhatsApp</a>
       </div>
     </div>
   </div>
 </footer>
 
 <style>
-  /* FUNDO E GLOW */
+  /* FUNDO E GLOW CORRIGIDO */
   .rodape-klassy-premium {
     position: relative;
     background-color: #0a0a0a; /* Preto profundo, muito suave */
@@ -91,9 +95,10 @@ const anoAtual = new Date().getFullYear();
     left: -10%;
     width: 50vw;
     height: 50vw;
+    /* Alterado para corresponder ao verde #779c85 com opacidade muito baixa */
     background: radial-gradient(
       circle,
-      rgba(230, 0, 126, 0.05) 0%,
+      rgba(119, 156, 133, 0.08) 0%,
       transparent 60%
     );
     z-index: 0;
@@ -232,6 +237,22 @@ const anoAtual = new Date().getFullYear();
     padding-top: 2rem;
     color: #555555;
     font-size: 0.85rem;
+  }
+
+  .rodape-base p {
+    color: #555555;
+    font-size: 0.85rem;
+  }
+
+  .link-dev {
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .link-dev:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
   }
 
   .redes-sociais {

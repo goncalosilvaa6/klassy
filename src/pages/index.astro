@@ -1,51 +1,46 @@
 ---
 // src/pages/index.astro
 import LayoutBase from "../layouts/LayoutBase.astro";
-import CartaoServico from "../components/CartaoServico.astro";
-import servicosData from "../data/servicos.json";
-
-// 1. Importar a ferramenta de Imagens do Astro
 import { Image } from "astro:assets";
 
-// 2. Importar os ficheiros reais
+// Importar os ficheiros reais de imagem
 import imgPrincipal from "../assets/foto.jpeg";
 import imgDetalhe from "../assets/foto.jpeg";
 import imgEspecialista from "../assets/foto.jpeg";
 import imgGaleria1 from "../assets/foto.jpeg";
 import imgGaleria2 from "../assets/foto.jpeg";
 import imgGaleria3 from "../assets/foto.jpeg";
-
-const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para manter a grelha simétrica
 ---
 
-<LayoutBase titulo="Estética e Beleza Avançada">
+<LayoutBase titulo="Estética e Beleza Avançada | Klassy">
   <section class="hero-moderno">
     <div class="hero-container">
-      <div class="hero-texto">
-        <span class="etiqueta-topo">Cuidado de Excelência</span>
-        <h1>Resultados excecionais, profissionais dedicados.</h1>
+      <div class="hero-texto animar-fade-up">
+        <span class="etiqueta-topo">O Seu Espaço de Beleza</span>
+        <h1>Realçamos a sua essência com detalhe e dedicação.</h1>
         <p>
-          Com técnicas avançadas e cuidado personalizado, revelamos a sua melhor
-          versão. Uma experiência de beleza atemporal e sem complicações.
+          Num ambiente acolhedor e sofisticado, unimos as melhores técnicas de
+          estética para renovar a sua autoestima. Uma experiência de puro
+          cuidado, beleza e bem-estar.
         </p>
         <div class="hero-botoes">
-          <a href="#agendar" class="botao-principal">Agende o seu Horário</a>
-          <a href="/servicos" class="botao-secundario">Ver Preçário</a>
+          <a href="/contactos" class="botao-principal">Agende o seu Horário</a>
+          <a href="/servicos" class="botao-secundario">Ver Serviços</a>
         </div>
       </div>
 
-      <div class="hero-imagens">
+      <div class="hero-imagens animar-fade-up-atraso">
         <div class="imagem-principal">
           <Image
             src={imgPrincipal}
-            alt="Profissional a realizar tratamento de estética na clínica"
+            alt="Profissional a realizar tratamento de estética no salão"
             class="foto-preenchimento"
           />
         </div>
         <div class="imagem-sobreposta">
           <Image
             src={imgDetalhe}
-            alt="Detalhe de um serviço de beleza e cuidado de pele"
+            alt="Detalhe de um serviço de beleza e cuidado pessoal"
             class="foto-preenchimento"
           />
         </div>
@@ -53,40 +48,61 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     </div>
   </section>
 
-  <section class="servicos-caixa">
-    <div class="cabecalho-seccao">
-      <h2>As Nossas Especialidades</h2>
-      <p>
-        A pele reflete a sua história. Nós ajudamos a escrever os próximos
-        capítulos com luminosidade.
-      </p>
-    </div>
+  <section class="sobre-especialista">
+    <div class="sobre-container">
+      <div class="sobre-imagem-wrapper">
+        <Image
+          src={imgEspecialista}
+          alt="Retrato da especialista fundadora do espaço"
+          class="foto-perfil"
+        />
+        <div class="selo-experiencia">
+          <span class="anos">+15</span>
+          <span class="texto-selo">Anos de<br />Experiência</span>
+        </div>
+      </div>
 
-    <div class="grelha-quatro">
-      {
-        servicosDestaque.map((servico) => (
-          <div class="caixa-servico">
-            <div class="icone-placeholder">✨</div>
-            <h3>{servico.nome}</h3>
-            <p class="desc-breve">
-              A sua beleza elevada ao próximo nível com resultados visíveis.
-            </p>
-            <div class="rodape-caixa">
-              <span class="preco-caixa">Desde {servico.preco}€</span>
-              <a href="#agendar" class="link-agendar">
-                Agendar <span class="seta">→</span>
-              </a>
-            </div>
-          </div>
-        ))
-      }
+      <div class="sobre-texto">
+        <h2>A arte de cuidar de si, pelas mãos de quem a compreende.</h2>
+        <p>
+          Sou a <strong>Sandra Silva</strong>, apaixonada por estética e
+          fundadora deste espaço. Acredito que a verdadeira beleza floresce
+          quando aliamos o conforto de um atendimento próximo à perfeição
+          técnica.
+        </p>
+        <p>
+          O meu compromisso é proporcionar-lhe um momento que é só seu. Com
+          produtos de excelência e um olhar atento a cada detalhe, trabalhamos
+          diariamente para que saia do nosso espaço com a confiança renovada e
+          um sorriso no rosto.
+        </p>
+
+        <ul class="lista-vantagens">
+          <li>
+            <span class="check">✓</span> Especialistas em Estética Integrada
+          </li>
+          <li>
+            <span class="check">✓</span> Produtos de Alta Gama e Qualidade
+          </li>
+          <li>
+            <span class="check">✓</span> Atendimento Único e Personalizado
+          </li>
+        </ul>
+
+        <a href="/sobre" class="botao-secundario mt-2"
+          >Conhecer o Nosso Espaço</a
+        >
+      </div>
     </div>
   </section>
 
   <section class="prova-social">
     <div class="cabecalho-seccao">
       <h2>O Que Dizem as Nossas Clientes</h2>
-      <p>Resultados reais, avaliados por quem confia em nós.</p>
+      <p>
+        Histórias reais de quem confia na Klassy para os seus momentos de
+        cuidado.
+      </p>
     </div>
 
     <div class="grelha-testemunhos">
@@ -96,8 +112,9 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
           <span class="etiqueta-google">G</span>
         </div>
         <p class="texto-avaliacao">
-          "A melhor limpeza de pele que já fiz. O espaço é imaculado e o
-          atendimento é super profissional. Recomendo de olhos fechados!"
+          "A melhor limpeza de pele que já fiz. O espaço é lindíssimo e super
+          acolhedor. O atendimento é muito profissional. Recomendo de olhos
+          fechados!"
         </p>
         <span class="nome-cliente">— Maria Santos</span>
       </div>
@@ -109,7 +126,8 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
         </div>
         <p class="texto-avaliacao">
           "Sou cliente de unhas de gel há 2 anos e o trabalho é sempre
-          impecável. Duram semanas sem levantar e o ambiente é fantástico."
+          impecável. Duram semanas sem levantar e o ambiente é fantástico para
+          relaxar."
         </p>
         <span class="nome-cliente">— Ana Rita Freitas</span>
       </div>
@@ -121,7 +139,8 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
         </div>
         <p class="texto-avaliacao">
           "Fiz depilação a laser e os resultados notaram-se logo na primeira
-          sessão. Zero dor e muita transparência nos preços."
+          sessão. Muito conforto no processo e uma simpatia incrível por parte
+          da equipa."
         </p>
         <span class="nome-cliente">— Joana Silva</span>
       </div>
@@ -129,7 +148,7 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
 
     <div class="accao-prova">
       <a
-        href="https://www.google.com/search?sca_esv=1a942b62e7423521&rlz=1C1CHBD_pt-PTPT1189PT1189&hl=pt-PT&biw=1920&bih=911&sxsrf=ANbL-n5Teg7ortdxjqtBHctLqmgB0z9sng:1780221856402&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXYJPMPWu2ZST8sIhuHPdCrTSMDBkHcDtWTHI9qfvAVoG_LL9Fe4KmFqU7r2ndQNGvJmH6yzTjfwEZsT0XiJBORSuMXZO_1bZQksnwU2Q0sLZ3Gl2pbJJNmw7hatzn385cMDl6Oy3iHL8iYcF1-RqCNh9lpVu8pqM5_5sVEXIgcrHuCpVA%3D%3D&q=Klassy+-+Nails,+Beauty+%26+Mind+-+Centro+de+Est%C3%A9tica+%7C+Tu%2B+Bonita+Cr%C3%ADticas&sa=X&ved=2ahUKEwi9gvyao-OUAxWYTKQEHeCjJC4Q0bkNegQIIhAI"
+        href="https://www.google.com/search?sca_esv=1a942b62e7423521&rlz=1C1CHBD_pt-PTPT1189PT1189&hl=pt-PT&sxsrf=ANbL-n4Cp2LcvoW29XzKLfMeW41OTmQIXA:1780437824670&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOXYJPMPWu2ZST8sIhuHPdCrTSMDBkHcDtWTHI9qfvAVoG_LL9Fe4KmFqU7r2ndQNGvJmH6yzTjfwEZsT0XiJBORSuMXZO_1bZQksnwU2Q0sLZ3Gl2pbJJNmw7hatzn385cMDl6Oy3iHL8iYcF1-RqCNh9lpVu8pqM5_5sVEXIgcrHuCpVA%3D%3D&q=Klassy+-+Nails,+Beauty+%26+Mind+-+Centro+de+Est%C3%A9tica+%7C+Tu%2B+Bonita+Cr%C3%ADticas&sa=X&ved=2ahUKEwiW7tXgx-mUAxVwg_0HHXsDCnkQ0bkNegQIKBAI&biw=1920&bih=911&dpr=1"
         target="_blank"
         rel="noopener noreferrer"
         class="botao-google"
@@ -139,76 +158,40 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     </div>
   </section>
 
-  <section class="sobre-especialista">
-    <div class="sobre-container">
-      <div class="sobre-imagem-wrapper">
-        <Image
-          src={imgEspecialista}
-          alt="Retrato da especialista fundadora da clínica"
-          class="foto-perfil"
-        />
-        <div class="selo-experiencia">
-          <span class="anos">+15</span>
-          <span class="texto-selo">Anos de<br />Experiência</span>
-        </div>
-      </div>
-
-      <div class="sobre-texto">
-        <h2>A arte de cuidar da sua pele não se delega a curiosos.</h2>
-        <p>
-          Sou a [Nome da Tua Mãe], fundadora da clínica. Acredito que a
-          verdadeira beleza começa com um atendimento onde a técnica impecável
-          se cruza com a atenção ao detalhe.
-        </p>
-        <p>
-          O meu compromisso é simples: não usamos tratamentos da moda que não
-          funcionam. Usamos ciência, produtos premium e honestidade para
-          garantir que sai desta porta com resultados reais e a confiança
-          renovada.
-        </p>
-
-        <ul class="lista-vantagens">
-          <li>✓ Profissionalismo Certificado</li>
-          <li>✓ Higiene e Segurança Rigorosas</li>
-          <li>✓ Acompanhamento Personalizado</li>
-        </ul>
-
-        <a href="#sobre" class="botao-secundario mt-2"
-          >Conhecer o Nosso Espaço</a
-        >
-      </div>
-    </div>
-  </section>
-
-  <!-- SECÇÃO GALERIA (O Portefólio Visual) -->
   <section class="galeria-trabalhos">
     <div class="galeria-container">
       <div class="galeria-texto">
-        <h2>Trabalho em Destaque</h2>
+        <h2>Inspire-se no Nosso Portefólio</h2>
         <p>
-          Percorra a nossa galeria e deixe-se inspirar pelos detalhes que fazem
-          a diferença. A sua beleza, elevada à perfeição.
+          Percorra a nossa galeria e descubra os detalhes que fazem a diferença.
+          Da manicura perfeita aos cuidados de corpo, o nosso foco é sempre a
+          sua melhor versão.
         </p>
-        <a
-          href="https://instagram.com/teulink"
-          target="_blank"
-          rel="noopener"
-          class="botao-secundario mt-2">Ver mais no Instagram</a
-        >
+        <div class="botoes-galeria">
+          <a href="/galeria" class="botao-principal mt-2"
+            >Ver Galeria Completa</a
+          >
+          <a
+            href="https://www.instagram.com/klassy.pt/"
+            target="_blank"
+            rel="noopener"
+            class="botao-secundario mt-2">Seguir no Instagram</a
+          >
+        </div>
       </div>
 
       <div class="galeria-grelha-imagens">
         <div class="foto-wrapper destaque-vertical">
           <Image
             src={imgGaleria1}
-            alt="Trabalho de estética facial detalhado"
+            alt="Trabalho de estética facial"
             class="foto-galeria"
           />
         </div>
         <div class="foto-wrapper">
           <Image
             src={imgGaleria2}
-            alt="Trabalho de manicure e unhas de gel"
+            alt="Trabalho de manicure"
             class="foto-galeria"
           />
         </div>
@@ -225,10 +208,31 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
 </LayoutBase>
 
 <style>
+  /* --- ANIMAÇÕES GLOBAIS (CSS PURO) --- */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animar-fade-up {
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  .animar-fade-up-atraso {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
+  }
+
   /* --- HERO MODERNO --- */
   .hero-moderno {
     background-color: var(--cor-fundo-suave);
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     overflow: hidden;
   }
 
@@ -237,7 +241,7 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
   }
 
@@ -248,68 +252,82 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     text-transform: uppercase;
     font-size: 0.8rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-texto h1 {
-    font-size: 3.5rem;
+    font-family: serif;
+    font-size: 3.8rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--cor-texto);
   }
 
   .hero-texto p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--cor-texto-suave);
     margin-bottom: 2.5rem;
     max-width: 90%;
+    line-height: 1.7;
   }
 
   .hero-botoes {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  /* Imagens Hero (Efeito Sobreposto) */
   .hero-imagens {
     position: relative;
-    height: 600px;
-  }
-
-  .placeholder-img {
-    background-color: #eaeaea;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    border: 1px dashed #ccc;
+    height: 650px;
   }
 
   .imagem-principal {
     position: absolute;
     top: 0;
     right: 0;
-    width: 80%;
-    height: 90%;
-    box-shadow: -20px 20px 0px var(--cor-destaque); /* O quadrado magenta atrás da foto */
+    width: 85%;
+    height: 85%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
+
+  .imagem-principal::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid var(--cor-destaque);
+    z-index: -1;
   }
 
   .imagem-sobreposta {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 55%;
-    height: 45%;
-    border: 10px solid var(--cor-fundo-suave); /* Borda para separar da imagem principal */
+    width: 50%;
+    height: 50%;
+    border: 12px solid var(--cor-fundo-suave);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   }
 
-  /* --- SECÇÃO SERVIÇOS CAIXA --- */
-  .servicos-caixa {
-    padding: 6rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  .foto-preenchimento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* --- SECÇÃO PROVA SOCIAL --- */
+  .prova-social {
+    padding: 7rem 2rem;
+    background-color: var(--cor-fundo-suave);
+    border-top: 1px solid #e6ebe8;
+    border-bottom: 1px solid #e6ebe8;
   }
 
   .cabecalho-seccao {
@@ -318,6 +336,7 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
   }
 
   .cabecalho-seccao h2 {
+    font-family: serif;
     font-size: 2.5rem;
     color: var(--cor-texto);
     margin-bottom: 1rem;
@@ -328,136 +347,46 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     font-style: italic;
   }
 
-  .grelha-quatro {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .caixa-servico {
-    border: 1px solid #eee;
-    padding: 2.5rem 1.5rem;
-    background: #fff;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-    border-bottom: 4px solid transparent;
-  }
-
-  .caixa-servico:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-    border-bottom: 4px solid var(--cor-destaque);
-  }
-
-  .icone-placeholder {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .caixa-servico h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-
-  .desc-breve {
-    font-size: 0.9rem;
-    color: var(--cor-texto-suave);
-    margin-bottom: 2rem;
-  }
-
-  .rodape-caixa {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #eee;
-    padding-top: 1rem;
-  }
-
-  .preco-caixa {
-    font-weight: bold;
-    color: var(--cor-texto);
-  }
-
-  .link-agendar {
-    color: var(--cor-destaque);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .link-agendar:hover .seta {
-    transform: translateX(5px);
-  }
-
-  .seta {
-    transition: transform 0.3s ease;
-  }
-
-  /* Responsividade */
-  @media (max-width: 900px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-    }
-    .hero-imagens {
-      height: 400px;
-    }
-    .hero-texto h1 {
-      font-size: 2.5rem;
-    }
-  }
-
-  .foto-preenchimento {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Isto corta a foto magicamente para caber na caixa sem a esmagar */
-    display: block;
-  }
-
-  /* --- SECÇÃO PROVA SOCIAL --- */
-  .prova-social {
-    padding: 5rem 2rem;
-    background-color: var(--cor-fundo-suave);
-    border-top: 1px solid #f0e6e8;
-  }
-
   .grelha-testemunhos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .cartao-testemunho {
     background: #ffffff;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-    position: relative;
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .cartao-testemunho:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
   }
 
   .estrelas {
-    color: #ffd700; /* Dourado clássico para estrelas de avaliação */
+    color: #c9a66b;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
     letter-spacing: 2px;
   }
 
   .texto-avaliacao {
     font-style: italic;
     color: var(--cor-texto-suave);
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    margin: 2rem 0;
+    line-height: 1.8;
   }
 
   .nome-cliente {
     font-weight: 700;
     color: var(--cor-destaque);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -466,17 +395,16 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
   }
 
   .etiqueta-google {
     font-weight: bold;
-    color: #4285f4; /* Azul oficial do Google */
+    color: #4285f4;
     font-family: serif;
     font-size: 1.2rem;
     background: #f1f3f4;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -485,29 +413,31 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
 
   .accao-prova {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
   .botao-google {
     display: inline-block;
-    background-color: transparent;
+    background-color: #fff;
     color: var(--cor-texto);
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.5rem;
     text-decoration: none;
-    font-weight: 700;
-    border: 2px solid #ddd;
+    font-weight: 600;
+    border: 1px solid #ddd;
     border-radius: 30px;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
   }
 
   .botao-google:hover {
-    border-color: var(--cor-texto);
-    background-color: #f9f9f9;
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
   }
 
   /* --- SECÇÃO SOBRE A ESPECIALISTA --- */
   .sobre-especialista {
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     background-color: var(--cor-fundo);
   }
 
@@ -516,7 +446,7 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 6rem;
     align-items: center;
   }
 
@@ -526,151 +456,210 @@ const servicosDestaque = servicosData.slice(0, 4); // Ajustado para 4 para mante
 
   .foto-perfil {
     width: 100%;
-    height: 550px;
+    height: 600px;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   }
 
   .selo-experiencia {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
+    bottom: -30px;
+    right: -30px;
     background-color: var(--cor-destaque);
     color: white;
     padding: 1.5rem;
     text-align: center;
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(230, 0, 126, 0.3);
+    box-shadow: 0 15px 30px rgba(119, 156, 133, 0.3);
+    transition: transform 0.4s ease;
+  }
+
+  .sobre-imagem-wrapper:hover .selo-experiencia {
+    transform: scale(1.05) rotate(5deg);
   }
 
   .selo-experiencia .anos {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 1;
   }
 
   .selo-experiencia .texto-selo {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.5rem;
   }
 
   .sobre-texto h2 {
-    font-size: 2.2rem;
+    font-family: serif;
+    font-size: 2.5rem;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: var(--cor-texto);
   }
 
   .sobre-texto p {
     color: var(--cor-texto-suave);
-    margin-bottom: 1.2rem;
-    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
 
   .lista-vantagens {
     list-style: none;
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 
   .lista-vantagens li {
-    font-weight: bold;
+    font-weight: 500;
     color: var(--cor-texto);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .check {
+    color: var(--cor-destaque);
+    font-weight: bold;
   }
 
   .mt-2 {
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 900px) {
-    .sobre-container {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-    .selo-experiencia {
-      bottom: -10px;
-      right: 10px;
-      width: 110px;
-      height: 110px;
-    }
-    .selo-experiencia .anos {
-      font-size: 1.5rem;
-    }
+    margin-top: 1.5rem;
   }
 
   /* --- SECÇÃO GALERIA --- */
-    .galeria-trabalhos {
-        padding: 6rem 2rem;
-        background-color: #ffffff;
-    }
+  .galeria-trabalhos {
+    padding: 8rem 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #f9f9f9;
+  }
 
+  .galeria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .galeria-texto h2 {
+    font-family: serif;
+    font-size: 2.8rem;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .galeria-texto p {
+    color: var(--cor-texto-suave);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .botoes-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .galeria-grelha-imagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .foto-wrapper {
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .foto-galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: block;
+  }
+
+  .foto-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(119, 156, 133, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .foto-wrapper:hover .foto-galeria {
+    transform: scale(1.08);
+  }
+
+  .foto-wrapper:hover::after {
+    opacity: 1;
+  }
+
+  .destaque-vertical {
+    grid-row: span 2;
+  }
+
+  /* RESPONSIVIDADE GLOBAL */
+  @media (max-width: 1024px) {
+    .hero-container,
+    .sobre-container,
     .galeria-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 4rem;
-        align-items: center;
+      gap: 3rem;
     }
-
-    .galeria-texto h2 {
-        font-size: 2.5rem;
-        color: var(--cor-texto);
-        margin-bottom: 1rem;
-        line-height: 1.1;
+    .hero-texto h1 {
+      font-size: 3rem;
     }
+  }
 
-    .galeria-texto p {
-        color: var(--cor-texto-suave);
-        margin-bottom: 2rem;
-        font-size: 1.05rem;
+  @media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: 1fr;
     }
-
-    .galeria-grelha-imagens {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+    .hero-imagens {
+      height: 500px;
     }
-
-    .foto-wrapper {
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    .hero-texto h1 {
+      font-size: 2.5rem;
     }
-
-    .foto-galeria {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-        display: block;
+    .hero-botoes {
+      flex-direction: column;
     }
-
-    /* Efeito de zoom ao passar o rato */
-    .foto-wrapper:hover .foto-galeria {
-        transform: scale(1.05);
+    .sobre-container {
+      grid-template-columns: 1fr;
     }
-
-    /* Faz a primeira foto ocupar duas linhas para um layout assimétrico e premium */
+    .selo-experiencia {
+      bottom: -15px;
+      right: 15px;
+      width: 120px;
+      height: 120px;
+    }
+    .selo-experiencia .anos {
+      font-size: 1.8rem;
+    }
+    .galeria-container {
+      grid-template-columns: 1fr;
+    }
     .destaque-vertical {
-        grid-row: span 2;
+      grid-row: span 1;
     }
-
-    @media (max-width: 900px) {
-        .galeria-container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        .destaque-vertical {
-            grid-row: span 1;
-        }
-    }
+  }
 </style>

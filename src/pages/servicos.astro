@@ -9,7 +9,7 @@ import imgAluguer from "../assets/foto.jpeg";
 
 <LayoutBase titulo="Menu de Serviços - Klassy">
   <!-- CABEÇALHO DA PÁGINA -->
-  <header class="cabecalho-servicos">
+  <header class="cabecalho-servicos animar-fade-up">
     <span class="etiqueta-topo">Serviços</span>
     <h1>
       Descubra mais acerca dos nossos<br />Tratamentos de Estética e Beleza
@@ -17,7 +17,7 @@ import imgAluguer from "../assets/foto.jpeg";
   </header>
 
   <!-- LISTA DE SERVIÇOS (2 Colunas) -->
-  <section class="menu-detalhado">
+  <section class="menu-detalhado animar-fade-up-atraso">
     <div class="coluna-servicos coluna-esq">
       <div class="bloco-servico">
         <h3>Depilação Laser de Díodo</h3>
@@ -29,7 +29,7 @@ import imgAluguer from "../assets/foto.jpeg";
       </div>
 
       <div class="bloco-servico">
-        <h3>Depilação Linha</h3>
+        <h3>Depilação à Linha</h3>
         <ul>
           <li>Sobrancelhas e Buço</li>
         </ul>
@@ -112,7 +112,7 @@ import imgAluguer from "../assets/foto.jpeg";
   </section>
 
   <!-- SECÇÃO ALUGUER DE ESPAÇO (Workshop) -->
-  <section class="aluguer-espaco">
+  <section class="aluguer-espaco animar-fade-up-atraso-2">
     <div class="imagem-fundo-wrapper">
       <Image
         src={imgAluguer}
@@ -126,33 +126,62 @@ import imgAluguer from "../assets/foto.jpeg";
       <span class="etiqueta-aluguer">Aluguer de Espaço</span>
       <h2>Sabia que...</h2>
       <p>Pode alugar a nossa sala de Workshop de Nails e Lash Lifting?</p>
-      <a href="#agendar" class="botao-principal">Contacte-nos</a>
+      <a href="/contactos" class="botao-principal">Contacte-nos</a>
     </div>
   </section>
 </LayoutBase>
 
 <style>
   /* ==========================================================
+       ANIMAÇÕES GLOBAIS (CSS PURO)
+       ========================================================== */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animar-fade-up {
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  .animar-fade-up-atraso {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s forwards;
+  }
+
+  .animar-fade-up-atraso-2 {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s forwards;
+  }
+
+  /* ==========================================================
        CABEÇALHO
        ========================================================== */
   .cabecalho-servicos {
     text-align: center;
-    padding: 5rem 2rem 3rem;
+    padding: 6rem 2rem 4rem;
     background-color: var(--cor-fundo);
   }
 
   .etiqueta-topo {
-    color: var(--cor-texto-suave);
+    color: var(--cor-destaque);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
   }
 
   .cabecalho-servicos h1 {
     font-family: serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--cor-texto);
     line-height: 1.2;
   }
@@ -163,7 +192,7 @@ import imgAluguer from "../assets/foto.jpeg";
   .menu-detalhado {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem 5rem;
+    padding: 0 2rem 6rem;
     display: flex;
     position: relative;
   }
@@ -183,51 +212,68 @@ import imgAluguer from "../assets/foto.jpeg";
   /* O traço fino a separar as colunas no meio */
   .divisor-vertical {
     width: 1px;
-    background-color: #e0e0e0;
+    background-color: #eaeaea;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
   .bloco-servico {
     padding: 1.5rem 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #eaeaea;
+    transition: transform 0.3s ease;
   }
 
-  /* Remove a borda do último elemento para ficar limpo */
+  /* Efeito subtil ao passar o rato no bloco do serviço */
+  .bloco-servico:hover {
+    transform: translateX(5px);
+  }
+
   .sem-borda {
     border-bottom: none;
   }
 
   .bloco-servico h3 {
     font-family: serif;
-    font-size: 1.2rem;
-    color: var(
-      --cor-texto
-    ); /* Substituímos o verde das fotos pelo nosso tom base para manter coerência */
+    font-size: 1.3rem;
+    color: var(--cor-texto);
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .bloco-servico:hover h3 {
+    color: var(--cor-destaque);
   }
 
   .bloco-servico ul {
-    list-style: none; /* Removemos a bolinha feia do browser */
+    list-style: none;
     padding-left: 0;
   }
 
   .bloco-servico li {
     color: var(--cor-texto-suave);
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     position: relative;
     padding-left: 1.2rem;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
   }
 
-  /* Criamos uma bolinha (bullet) customizada mais elegante */
+  /* Bolinha (bullet) customizada elegante */
   .bloco-servico li::before {
     content: "•";
-    color: var(--cor-destaque); /* A bolinha fica na cor da marca (magenta) */
+    color: var(--cor-destaque); /* A bolinha fica na cor Verde Sálvia */
     font-size: 1.2rem;
     position: absolute;
     left: 0;
     top: -2px;
+  }
+
+  /* Efeito de interatividade de luxo na lista */
+  .bloco-servico li:hover {
+    color: var(--cor-texto);
+    transform: translateX(4px);
   }
 
   /* ==========================================================
@@ -235,11 +281,12 @@ import imgAluguer from "../assets/foto.jpeg";
        ========================================================== */
   .aluguer-espaco {
     position: relative;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 500px;
+    overflow: hidden;
   }
 
   .imagem-fundo-wrapper {
@@ -255,52 +302,64 @@ import imgAluguer from "../assets/foto.jpeg";
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 10s ease; /* Efeito Ken Burns lento no fundo */
   }
 
-  /* Uma película semitransparente sobre a foto para o texto ser legível */
+  .aluguer-espaco:hover .foto-preenchimento {
+    transform: scale(1.05);
+  }
+
+  /* Película semitransparente CORRIGIDA PARA O TEMA SÁLVIA */
   .camada-escura {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(230, 180, 190, 0.4); /* Tom suave sobre a imagem */
+    background-color: rgba(
+      40,
+      55,
+      45,
+      0.7
+    ); /* Tom escuro e elegante de Verde */
     z-index: -1;
   }
 
   .caixa-aluguer {
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.95
-    ); /* Fundo branco com ligeira transparência */
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 4rem;
     text-align: center;
     max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: transform 0.4s ease;
+  }
+
+  .caixa-aluguer:hover {
+    transform: translateY(-5px);
   }
 
   .etiqueta-aluguer {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--cor-texto-suave);
+    letter-spacing: 2px;
+    color: var(--cor-destaque);
+    font-weight: 700;
   }
 
   .caixa-aluguer h2 {
     font-family: serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin: 1rem 0;
     color: var(--cor-texto);
   }
 
   .caixa-aluguer p {
-    font-size: 1.2rem;
-    color: var(--cor-texto);
-    margin-bottom: 2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   /* ==========================================================
@@ -309,8 +368,8 @@ import imgAluguer from "../assets/foto.jpeg";
   @media (max-width: 900px) {
     .menu-detalhado {
       flex-direction: column;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     .coluna-esq,
@@ -320,16 +379,24 @@ import imgAluguer from "../assets/foto.jpeg";
     }
 
     .divisor-vertical {
-      display: none; /* Esconde o traço vertical no telemóvel */
+      display: none;
     }
 
     .sem-borda-mobile {
-      border-bottom: 1px solid #e0e0e0; /* Repõe a borda que liga a coluna esquerda à direita no mobile */
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .cabecalho-servicos h1 {
+      font-size: 2.2rem;
     }
 
     .caixa-aluguer {
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem;
       width: 90%;
+    }
+
+    .caixa-aluguer h2 {
+      font-size: 2rem;
     }
   }
 </style>

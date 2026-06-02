@@ -1,67 +1,276 @@
 ---
 // src/components/Cabecalho.astro
 ---
-<header class="cabecalho-principal">
-    <div class="container-cabecalho">
-        <a href="/" class="logo">Klassy</a>
-        
-        <nav>
-            <ul class="menu">
-                <li><a href="/">Início</a></li>
-                <li><a href="/sobre">Sobre a Klassy</a></li>
-                <li><a href="/servicos">Serviços</a></li>
-                <li><a href="/galeria">Galeria</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-            </ul>
-        </nav>
 
-        <a href="#marcar" class="botao-principal botao-pequeno">Marcar</a>
+<header class="cabecalho-editorial">
+  <div class="container-cabecalho">
+    <input
+      type="checkbox"
+      id="menu-toggle"
+      class="checkbox-oculto"
+      aria-label="Abrir menu"
+    />
+
+    <label for="menu-toggle" class="icone-hamburguer">
+      <span class="linha"></span>
+      <span class="linha"></span>
+      <span class="linha"></span>
+    </label>
+
+    <nav class="nav-bloco nav-esq">
+      <a href="/">Início</a>
+      <a href="/sobre">A Klassy</a>
+    </nav>
+
+    <div class="bloco-centro">
+      <a href="/" class="logo-editorial">KLASSY</a>
     </div>
+
+    <nav class="nav-bloco nav-dir">
+      <a href="/servicos">Serviços</a>
+      <a href="/galeria">Portefólio</a>
+      <a href="/contactos" class="botao-nav-luxo">Agendar</a>
+    </nav>
+
+    <div class="menu-mobile-dropdown">
+      <a href="/">Início</a>
+      <a href="/sobre">A Clínica</a>
+      <a href="/servicos">Serviços e Preçário</a>
+      <a href="/galeria">Portefólio</a>
+      <a href="/contactos">Contactos</a>
+      <a href="/contactos" class="botao-mobile-destaque">Agendar Avaliação</a>
+    </div>
+  </div>
 </header>
 
 <style>
-    .cabecalho-principal {
-        background-color: var(--cor-fundo);
-        border-bottom: 1px solid #eaeaea;
-        position: sticky;
-        top: 0;
-        z-index: 100; /* Garante que o menu fica sempre por cima ao fazer scroll */
-    }
+  /* BASE DO CABEÇALHO */
+  .cabecalho-editorial {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.98
+    ); /* Fundo quase sólido para legibilidade */
+    backdrop-filter: blur(10px); /* Efeito de vidro moderno */
+    border-bottom: 1px solid rgba(119, 156, 133, 0.15); /* Linha ultra fina Verde Sálvia */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+  }
 
+  .container-cabecalho {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    position: relative;
+  }
+
+  /* O LOGÓTIPO CENTRAL */
+  .bloco-centro {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-editorial {
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    letter-spacing: 3px;
+    line-height: 1;
+    transition: transform 0.4s ease;
+  }
+
+  .logo-editorial:hover {
+    transform: scale(1.05);
+  }
+
+  /* OS BLOCOS DE NAVEGAÇÃO */
+  .nav-bloco {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-esq {
+    justify-content: flex-start;
+  }
+
+  .nav-dir {
+    justify-content: flex-end;
+  }
+
+  .nav-bloco a:not(.botao-nav-luxo) {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+  }
+
+  /* O Sublinhado Animado Premium */
+  .nav-bloco a:not(.botao-nav-luxo)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--cor-destaque);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateX(-50%);
+  }
+
+  .nav-bloco a:not(.botao-nav-luxo):hover {
+    color: var(--cor-destaque);
+  }
+
+  .nav-bloco a:not(.botao-nav-luxo):hover::after {
+    width: 100%;
+  }
+
+  /* BOTÃO DE AGENDAMENTO NO HEADER */
+  .botao-nav-luxo {
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+    padding: 0.6rem 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .botao-nav-luxo:hover {
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(119, 156, 133, 0.2);
+  }
+
+  /* ==========================================================
+       A MAGIA DO MENU MOBILE ZERO JAVASCRIPT
+       ========================================================== */
+  .checkbox-oculto {
+    display: none;
+  }
+
+  .icone-hamburguer {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    z-index: 1002; /* Fica acima de tudo para poder fechar o menu */
+  }
+
+  .icone-hamburguer .linha {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--cor-texto);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: left center;
+  }
+
+  .menu-mobile-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    transition:
+      max-height 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+      padding 0.6s ease;
+    border-top: 1px solid transparent;
+  }
+
+  .menu-mobile-dropdown a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    font-family: serif;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .botao-mobile-destaque {
+    margin-top: 2rem !important;
+    background-color: var(--cor-destaque);
+    color: #fff !important;
+    padding: 1rem 2rem;
+    font-family: var(--fonte-principal) !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* A LÓGICA DO CLIQUE CSS */
+  .checkbox-oculto:checked ~ .menu-mobile-dropdown {
+    max-height: 500px;
+    padding: 2rem 0 3rem;
+    border-top-color: rgba(119, 156, 133, 0.15);
+  }
+
+  /* Anima os links a aparecerem quando o menu abre */
+  .checkbox-oculto:checked ~ .menu-mobile-dropdown a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Anima o Hambúrguer para um "X" */
+  .checkbox-oculto:checked ~ .icone-hamburguer .linha:nth-child(1) {
+    transform: rotate(45deg) translate(-2px, -2px);
+  }
+  .checkbox-oculto:checked ~ .icone-hamburguer .linha:nth-child(2) {
+    opacity: 0;
+  }
+  .checkbox-oculto:checked ~ .icone-hamburguer .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(-2px, 2px);
+  }
+
+  /* RESPONSIVIDADE PARA TELEMÓVEIS / TABLETS */
+  @media (max-width: 950px) {
     .container-cabecalho {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
     }
 
-    .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--cor-destaque);
-        text-decoration: none;
+    .nav-esq,
+    .nav-dir {
+      display: none; /* Esconde o menu de computador */
     }
 
-    .menu {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
+    .icone-hamburguer {
+      display: flex; /* Mostra o ícone */
     }
 
-    .menu a {
-        text-decoration: none;
-        color: var(--cor-texto);
-        font-weight: 500;
+    .logo-editorial {
+      font-size: 1.8rem;
     }
-
-    .menu a:hover {
-        color: #000;
-    }
-
-    .botao-pequeno {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
+  }
 </style>
