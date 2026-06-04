@@ -5,48 +5,190 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 <LayoutBase titulo="Termos e Condições | Klassy">
   <section class="pagina-legal">
     <h1>Termos e Condições</h1>
+    <p class="intro-legal">Última atualização: Junho de 2026</p>
 
-    <h2>1. Marcações e Cancelamentos</h2>
-    <p>
-      Agradecemos que nos informe sobre qualquer cancelamento ou alteração de
-      marcação com pelo menos 24 horas de antecedência. Desta forma, conseguimos
-      gerir a nossa agenda de forma eficiente para todas as clientes.
+    <p class="nota-inicial">
+      Bem-vinda à <strong>Klassy</strong>. Ao agendar e usufruir dos nossos
+      serviços, concorda com os seguintes termos, criados para garantir que
+      todas as nossas clientes recebem um serviço de excelência, num ambiente
+      seguro e tranquilo.
     </p>
 
-    <h2>2. Pagamentos</h2>
+    <h2>1. Marcações, Cancelamentos e Faltas</h2>
     <p>
-      Os pagamentos devem ser efetuados no final de cada sessão, sendo aceite
-      o método de pagamento númerario. 
+      O nosso tempo é dedicado a si. Agradecemos que nos informe sobre qualquer
+      cancelamento ou alteração de marcação com, pelo menos, <strong
+        >24 horas de antecedência</strong
+      >. Desta forma, conseguimos reorganizar a nossa agenda e ceder o seu
+      horário a outra cliente.
+    </p>
+    <ul>
+      <li>
+        <strong>Faltas de comparência:</strong> Em caso de falta sem aviso prévio,
+        a Klassy reserva-se o direito de solicitar o pagamento antecipado de 50% do
+        valor do tratamento em futuras marcações.
+      </li>
+    </ul>
+
+    <h2>2. Pontualidade e Tolerância</h2>
+    <p>
+      Pedimos a gentileza de chegar <strong>5 minutos antes</strong> da hora marcada,
+      para que possa relaxar e preparar-se para o seu momento.
+    </p>
+    <ul>
+      <li>
+        Existe uma tolerância de atraso de <strong>15 minutos</strong>. Atrasos
+        superiores poderão implicar a redução do tempo útil do serviço
+        (mantendo-se o valor integral) ou, no limite, a necessidade de
+        remarcação, para não prejudicar as clientes seguintes.
+      </li>
+    </ul>
+
+    <h2>3. Pagamentos e Faturação</h2>
+    <p>Os pagamentos devem ser efetuados na íntegra no final de cada sessão.</p>
+    <ul>
+      <li>
+        <strong>Método de Pagamento:</strong> Atualmente, aceitamos pagamentos exclusivamente
+        em <strong>numerário</strong>. Agradecemos que venha prevenida para
+        evitar constrangimentos.
+      </li>
+      <li>
+        <strong>Faturação:</strong> Caso pretenda fatura com NIF, solicitamos que
+        nos informe no momento do pagamento para a correta emissão da mesma.
+      </li>
+    </ul>
+
+    <h2>4. Saúde, Segurança e Restrições</h2>
+    <p>
+      A sua saúde e segurança são a nossa maior prioridade. É da <strong
+        >exclusiva responsabilidade da cliente</strong
+      > informar a profissional, antes de qualquer procedimento, sobre:
+    </p>
+    <ul>
+      <li>Gravidez ou período de amamentação;</li>
+      <li>Alergias a cosméticos, produtos químicos ou metais;</li>
+      <li>
+        Condições médicas relevantes (ex: diabetes, problemas de pele, toma de
+        medicamentos fotossensibilizantes antes de sessões de laser).
+      </li>
+    </ul>
+    <p>
+      A Klassy reserva-se o direito de recusar a prestação de um serviço caso
+      considere que o mesmo representa um risco para a saúde da cliente.
     </p>
 
-    <h2>3. Pontualidade</h2>
+    <h2>5. Cheques-Oferta (Vouchers) e Campanhas</h2>
     <p>
-      Pedimos a gentileza de chegar 5 minutos antes da hora marcada. Atrasos
-      superiores a 15 minutos poderão implicar a redução do tempo do serviço ou
-      a necessidade de remarcação.
+      Os cheques-oferta adquiridos na clínica são o presente ideal, mas estão
+      sujeitos a regras de utilização:
+    </p>
+    <ul>
+      <li>
+        Têm a validade estipulada no próprio documento (geralmente 6 meses após
+        a data de emissão).
+      </li>
+      <li>Não são reembolsáveis nem convertíveis em dinheiro.</li>
+      <li>
+        A marcação do serviço está sujeita à disponibilidade de agenda, pelo que
+        aconselhamos a marcação com a devida antecedência.
+      </li>
+    </ul>
+
+    <h2>6. Menores de Idade</h2>
+    <p>
+      A prestação de serviços de estética avançada a menores de 18 anos requer a
+      autorização prévia, por escrito, ou a presença física de um dos pais ou
+      tutor legal no momento da primeira avaliação e tratamento.
+    </p>
+
+    <h2>7. Preços e Alterações</h2>
+    <p>
+      A Klassy reserva-se o direito de atualizar o seu preçário e os presentes
+      Termos e Condições a qualquer momento. As alterações de preço não afetarão
+      marcações já agendadas e confirmadas previamente.
+    </p>
+
+    <h2>8. Resolução de Litígios</h2>
+    <p>
+      Trabalhamos diariamente para a sua total satisfação. No entanto, em caso
+      de insatisfação, informamos que dispomos de Livro de Reclamações em
+      formato físico no nosso espaço e em formato digital, acessível através do <strong
+        ><a
+          href="https://www.livroreclamacoes.pt/"
+          target="_blank"
+          rel="noopener">Livro de Reclamações</a
+        ></strong
+      >.
     </p>
   </section>
 </LayoutBase>
 
 <style>
+  a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
   .pagina-legal {
-    max-width: 800px;
-    margin: 4rem auto;
+    max-width: 850px;
+    margin: 6rem auto;
     padding: 0 2rem;
   }
+
   h1 {
     font-family: serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+  }
+
+  .intro-legal {
+    font-size: 0.9rem;
+    color: #999;
     margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
+
+  .nota-inicial {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    font-weight: 500;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+  }
+
   h2 {
-    font-size: 1.3rem;
-    margin-top: 2rem;
+    font-size: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     color: var(--cor-destaque);
+    border-left: 3px solid var(--cor-destaque);
+    padding-left: 1rem;
   }
+
   p {
     color: var(--cor-texto-suave);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: var(--cor-texto-suave);
     line-height: 1.7;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+  }
+
+  strong {
+    color: var(--cor-texto);
   }
 </style>

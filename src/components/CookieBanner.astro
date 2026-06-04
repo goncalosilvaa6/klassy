@@ -1,0 +1,210 @@
+---
+// src/components/CookieBanner.astro
+---
+
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-conteudo">
+    <h4>A sua privacidade é importante</h4>
+    <p>
+      Utilizamos cookies essenciais para o funcionamento do site e, com o seu
+      consentimento, cookies analíticos para melhorar a sua experiência. Pode
+      ler mais na nossa
+      <a href="/privacidade" class="link-privacidade">Política de Privacidade</a
+      >.
+    </p>
+  </div>
+  <div class="cookie-botoes">
+    <button id="btn-aceitar-cookies" class="botao-cookie-primario"
+      >Aceitar Todos</button
+    >
+    <button id="btn-recusar-cookies" class="botao-cookie-secundario"
+      >Apenas Essenciais</button
+    >
+  </div>
+</div>
+
+<style>
+  /* ESTILOS DO BANNER DE LUXO */
+  .cookie-banner {
+    position: fixed;
+    bottom: -100%; /* Começa escondido fora do ecrã */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(119, 156, 133, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    z-index: 10001; /* Acima de tudo, até do WhatsApp */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: bottom 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  /* Classe ativada pelo JavaScript para mostrar o banner */
+  .cookie-banner.mostrar {
+    bottom: 2rem;
+  }
+
+  .cookie-conteudo h4 {
+    font-family: serif;
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cookie-conteudo p {
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .link-privacidade {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .link-privacidade:hover {
+    text-decoration: underline;
+  }
+
+  .cookie-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-width: 200px;
+  }
+
+  /* Botão Primário (Aceitar) */
+  .botao-cookie-primario {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--fonte-principal, sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .botao-cookie-primario:hover {
+    background-color: var(
+      --cor-destaque-hover,
+      #5f806a
+    ); /* Um tom mais escuro de Sálvia */
+    transform: translateY(-2px);
+  }
+
+  /* Botão Secundário (Recusar) */
+  .botao-cookie-secundario {
+    background-color: transparent;
+    color: var(--cor-texto-suave);
+    border: 1px solid #ccc;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--fonte-principal, sans-serif);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .botao-cookie-secundario:hover {
+    background-color: #f5f5f5;
+    color: var(--cor-texto);
+  }
+
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    .cookie-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .cookie-banner.mostrar {
+      bottom: 1rem;
+    }
+
+    .cookie-botoes {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  // 1. Variável de controlo para não carregar o Google Analytics múltiplas vezes
+  let analyticsCarregado = false;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookie-banner");
+    const btnAceitar = document.getElementById("btn-aceitar-cookies");
+    const btnRecusar = document.getElementById("btn-recusar-cookies");
+
+    // 2. FUNÇÃO QUE ATIVA O GOOGLE ANALYTICS NA PRÁTICA
+    const carregarScriptsAnaliticos = () => {
+      if (analyticsCarregado) return;
+
+      console.log("🟢 Consentimento dado: A carregar Google Analytics...");
+
+      // A. Injetar o ficheiro externo do Google
+      const scriptGA = document.createElement("script");
+      scriptGA.async = true;
+      scriptGA.src = "https://www.googletagmanager.com/gtag/js?id=G-CD48HF372K";
+      document.head.appendChild(scriptGA);
+
+      // B. Aceder à window de forma que o TypeScript aceite (usando 'as any')
+      const win = window as any;
+
+      if (typeof win.gtag === "function") {
+        win.gtag("config", "G-CD48HF372K");
+      }
+
+      analyticsCarregado = true;
+    };
+    // 3. VERIFICAÇÃO INICIAL (Ao carregar a página)
+    const consentimento = localStorage.getItem("consentimento_cookies_klassy");
+
+    if (consentimento === "todos") {
+      carregarScriptsAnaliticos();
+    } else if (!consentimento && banner) {
+      setTimeout(() => {
+        banner.classList.add("mostrar");
+      }, 500);
+    }
+
+    // 4. FUNÇÃO DO CLIQUE NOS BOTÕES
+    const fecharBanner = (escolha: string) => {
+      localStorage.setItem("consentimento_cookies_klassy", escolha);
+      banner?.classList.remove("mostrar");
+
+      if (escolha === "todos") {
+        carregarScriptsAnaliticos();
+      } else {
+        console.log("🔴 Consentimento recusado: Nenhum rastreamento ativado.");
+      }
+    };
+
+    if (btnAceitar && banner) {
+      btnAceitar.addEventListener("click", () => fecharBanner("todos"));
+    }
+
+    if (btnRecusar && banner) {
+      btnRecusar.addEventListener("click", () => fecharBanner("essenciais"));
+    }
+  });
+</script>

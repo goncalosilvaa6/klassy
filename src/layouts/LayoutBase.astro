@@ -3,15 +3,72 @@
 import "../styles/global.css";
 import Cabecalho from "../components/Cabecalho.astro";
 import Rodape from "../components/Rodape.astro";
+import CookieBanner from "../components/cookiebanner.astro";
 
 const { titulo } = Astro.props;
+const urlSite = "https://www.klassy.pt";
 ---
 
 <html lang="pt-PT">
   <head>
-    <meta charset="utf-8" />
+    <!-- Configurações Básicas e Técnicas -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Standard -->
     <title>{titulo}</title>
+    <meta
+      name="description"
+      content="Centro de estética de referência em Valongo desde 2006. Nails, Beauty & Mind dedicada à mulher moderna e exigente."
+    />
+    <meta
+      name="keywords"
+      content="unhas valongo, unhas de gel valongo, laser diodo 3 ondas, depilação laser valongo, massagens renata frança, estética avançada valongo"
+    />
+    <meta name="author" content="Klassy.pt" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+    <meta name="revisit-after" content="1 day" />
+
+    <!-- Open Graph / Facebook / WhatsApp (Como o link aparece ao ser partilhado) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={urlSite} />
+    <meta
+      property="og:title"
+      content="Klassy | Nails, Beauty & Mind em Valongo"
+    />
+    <meta
+      property="og:description"
+      content="Realçamos a sua essência com detalhe e dedicação. Estética Básica e Avançada."
+    />
+    <meta property="og:image" content={`${urlSite}/og-image.jpg`} />
+    <!-- Criar uma imagem 1200x630px na pasta public -->
+    <meta property="og:site_name" content="Klassy" />
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Klassy | Centro de Estética" />
+    <meta
+      name="twitter:description"
+      content="Especialistas em beleza e bem-estar em Valongo."
+    />
+
+    <!-- Favicon (O ícone que aparece na aba do browser) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Canonical URL (Evita conteúdo duplicado para o Google) -->
+    <link rel="canonical" href={urlSite} />
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      // Nota: O carregamento real é controlado apenas pelo CookieBanner.astro
+    </script>
   </head>
   <!-- 1. Adicionámos o ID topo para a âncora do botão funcionar -->
   <body id="topo">
@@ -36,6 +93,8 @@ const { titulo } = Astro.props;
         ></path>
       </svg>
     </a>
+
+    <CookieBanner />
 
     <a
       href="#topo"

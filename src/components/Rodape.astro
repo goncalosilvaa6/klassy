@@ -35,7 +35,7 @@ const anoAtual = new Date().getFullYear();
         <h4>Informação</h4>
         <nav>
           <a href="/termos">Termos e Condições</a>
-          <a href="/privacidade">Política de Privacidade</a>
+          <a href="/privacidade">Política de Privacidade e Cookies</a>
           <a
             href="https://www.livroreclamacoes.pt/"
             target="_blank"
@@ -46,8 +46,8 @@ const anoAtual = new Date().getFullYear();
 
       <div class="coluna-contacto">
         <h4>Linha Direta</h4>
-        <a href="mailto:geral@klassy.pt" class="link-destaque"
-          >geral@klassy.pt</a
+        <a href="mailto:klassypt@gmail.com" class="link-destaque"
+          >klassypt@gmail.com</a
         >
         <a href="tel:+351919786224" class="link-destaque">+351 919 786 224</a>
         <address>
@@ -58,16 +58,24 @@ const anoAtual = new Date().getFullYear();
     </div>
 
     <div class="rodape-base">
-      <p>
-        &copy; {anoAtual} Klassy. Desenvolvido por
-        <a
-          href="https://github.com/goncalosilvaa6"
-          target="_blank"
-          rel="noopener"
-          class="link-dev">Gonçalo Silva</a
-        >.
-      </p>
+      <!-- Agrupamos os textos do lado esquerdo -->
+      <div class="rodape-base-info">
+        <p>
+          &copy; {anoAtual} Klassy. Desenvolvido por
+          <a
+            href="https://github.com/goncalosilvaa6"
+            target="_blank"
+            rel="noopener"
+            class="link-dev">Gonçalo Silva</a
+          >.
+        </p>
+        <p class="identificacao-legal">
+          Klassy Nails, Beauty & Mind | NIF: 000 000 000 | Valongo, Portugal |
+          geral@klassy.pt
+        </p>
+      </div>
 
+      <!-- Redes sociais mantêm-se à direita -->
       <div class="redes-sociais">
         <a href="https://www.instagram.com/klassy.pt/">Instagram</a>
         <span class="ponto">•</span>
@@ -81,6 +89,18 @@ const anoAtual = new Date().getFullYear();
 
 <style>
   /* FUNDO E GLOW CORRIGIDO */
+  .rodape-base-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; /* Espaço pequenino e elegante entre os dois textos */
+  }
+  .identificacao-legal {
+    color: #555555; /* Um cinza ainda mais escuro para não roubar atenção */
+    font-size: 0.7rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
   .rodape-klassy-premium {
     position: relative;
     background-color: #0a0a0a; /* Preto profundo, muito suave */
