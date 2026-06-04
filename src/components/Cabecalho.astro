@@ -53,7 +53,7 @@
       0.98
     ); /* Fundo quase sólido para legibilidade */
     backdrop-filter: blur(10px); /* Efeito de vidro moderno */
-    border-bottom: 1px solid rgba(119, 156, 133, 0.15); /* Linha ultra fina Verde Sálvia */
+    border-bottom: 1px solid var(--cor-secundaria); /* Linha ultra fina Dourada */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -80,7 +80,7 @@
     font-family: serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--cor-destaque);
+    color: var(--cor-destaque); /* Mantém-se a usar o Rosa principal */
     text-decoration: none;
     letter-spacing: 3px;
     line-height: 1;
@@ -118,7 +118,7 @@
     transition: color 0.3s ease;
   }
 
-  /* O Sublinhado Animado Premium */
+  /* O Sublinhado Animado Premium (Rosa) */
   .nav-bloco a:not(.botao-nav-luxo)::after {
     content: "";
     position: absolute;
@@ -152,11 +152,11 @@
     letter-spacing: 1px;
     transition: all 0.3s ease;
   }
-
   .botao-nav-luxo:hover {
     background-color: var(--cor-destaque);
     color: #ffffff;
-    box-shadow: 0 5px 15px rgba(119, 156, 133, 0.2);
+    /* Sombra rosada suave adaptada ao novo destaque, em vez da antiga variável verde */
+    box-shadow: 0 5px 15px rgba(212, 49, 136, 0.25);
   }
 
   /* ==========================================================
@@ -232,7 +232,9 @@
   .checkbox-oculto:checked ~ .menu-mobile-dropdown {
     max-height: 500px;
     padding: 2rem 0 3rem;
-    border-top-color: rgba(119, 156, 133, 0.15);
+    border-top-color: var(
+      --cor-secundaria
+    ); /* Linha superior Dourada ao abrir o menu mobile */
   }
 
   /* Anima os links a aparecerem quando o menu abre */

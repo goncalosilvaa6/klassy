@@ -119,6 +119,7 @@ import img6 from "../assets/foto.jpeg";
   }
 
   .etiqueta {
+    /* A etiqueta do topo agora usa o Rosa Destaque */
     color: var(--cor-destaque);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -213,7 +214,8 @@ import img6 from "../assets/foto.jpeg";
 
   .detalhe {
     font-size: 0.85rem;
-    color: #e0e0e0;
+    /* Aqui usamos um toque de Dourado para os detalhes por baixo da categoria nas fotos */
+    color: var(--cor-secundaria);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -235,7 +237,7 @@ import img6 from "../assets/foto.jpeg";
     color: var(--cor-texto-suave);
   }
 
-  /* LIGHTBOX STYLES */
+  /* LIGHTBOX STYLES (A caixa preta quando clicas na foto) */
   #lightbox {
     position: fixed;
     top: 0;
@@ -285,6 +287,7 @@ import img6 from "../assets/foto.jpeg";
       transform 0.3s ease;
   }
 
+  /* Interatividade: O botão de fechar (X) roda e fica Rosa */
   #fechar-lightbox:hover {
     color: var(--cor-destaque);
     transform: rotate(90deg);

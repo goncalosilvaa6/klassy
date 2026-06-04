@@ -246,6 +246,7 @@ import imgGaleria3 from "../assets/foto.jpeg";
   }
 
   .etiqueta-topo {
+    /* Rosa principal para captar a atenção logo de início */
     color: var(--cor-destaque);
     font-weight: 700;
     letter-spacing: 2px;
@@ -299,7 +300,8 @@ import imgGaleria3 from "../assets/foto.jpeg";
     left: 15px;
     right: -15px;
     bottom: -15px;
-    border: 1px solid var(--cor-destaque);
+    /* Dourado na moldura traseira da foto para dar o toque premium */
+    border: 1px solid var(--cor-secundaria);
     z-index: -1;
   }
 
@@ -371,7 +373,9 @@ import imgGaleria3 from "../assets/foto.jpeg";
   }
 
   .estrelas {
-    color: #c9a66b;
+    color: var(
+      --cor-secundaria
+    ); /* Usa o teu novo dourado em vez do código antigo */
     font-size: 1.2rem;
     letter-spacing: 2px;
   }
@@ -466,6 +470,7 @@ import imgGaleria3 from "../assets/foto.jpeg";
     position: absolute;
     bottom: -30px;
     right: -30px;
+    /* Fica a Rosa Forte com sombra rosada escura */
     background-color: var(--cor-destaque);
     color: white;
     padding: 1.5rem;
@@ -476,7 +481,7 @@ import imgGaleria3 from "../assets/foto.jpeg";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 15px 30px rgba(119, 156, 133, 0.3);
+    box-shadow: 0 15px 30px rgba(212, 49, 136, 0.3);
     transition: transform 0.4s ease;
   }
 
@@ -527,6 +532,7 @@ import imgGaleria3 from "../assets/foto.jpeg";
   }
 
   .check {
+    /* Checks da lista também a Rosa */
     color: var(--cor-destaque);
     font-weight: bold;
   }
@@ -600,7 +606,8 @@ import imgGaleria3 from "../assets/foto.jpeg";
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(119, 156, 133, 0.1);
+    /* O "véu" que cai sobre as fotos agora usa o Dourado para o efeito de calor, substituindo o RGB do Verde */
+    background: rgba(224, 193, 90, 0.15);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;

@@ -9,7 +9,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     <div class="decor-text">KLASSY</div>
     <div class="header-grid">
       <div class="titulo-wrapper">
-        <nav class="bread">Início / Contactos</nav>
+        <nav class="bread">Contactos</nav>
         <h1>Onde a sua <em>Beleza</em> ganha uma morada.</h1>
       </div>
       <div class="apoio-wrapper">
@@ -243,7 +243,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 
   /* --- GRELHA DE INFORMAÇÃO PROFISSIONAL --- */
   .info-profissional-wrapper {
-    /* CORREÇÃO: Usar o fundo verde gelo suave que definimos no global.css */
+    /* Fundo Blush Suave que definimos no global.css */
     background-color: var(--cor-fundo-suave);
     padding: 6rem 10%;
   }
@@ -270,7 +270,8 @@ import LayoutBase from "../layouts/LayoutBase.astro";
   .icone-titulo svg {
     width: 32px;
     height: 32px;
-    color: var(--cor-destaque); /* Ícones agora assumem o verde da marca */
+    /* Ícones com o tom Dourado trazem mais requinte a esta página do que o Rosa puro */
+    color: var(--cor-secundaria);
     margin-bottom: 1rem;
     transition: transform 0.4s ease;
   }
@@ -356,7 +357,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     margin-top: 3rem;
   }
 
-  /* Botão de Ação */
+  /* Botão de Ação (Agendar / WhatsApp) */
   .botao-outline {
     display: inline-flex;
     align-items: center;
@@ -371,13 +372,13 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  /* Interatividade: Botão enche com a cor da marca e o ícone mexe */
+  /* Interatividade: Botão enche com o Rosa e a sombra adapta-se */
   .botao-outline:hover {
     border-color: var(--cor-destaque);
     background-color: var(--cor-destaque);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(119, 156, 133, 0.2);
+    box-shadow: 0 10px 20px rgba(212, 49, 136, 0.2); /* Sombra rosada subtil */
   }
 
   .botao-outline:hover svg {
@@ -419,13 +420,13 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito de mola */
   }
 
-  /* Interatividade: Círculos saltam ligeiramente */
+  /* Interatividade: Círculos saltam com o Rosa */
   .redes-circulos a:hover {
     border-color: var(--cor-destaque);
     color: #fff;
     background-color: var(--cor-destaque);
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(119, 156, 133, 0.3);
+    box-shadow: 0 5px 15px rgba(212, 49, 136, 0.25);
   }
 
   /* Linha de Separação */

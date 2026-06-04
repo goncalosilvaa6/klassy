@@ -1,16 +1,24 @@
 /* src/styles/global.css */
 :root {
---cor-fundo: #ffffff;
-    /* Substituímos o rosa bebé por um verde menta/gelo ultra pálido para os fundos das secções */
-    --cor-fundo-suave: #f2f7f4;
+    /* FUNDOS */
+    --cor-fundo: #ffffff;
+    /* Substituímos o verde menta por um tom "blush" ultra pálido e quente. 
+       É quase branco, mas tem uma gota microscópica de rosa/creme para não chocar com as novas cores. */
+    --cor-fundo-suave: #fdf7fa;
+
+    /* TEXTOS */
     --cor-texto: #2d2d2d;
     --cor-texto-suave: #666666;
 
-    /* O teu novo "Verde Claro Bonito" (Verde Sálvia Premium) */
-    --cor-destaque: #7ed19e;
+    /* COR PRINCIPAL (O Rosa do Logo) */
+    --cor-destaque: #d43188;
+    /* Um tom de rosa mais escuro/fechado para o efeito de passar o rato (Hover) nos botões */
+    --cor-destaque-hover: #ad256d;
 
-    /* Um tom mais escuro da mesma família para quando o rato passa por cima (Hover) */
-    --cor-destaque-hover: #3b634b;
+    /* COR SECUNDÁRIA (O Dourado do Logo) */
+    --cor-secundaria: #e0c15a;
+    /* Hover do dourado (ligeiramente mais mostarda/caramelo) */
+    --cor-secundaria-hover: #c4a647;
 
     --fonte-principal: system-ui, -apple-system, sans-serif;
 }

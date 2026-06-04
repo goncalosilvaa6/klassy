@@ -34,7 +34,8 @@
     max-width: 800px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(119, 156, 133, 0.2);
+    /* Borda subtil com o tom dourado (com muita transparência) */
+    border: 1px solid rgba(224, 193, 90, 0.3);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 2rem;
@@ -99,11 +100,10 @@
   }
 
   .botao-cookie-primario:hover {
-    background-color: var(
-      --cor-destaque-hover,
-      #5f806a
-    ); /* Um tom mais escuro de Sálvia */
+    background-color: var(--cor-destaque-hover);
     transform: translateY(-2px);
+    /* Sombra rosada suave adaptada à nova cor principal */
+    box-shadow: 0 5px 15px rgba(212, 49, 136, 0.25);
   }
 
   /* Botão Secundário (Recusar) */

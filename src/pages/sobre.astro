@@ -178,7 +178,7 @@ import imgSobre3 from "../assets/foto.jpeg";
     padding-left: 1.5rem;
   }
 
-  /* Linha decorativa verde sálvia ao lado dos valores */
+  /* Linha decorativa Rosa ao lado dos valores */
   .bloco-valor::before {
     content: "";
     position: absolute;
@@ -250,7 +250,7 @@ import imgSobre3 from "../assets/foto.jpeg";
   .sobre-filosofia {
     position: relative;
     padding: 8rem 2rem;
-    background-color: #faf9f6; /* Bege super claro que combina bem com o verde sálvia */
+    background-color: #ffffff; /* Ajustado para branco puro para combinar com a nova paleta */
   }
 
   /* Fundo dividido visualmente */
@@ -260,9 +260,7 @@ import imgSobre3 from "../assets/foto.jpeg";
     right: 0;
     width: 45%;
     height: 100%;
-    background-color: var(
-      --cor-fundo-suave
-    ); /* O nosso Verde Gelo/Menta pálido */
+    background-color: var(--cor-fundo-suave); /* O nosso fundo "Blush" pálido */
     z-index: 0;
   }
 
@@ -303,15 +301,16 @@ import imgSobre3 from "../assets/foto.jpeg";
     transform: translateY(-5px);
   }
 
-  /* A linha fina decorativa ao redor do texto - CORRIGIDA PARA VERDE SÁLVIA */
+  /* A linha fina decorativa ao redor do texto - CORRIGIDA PARA DOURADO */
   .borda-fina {
-    border: 1px solid rgba(119, 156, 133, 0.4); /* Linha Verde Sálvia subtil */
+    /* Linha Dourada com alguma transparência para não ficar berrante */
+    border: 1px solid rgba(224, 193, 90, 0.5);
     padding: 3.5rem 2.5rem;
     transition: border-color 0.4s ease;
   }
 
   .caixa-decorada:hover .borda-fina {
-    border-color: var(--cor-destaque);
+    border-color: var(--cor-secundaria);
   }
 
   .borda-fina h2 {

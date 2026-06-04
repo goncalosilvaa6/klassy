@@ -170,6 +170,7 @@ import imgAluguer from "../assets/foto.jpeg";
   }
 
   .etiqueta-topo {
+    /* Rosa Forte para a etiqueta */
     color: var(--cor-destaque);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -241,6 +242,7 @@ import imgAluguer from "../assets/foto.jpeg";
   }
 
   .bloco-servico:hover h3 {
+    /* O título dos serviços brilha a rosa ao passar o rato */
     color: var(--cor-destaque);
   }
 
@@ -263,7 +265,8 @@ import imgAluguer from "../assets/foto.jpeg";
   /* Bolinha (bullet) customizada elegante */
   .bloco-servico li::before {
     content: "•";
-    color: var(--cor-destaque); /* A bolinha fica na cor Verde Sálvia */
+    /* A bolinha fica na cor Dourada Secundária para não pesar demasiado em Rosa */
+    color: var(--cor-secundaria);
     font-size: 1.2rem;
     position: absolute;
     left: 0;
@@ -309,19 +312,15 @@ import imgAluguer from "../assets/foto.jpeg";
     transform: scale(1.05);
   }
 
-  /* Película semitransparente CORRIGIDA PARA O TEMA SÁLVIA */
+  /* Película semitransparente CORRIGIDA PARA O NOVO TEMA PREMIUM */
   .camada-escura {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(
-      40,
-      55,
-      45,
-      0.7
-    ); /* Tom escuro e elegante de Verde */
+    /* Tom escuro e neutro, garantindo que o Dourado e o Rosa da caixa brilham */
+    background-color: rgba(15, 15, 15, 0.75);
     z-index: -1;
   }
 
@@ -343,7 +342,8 @@ import imgAluguer from "../assets/foto.jpeg";
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--cor-destaque);
+    /* Etiqueta da caixa usa o Dourado para reforçar a ideia de exclusividade (workshop/aluguer) */
+    color: var(--cor-secundaria);
     font-weight: 700;
   }
 

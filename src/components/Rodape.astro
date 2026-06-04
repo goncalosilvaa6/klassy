@@ -92,10 +92,11 @@ const anoAtual = new Date().getFullYear();
   .rodape-base-info {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem; /* Espaço pequenino e elegante entre os dois textos */
+    gap: 0.4rem;
   }
+
   .identificacao-legal {
-    color: #555555; /* Um cinza ainda mais escuro para não roubar atenção */
+    color: #555555;
     font-size: 0.7rem;
     margin: 0;
     letter-spacing: 0.5px;
@@ -109,16 +110,17 @@ const anoAtual = new Date().getFullYear();
     margin-top: 5rem;
   }
 
+  /* O Glow agora usa o novo Rosa com opacidade ultra baixa */
   .glow-decorativo {
     position: absolute;
     top: -20%;
     left: -10%;
     width: 50vw;
     height: 50vw;
-    /* Alterado para corresponder ao verde #779c85 com opacidade muito baixa */
+    /* Substituído o RGB do verde pelo RGB do Rosa Destaque (212, 49, 136) */
     background: radial-gradient(
       circle,
-      rgba(119, 156, 133, 0.08) 0%,
+      rgba(212, 49, 136, 0.06) 0%,
       transparent 60%
     );
     z-index: 0;
@@ -152,9 +154,10 @@ const anoAtual = new Date().getFullYear();
     line-height: 1.1;
   }
 
+  /* Em itálico usamos o Dourado para dar um toque de requinte no fundo escuro */
   .texto-fluido em {
     font-family: serif;
-    color: var(--cor-destaque);
+    color: var(--cor-secundaria);
     font-style: italic;
   }
 
@@ -191,6 +194,7 @@ const anoAtual = new Date().getFullYear();
     font-size: 1.8rem;
     margin-bottom: 1rem;
     letter-spacing: 1px;
+    color: var(--cor-destaque); /* Nome da clínica no rodapé a rosa */
   }
 
   .coluna-marca p {

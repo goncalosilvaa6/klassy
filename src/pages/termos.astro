@@ -130,6 +130,11 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     font-size: 0.9rem;
     transition: color 0.3s ease;
   }
+
+  a:hover {
+    color: var(--cor-destaque);
+  }
+
   .pagina-legal {
     max-width: 850px;
     margin: 6rem auto;
@@ -165,7 +170,8 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     margin-top: 3rem;
     margin-bottom: 1rem;
     color: var(--cor-destaque);
-    border-left: 3px solid var(--cor-destaque);
+    /* A barra lateral a Dourado para coerência com a página de Privacidade */
+    border-left: 3px solid var(--cor-secundaria);
     padding-left: 1rem;
   }
 
@@ -190,5 +196,23 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 
   strong {
     color: var(--cor-texto);
+  }
+
+  .caixa-identificacao {
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.8;
+  }
+
+  .caixa-identificacao strong {
+    color: var(--cor-destaque);
+    font-size: 1.05rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
   }
 </style>
