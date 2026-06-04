@@ -1,18 +1,17 @@
 ---
-// src/pages/sobre.astro
-import LayoutBase from "../layouts/LayoutBase.astro";
+import LayoutBase from "../layouts/baselayout.astro";
 import { Image } from "astro:assets";
 
-// Importa as tuas imagens da pasta assets
 import imgSobre1 from "../assets/foto.jpeg";
 import imgSobre2 from "../assets/foto.jpeg";
 import imgSobre3 from "../assets/foto.jpeg";
 ---
 
-<LayoutBase titulo="Sobre a Klassy - O Seu Centro de Estética">
+<LayoutBase titulo="O Seu Centro de Estética - Klassy">
   <section class="sobre-intro">
     <div class="container-split">
       <div class="texto-intro animar-fade-up">
+        <span class="etiqueta-topo">A Nossa Essência</span>
         <h1>Sobre a Klassy</h1>
         <p class="destaque-texto">
           Criado por uma mulher apaixonada pela área, há <strong
@@ -140,7 +139,7 @@ import imgSobre3 from "../assets/foto.jpeg";
        SECÇÃO 1: INTRODUÇÃO E IMAGENS SOBREPOSTAS
        ========================================================== */
   .sobre-intro {
-    padding: 8rem 2rem 6rem;
+    padding: 6rem 2rem 6rem;
     background-color: var(--cor-fundo);
   }
 
@@ -151,6 +150,16 @@ import imgSobre3 from "../assets/foto.jpeg";
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
+  }
+
+  .etiqueta-topo {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
   }
 
   .texto-intro h1 {
@@ -250,7 +259,7 @@ import imgSobre3 from "../assets/foto.jpeg";
   .sobre-filosofia {
     position: relative;
     padding: 8rem 2rem;
-    background-color: #ffffff; /* Ajustado para branco puro para combinar com a nova paleta */
+    background-color: #ffffff;
   }
 
   /* Fundo dividido visualmente */
@@ -260,7 +269,7 @@ import imgSobre3 from "../assets/foto.jpeg";
     right: 0;
     width: 45%;
     height: 100%;
-    background-color: var(--cor-fundo-suave); /* O nosso fundo "Blush" pálido */
+    background-color: var(--cor-fundo-suave);
     z-index: 0;
   }
 
@@ -301,9 +310,7 @@ import imgSobre3 from "../assets/foto.jpeg";
     transform: translateY(-5px);
   }
 
-  /* A linha fina decorativa ao redor do texto - CORRIGIDA PARA DOURADO */
   .borda-fina {
-    /* Linha Dourada com alguma transparência para não ficar berrante */
     border: 1px solid rgba(224, 193, 90, 0.5);
     padding: 3.5rem 2.5rem;
     transition: border-color 0.4s ease;

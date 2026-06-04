@@ -1,14 +1,12 @@
 ---
-// src/pages/servicos.astro
-import LayoutBase from "../layouts/LayoutBase.astro";
+import LayoutBase from "../layouts/baselayout.astro";
 import { Image } from "astro:assets";
 
-// Importa a imagem de fundo para a secção de workshop
 import imgAluguer from "../assets/foto.jpeg";
 ---
 
-<LayoutBase titulo="Menu de Serviços - Klassy">
-  <!-- CABEÇALHO DA PÁGINA -->
+<LayoutBase titulo="Serviços - Klassy">
+  <!-- CABEÇALHO DA PÁGINA PADRONIZADO (Espaçamentos e Fontes alinhados com o site) -->
   <header class="cabecalho-servicos animar-fade-up">
     <span class="etiqueta-topo">Serviços</span>
     <h1>
@@ -126,7 +124,7 @@ import imgAluguer from "../assets/foto.jpeg";
       <span class="etiqueta-aluguer">Aluguer de Espaço</span>
       <h2>Sabia que...</h2>
       <p>Pode alugar a nossa sala de Workshop de Nails e Lash Lifting?</p>
-      <a href="/contactos" class="botao-principal">Contacte-nos</a>
+      <a href="/contact" class="botao-principal">Contacte-nos</a>
     </div>
   </section>
 </LayoutBase>
@@ -161,16 +159,16 @@ import imgAluguer from "../assets/foto.jpeg";
   }
 
   /* ==========================================================
-       CABEÇALHO
+       CABEÇALHO PADRONIZADO
        ========================================================== */
   .cabecalho-servicos {
     text-align: center;
-    padding: 6rem 2rem 4rem;
-    background-color: var(--cor-fundo);
+    /* Ajustado para o mesmo espaçamento (8rem topo) das outras páginas */
+    padding: 8rem 2rem 5rem;
+    background-color: var(--cor-fundo-suave);
   }
 
   .etiqueta-topo {
-    /* Rosa Forte para a etiqueta */
     color: var(--cor-destaque);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -182,7 +180,8 @@ import imgAluguer from "../assets/foto.jpeg";
 
   .cabecalho-servicos h1 {
     font-family: serif;
-    font-size: 2.8rem;
+    /* Aumentado de 2.8rem para 3.2rem para igualar as outras páginas */
+    font-size: 3.2rem;
     color: var(--cor-texto);
     line-height: 1.2;
   }
@@ -210,7 +209,6 @@ import imgAluguer from "../assets/foto.jpeg";
     padding-left: 3rem;
   }
 
-  /* O traço fino a separar as colunas no meio */
   .divisor-vertical {
     width: 1px;
     background-color: #eaeaea;
@@ -224,7 +222,6 @@ import imgAluguer from "../assets/foto.jpeg";
     transition: transform 0.3s ease;
   }
 
-  /* Efeito subtil ao passar o rato no bloco do serviço */
   .bloco-servico:hover {
     transform: translateX(5px);
   }
@@ -242,7 +239,6 @@ import imgAluguer from "../assets/foto.jpeg";
   }
 
   .bloco-servico:hover h3 {
-    /* O título dos serviços brilha a rosa ao passar o rato */
     color: var(--cor-destaque);
   }
 
@@ -262,10 +258,8 @@ import imgAluguer from "../assets/foto.jpeg";
       transform 0.3s ease;
   }
 
-  /* Bolinha (bullet) customizada elegante */
   .bloco-servico li::before {
     content: "•";
-    /* A bolinha fica na cor Dourada Secundária para não pesar demasiado em Rosa */
     color: var(--cor-secundaria);
     font-size: 1.2rem;
     position: absolute;
@@ -273,7 +267,6 @@ import imgAluguer from "../assets/foto.jpeg";
     top: -2px;
   }
 
-  /* Efeito de interatividade de luxo na lista */
   .bloco-servico li:hover {
     color: var(--cor-texto);
     transform: translateX(4px);
@@ -305,21 +298,19 @@ import imgAluguer from "../assets/foto.jpeg";
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 10s ease; /* Efeito Ken Burns lento no fundo */
+    transition: transform 10s ease;
   }
 
   .aluguer-espaco:hover .foto-preenchimento {
     transform: scale(1.05);
   }
 
-  /* Película semitransparente CORRIGIDA PARA O NOVO TEMA PREMIUM */
   .camada-escura {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Tom escuro e neutro, garantindo que o Dourado e o Rosa da caixa brilham */
     background-color: rgba(15, 15, 15, 0.75);
     z-index: -1;
   }
@@ -342,7 +333,6 @@ import imgAluguer from "../assets/foto.jpeg";
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /* Etiqueta da caixa usa o Dourado para reforçar a ideia de exclusividade (workshop/aluguer) */
     color: var(--cor-secundaria);
     font-weight: 700;
   }

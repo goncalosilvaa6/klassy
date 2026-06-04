@@ -1,9 +1,9 @@
 ---
 // src/layouts/LayoutBase.astro
 import "../styles/global.css";
-import Cabecalho from "../components/Cabecalho.astro";
-import Rodape from "../components/Rodape.astro";
-import CookieBanner from "../components/CookieBanner.astro";
+import Cabecalho from "../components/header.astro";
+import Rodape from "../components/footer.astro";
+import CookieBanner from "../components/cookiebanner.astro";
 
 const { titulo } = Astro.props;
 const urlSite = "https://www.klassy.pt";
@@ -11,12 +11,10 @@ const urlSite = "https://www.klassy.pt";
 
 <html lang="pt-PT">
   <head>
-    <!-- Configurações Básicas e Técnicas -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- SEO Standard -->
     <title>{titulo}</title>
     <meta
       name="description"
@@ -31,7 +29,6 @@ const urlSite = "https://www.klassy.pt";
     <meta name="language" content="Portuguese" />
     <meta name="revisit-after" content="1 day" />
 
-    <!-- Open Graph / Facebook / WhatsApp (Como o link aparece ao ser partilhado) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={urlSite} />
     <meta
@@ -43,23 +40,42 @@ const urlSite = "https://www.klassy.pt";
       content="Realçamos a sua essência com detalhe e dedicação. Estética Básica e Avançada."
     />
     <meta property="og:image" content={`${urlSite}/og-image.jpg`} />
-    <!-- Criar uma imagem 1200x630px na pasta public -->
     <meta property="og:site_name" content="Klassy" />
+    <meta property="og:locale" content="pt_PT" />
 
-    <!-- Twitter Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Klassy | Centro de Estética" />
     <meta
       name="twitter:description"
       content="Especialistas em beleza e bem-estar em Valongo."
     />
+    <meta name="twitter:image" content={`${urlSite}/og-image.jpg`} />
 
-    <!-- Favicon (O ícone que aparece na aba do browser) -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <!-- Canonical URL (Evita conteúdo duplicado para o Google) -->
     <link rel="canonical" href={urlSite} />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Klassy - Nails, Beauty & Mind",
+        "image": "https://www.klassy.pt/og-image.jpg",
+        "url": "https://www.klassy.pt",
+        "telephone": "+351919786224",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. 5 Outubro, 72 - Loja N | Edifício Vallis Longus",
+          "addressLocality": "Valongo",
+          "postalCode": "CÓDIGO POSTAL AQUI",
+          "addressRegion": "Porto",
+          "addressCountry": "PT"
+        },
+        "priceRange": "$$"
+      }
+    </script>
 
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -70,7 +86,6 @@ const urlSite = "https://www.klassy.pt";
       // Nota: O carregamento real é controlado apenas pelo CookieBanner.astro
     </script>
   </head>
-  <!-- 1. Adicionámos o ID topo para a âncora do botão funcionar -->
   <body id="topo">
     <Cabecalho />
 
@@ -193,7 +208,7 @@ const urlSite = "https://www.klassy.pt";
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(119, 156, 133, 0.4);
+    box-shadow: 0 5px 15px rgba(212, 49, 136, 0.4);
     z-index: 9999;
     transition:
       transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
@@ -232,17 +247,5 @@ const urlSite = "https://www.klassy.pt";
   }
 
   /* --- RESPONSIVIDADE TELEMÓVEL --- */
-  @media (max-width: 768px) {
-    .botao-whatsapp {
-      bottom: 1.5rem;
-      right: 1.5rem;
-      width: 55px;
-      height: 55px;
-    }
-
-    .botao-subir {
-      /* No telemóvel, escondemos o Voltar ao Topo. É inútil e polui o ecrã. */
-      display: none !important;
-    }
-  }
+  @media (max-width: 768px);
 </style>

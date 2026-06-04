@@ -1,9 +1,6 @@
-/* src/styles/global.css */
 :root {
     /* FUNDOS */
     --cor-fundo: #ffffff;
-    /* Substituímos o verde menta por um tom "blush" ultra pálido e quente. 
-       É quase branco, mas tem uma gota microscópica de rosa/creme para não chocar com as novas cores. */
     --cor-fundo-suave: #fdf7fa;
 
     /* TEXTOS */

@@ -1,31 +1,22 @@
 ---
-// src/pages/contactos.astro
-import LayoutBase from "../layouts/LayoutBase.astro";
+import LayoutBase from "../layouts/baselayout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<LayoutBase titulo="Contactos e Horários | Klassy">
-  <!-- 1. HEADER CRIATIVO (Mantido conforme pediste) -->
-  <section class="header-criativo">
-    <div class="decor-text">KLASSY</div>
-    <div class="header-grid">
-      <div class="titulo-wrapper">
-        <nav class="bread">Contactos</nav>
-        <h1>Onde a sua <em>Beleza</em> ganha uma morada.</h1>
-      </div>
-      <div class="apoio-wrapper">
-        <p>
-          Seja para um momento de cuidado pessoal ou para uma visão de parceria
-          estratégica, o nosso espaço está aberto para si.
-        </p>
-      </div>
-    </div>
-  </section>
+<LayoutBase titulo="Contactos e Horários - Klassy">
+  <!-- CABEÇALHO PADRONIZADO -->
+  <header class="cabecalho-contactos animar-fade-up">
+    <span class="etiqueta-topo">Contactos</span>
+    <h1>Onde a sua <em>Beleza</em> ganha uma morada.</h1>
+    <p>
+      Seja para um momento de cuidado pessoal ou para uma visão de parceria
+      estratégica, o nosso espaço está aberto para si.
+    </p>
+  </header>
 
-  <!-- 2. GRELHA DE INFORMAÇÃO PROFISSIONAL (Inspirada na referência) -->
   <section class="info-profissional-wrapper">
-    <div class="info-container">
+    <div class="info-container animar-fade-up-atraso">
       <div class="topo-info-grid">
-        <!-- COLUNA 1: Contactos -->
         <div class="coluna-dado">
           <div class="icone-titulo">
             <svg
@@ -56,7 +47,6 @@ import LayoutBase from "../layouts/LayoutBase.astro";
           </div>
         </div>
 
-        <!-- COLUNA 2: Horários -->
         <div class="coluna-dado">
           <div class="icone-titulo">
             <svg
@@ -73,12 +63,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
           </div>
 
           <div class="bloco-texto">
-            <h3>De terça a sexta-feira</h3>
-            <p>09h - 19h30</p>
-          </div>
-
-          <div class="bloco-texto">
-            <h3>Sábado</h3>
+            <h3>De terça a sábado</h3>
             <p>09h - 19h30</p>
           </div>
 
@@ -88,7 +73,6 @@ import LayoutBase from "../layouts/LayoutBase.astro";
           </div>
         </div>
 
-        <!-- COLUNA 3: Ação e Redes Sociais -->
         <div class="coluna-dado">
           <div class="bloco-texto">
             <h3 class="titulo-simples">Precisa de ajuda?</h3>
@@ -113,11 +97,28 @@ import LayoutBase from "../layouts/LayoutBase.astro";
             <div class="redes-circulos">
               <a
                 href="https://www.instagram.com/klassy.pt/"
-                aria-label="Instagram">IG</a
+                aria-label="Instagram"
               >
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="TikTok">TK</a>
-              <a href="#" aria-label="WhatsApp">WA</a>
+                <Icon
+                  name="fa6-brands:instagram"
+                  class="icone-social-circulo"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/klassy.pt"
+                aria-label="Facebook"
+              >
+                <Icon
+                  name="fa6-brands:facebook-f"
+                  class="icone-social-circulo"
+                />
+              </a>
+              <a href="https://www.tiktok.com/@klassypt" aria-label="TikTok">
+                <Icon name="fa6-brands:tiktok" class="icone-social-circulo" />
+              </a>
+              <a href="https://wa.me/351919786224" aria-label="WhatsApp">
+                <Icon name="fa6-brands:whatsapp" class="icone-social-circulo" />
+              </a>
             </div>
           </div>
         </div>
@@ -125,7 +126,6 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 
       <div class="linha-separadora"></div>
 
-      <!-- ZONA INFERIOR: Localização e Mapa -->
       <div class="fundo-info-grid">
         <div class="coluna-dado">
           <div class="icone-titulo">
@@ -143,7 +143,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
           </div>
 
           <div class="bloco-texto">
-            <h3>Klassy Estética Avançada</h3>
+            <h3>Klassy - Nails, Beauty & Mind</h3>
             <p>
               Av. 5 Outubro, 72 - Loja N | Edifício Vallis Longus<br />4440-503
               Valongo, Porto
@@ -188,64 +188,55 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     }
   }
 
-  /* HEADER CRIATIVO */
-  .header-criativo {
-    padding: 8rem 10% 4rem;
-    position: relative;
-    background: #ffffff;
-    overflow: hidden;
+  .animar-fade-up {
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
   }
 
-  .decor-text {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    font-size: 15rem;
-    font-weight: 900;
-    color: #f9f9f9;
-    z-index: 0;
-    pointer-events: none;
-    user-select: none;
-    animation: fadeUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  .animar-fade-up-atraso {
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s forwards;
   }
 
-  .header-grid {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    align-items: flex-end;
-    gap: 4rem;
-    animation: fadeUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  /* ==========================================================
+       CABEÇALHO PADRONIZADO
+       ========================================================== */
+  .cabecalho-contactos {
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+    background-color: var(--cor-fundo-suave);
   }
 
-  h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    max-width: 600px;
-    color: #222;
-  }
-
-  .bread {
-    font-size: 0.8rem;
+  .etiqueta-topo {
+    color: var(--cor-destaque);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #999;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
   }
 
-  .apoio-wrapper p {
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.6;
+  .cabecalho-contactos h1 {
+    font-family: serif;
+    font-size: 3.2rem;
+    color: var(--cor-texto);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .cabecalho-contactos p {
+    color: var(--cor-texto-suave);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   /* --- GRELHA DE INFORMAÇÃO PROFISSIONAL --- */
   .info-profissional-wrapper {
-    /* Fundo Blush Suave que definimos no global.css */
-    background-color: var(--cor-fundo-suave);
-    padding: 6rem 10%;
+    /* Ajustado para branco para contrastar com o cabeçalho blush */
+    background-color: var(--cor-fundo);
+    padding: 4rem 10% 8rem;
   }
 
   .info-container {
@@ -270,7 +261,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
   .icone-titulo svg {
     width: 32px;
     height: 32px;
-    /* Ícones com o tom Dourado trazem mais requinte a esta página do que o Rosa puro */
+    /* Ícones com o tom Dourado trazem requinte */
     color: var(--cor-secundaria);
     margin-bottom: 1rem;
     transition: transform 0.4s ease;
@@ -415,9 +406,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     border-radius: 50%;
     color: #444;
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito de mola */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   /* Interatividade: Círculos saltam com o Rosa */
@@ -427,6 +416,11 @@ import LayoutBase from "../layouts/LayoutBase.astro";
     background-color: var(--cor-destaque);
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 5px 15px rgba(212, 49, 136, 0.25);
+  }
+
+  .icone-social-circulo {
+    width: 18px;
+    height: 18px;
   }
 
   /* Linha de Separação */
@@ -462,12 +456,8 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 
   /* RESPONSIVIDADE */
   @media (max-width: 950px) {
-    .header-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .decor-text {
-      font-size: 8rem;
+    .cabecalho-contactos h1 {
+      font-size: 2.2rem;
     }
     .topo-info-grid {
       grid-template-columns: 1fr;

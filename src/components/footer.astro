@@ -1,5 +1,4 @@
 ---
-// src/components/Rodape.astro
 const anoAtual = new Date().getFullYear();
 ---
 
@@ -9,7 +8,7 @@ const anoAtual = new Date().getFullYear();
   <div class="container-rodape">
     <div class="rodape-cta">
       <h2 class="texto-fluido">A sua melhor versão <em>começa aqui.</em></h2>
-      <a href="/contactos" class="btn-rodape-luxo">Agendar serviço</a>
+      <a href="/contact" class="btn-rodape-luxo">Agendar serviço</a>
     </div>
 
     <div class="rodape-grelha">
@@ -24,18 +23,18 @@ const anoAtual = new Date().getFullYear();
       <div class="coluna-links">
         <h4>Navegação</h4>
         <nav>
-          <a href="/servicos">Serviços e Preçário</a>
-          <a href="/sobre">Sobre a Klassy</a>
-          <a href="/contactos">Contactos</a>
-          <a href="/galeria">Galeria de Resultados</a>
+          <a href="/about">Sobre a Klassy</a>
+          <a href="/services">Serviços</a>
+          <a href="/galery">Galeria de Resultados</a>
+          <a href="/contact">Contactos</a>
         </nav>
       </div>
 
       <div class="coluna-links">
         <h4>Informação</h4>
         <nav>
-          <a href="/termos">Termos e Condições</a>
-          <a href="/privacidade">Política de Privacidade e Cookies</a>
+          <a href="/terms">Termos e Condições</a>
+          <a href="/privacy_cookies">Política de Privacidade e Cookies</a>
           <a
             href="https://www.livroreclamacoes.pt/"
             target="_blank"
@@ -67,11 +66,10 @@ const anoAtual = new Date().getFullYear();
             target="_blank"
             rel="noopener"
             class="link-dev">Gonçalo Silva</a
-          >.
+          >
         </p>
         <p class="identificacao-legal">
-          Klassy Nails, Beauty & Mind | NIF: 000 000 000 | Valongo, Portugal |
-          geral@klassy.pt
+          Klassy Nails, Beauty & Mind | Valongo, Portugal | klassypt@gmail.com
         </p>
       </div>
 
@@ -79,9 +77,9 @@ const anoAtual = new Date().getFullYear();
       <div class="redes-sociais">
         <a href="https://www.instagram.com/klassy.pt/">Instagram</a>
         <span class="ponto">•</span>
-        <a href="#">Facebook</a>
+        <a href="https://www.facebook.com/klassy.pt">Facebook</a>
         <span class="ponto">•</span>
-        <a href="tel:+351919786224">WhatsApp</a>
+        <a href="https://wa.me/351919786224">WhatsApp</a>
       </div>
     </div>
   </div>
@@ -93,6 +91,15 @@ const anoAtual = new Date().getFullYear();
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+  }
+  .rodape-base-info a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  .rodape-base-info a:hover {
+    color: var(--cor-destaque);
   }
 
   .identificacao-legal {
