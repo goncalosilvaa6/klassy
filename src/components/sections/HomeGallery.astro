@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import imgGaleria1 from "../../assets/foto.jpeg";
+import imgGaleria2 from "../../assets/foto.jpeg";
+import imgGaleria3 from "../../assets/foto.jpeg";
+---
+
+<section class="py-24 sm:py-32 px-6 lg:px-12 bg-white border-t border-gray-100">
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center"
+  >
+    <!-- Coluna de Texto -->
+    <div class="lg:col-span-1 flex flex-col items-start text-left">
+      <h2
+        class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--cor-texto)] mb-6 leading-tight"
+      >
+        Inspire-se no Nosso Portefólio
+      </h2>
+      <p
+        class="text-[var(--cor-texto-suave)] mb-8 text-base sm:text-lg leading-relaxed"
+      >
+        Percorra a nossa galeria e descubra os detalhes que fazem a diferença.
+        Da manicura perfeita aos cuidados de corpo, o nosso foco é sempre a sua
+        melhor versão.
+      </p>
+      <div class="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto">
+        <a
+          href="/galery"
+          class="px-8 py-3.5 bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider rounded text-center transition-all duration-300 hover:-translate-y-0.5 shadow-md shadow-[rgba(212,49,136,0.2)]"
+        >
+          Ver Galeria Completa
+        </a>
+        <a
+          href="https://www.instagram.com/klassy.pt/"
+          target="_blank"
+          rel="noopener"
+          class="px-8 py-3.5 bg-transparent text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] border border-[var(--cor-secundaria)] hover:border-[var(--cor-destaque)] text-xs font-bold uppercase tracking-wider rounded text-center transition-all duration-300 hover:-translate-y-0.5"
+        >
+          Seguir no Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Coluna Grelha de Imagens -->
+    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div
+        class="sm:row-span-2 overflow-hidden rounded relative group aspect-[3/4] sm:aspect-auto"
+      >
+        <Image
+          src={imgGaleria1}
+          alt="Trabalho de estética facial"
+          class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
+        />
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded relative group aspect-[4/3]">
+        <Image
+          src={imgGaleria2}
+          alt="Trabalho de manicure"
+          class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
+        />
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded relative group aspect-[4/3]">
+        <Image
+          src={imgGaleria3}
+          alt="Tratamento corporal"
+          class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
+        />
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

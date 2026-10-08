@@ -1,0 +1,283 @@
+---
+import { Image } from "astro:assets";
+import imgPrincipal from "../../assets/foto.jpeg";
+import imgDetalhe from "../../assets/foto.jpeg";
+---
+
+<section
+  class="relative bg-[var(--cor-fundo-suave)] pt-14 lg:pt-20 overflow-hidden flex flex-col justify-between"
+>
+  <!-- GLOW DECORATIVO DE FUNDO -->
+  <div
+    class="absolute top-10 right-10 w-96 h-96 bg-[var(--cor-destaque)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+  <div
+    class="absolute top-1/2 left-0 w-80 h-80 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div
+    class="relative max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center pb-16 lg:pb-24 z-10"
+  >
+    <!-- LADO ESQUERDO: TEXTO, CTA & MÉTRICAS (7 COLUNAS) -->
+    <div class="lg:col-span-7 flex flex-col items-start text-left">
+      <!-- Tag / Eyebrow -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-6"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+        <span
+          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          O Seu Espaço de Beleza em Valongo
+        </span>
+      </div>
+
+      <!-- Título Principal -->
+      <h1
+        class="font-serif text-4xl sm:text-5xl lg:text-[3.75rem] text-[var(--cor-texto)] leading-[1.12] mb-6 tracking-tight"
+      >
+        Realçamos a sua <span class="italic text-[var(--cor-destaque)]"
+          >essência</span
+        > com detalhe e dedicação.
+      </h1>
+
+      <!-- Parágrafo de Apoio -->
+      <p
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] mb-9 max-w-xl leading-relaxed font-light"
+      >
+        Num ambiente acolhedor e exclusivo, combinamos técnicas de estética
+        avançada e atendimento personalizado para renovar a sua confiança todos
+        os dias.
+      </p>
+
+      <!-- BOTÕES DE CONTACTO -->
+      <div class="flex flex-wrap items-center gap-4 mb-12 w-full sm:w-auto">
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/351919786224"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[rgba(212,49,136,0.25)] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[rgba(212,49,136,0.35)]"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            class="w-4 h-4 fill-current transition-transform duration-300 group-hover:scale-110"
+          >
+            <path
+              d="M.057 24l1.687-6.163A11.867 11.867 0 0 1 .157 11.892C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.48 11.82 11.82 0 0 1 3.48 8.413c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.683-1.448L.057 24zm6.547-3.893l.36.214a9.87 9.87 0 0 0 5.086 1.393c5.449 0 9.885-4.434 9.888-9.884a9.82 9.82 0 0 0-2.893-6.994 9.82 9.82 0 0 0-6.988-2.898c-5.452 0-9.887 4.435-9.888 9.884 0 1.884.524 3.714 1.516 5.289l.235.374-.999 3.65 3.681-.984z"
+            ></path>
+          </svg>
+          <span>Marcar por WhatsApp</span>
+        </a>
+
+        <!-- Telemóvel -->
+        <a
+          href="tel:+351919786224"
+          class="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:-translate-y-0.5 hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)]"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            class="w-4 h-4 fill-none stroke-[var(--cor-secundaria)] group-hover:stroke-[var(--cor-destaque)] stroke-2 stroke-linecap-round stroke-linejoin-round transition-colors"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+          <span>+351 919 786 224</span>
+        </a>
+      </div>
+
+      <!-- MÉTRICAS EDITORIAIS COM SEPARADORES SUAVES -->
+      <div
+        class="grid grid-cols-3 gap-6 pt-6 border-t border-[var(--cor-secundaria)]/30 w-full max-w-lg"
+      >
+        <div class="flex flex-col">
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-texto-suave)] mb-1"
+          >
+            Desde
+          </span>
+          <span
+            class="font-serif text-3xl lg:text-4xl text-[var(--cor-texto)] tracking-tight"
+          >
+            2006
+          </span>
+        </div>
+
+        <div
+          class="flex flex-col border-l border-[var(--cor-secundaria)]/30 pl-6"
+        >
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-texto-suave)] mb-1"
+          >
+            Experiência
+          </span>
+          <span
+            class="font-serif text-3xl lg:text-4xl text-[var(--cor-texto)] tracking-tight"
+          >
+            19<span class="text-[var(--cor-destaque)] text-2xl font-sans"
+              >+</span
+            >
+          </span>
+        </div>
+
+        <div
+          class="flex flex-col border-l border-[var(--cor-secundaria)]/30 pl-6"
+        >
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-texto-suave)] mb-1"
+          >
+            Avaliação
+          </span>
+          <span
+            class="font-serif text-3xl lg:text-4xl text-[var(--cor-texto)] tracking-tight flex items-center gap-1"
+          >
+            5<span class="text-[var(--cor-secundaria)] text-2xl">★</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO: COMPOSIÇÃO DE FOTOS EDITORIAL (5 COLUNAS) -->
+    <div
+      class="lg:col-span-5 relative w-full flex items-center justify-center lg:justify-end"
+    >
+      <div class="relative w-full max-w-[420px] aspect-[4/5]">
+        <!-- Moldura Decorativa Dourada Traseira -->
+        <div
+          class="absolute -inset-3 border border-[var(--cor-secundaria)]/60 rounded-3xl -rotate-2 pointer-events-none"
+        >
+        </div>
+
+        <!-- Foto Principal -->
+        <div
+          class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white"
+        >
+          <Image
+            src={imgPrincipal}
+            alt="Centro de estética Klassy em Valongo"
+            class="w-full h-full object-cover block"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"
+          >
+          </div>
+        </div>
+
+        <!-- Foto de Detalhe Flutuante Sobreposta -->
+        <div
+          class="absolute -bottom-6 -left-8 sm:-left-12 w-44 sm:w-52 aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-2xl ring-1 ring-black/10"
+        >
+          <Image
+            src={imgDetalhe}
+            alt="Detalhe de cuidado e manicure"
+            class="w-full h-full object-cover block"
+          />
+        </div>
+
+        <!-- Selo de Excelência Minimalista -->
+        <div
+          class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm border border-[var(--cor-secundaria)]/40 rounded-full py-2 px-4 shadow-lg flex items-center gap-2"
+        >
+          <span class="text-[var(--cor-secundaria)] text-xs">✦</span>
+          <span
+            class="text-[11px] font-bold uppercase tracking-wider text-[var(--cor-texto)]"
+            >Garantia Klassy</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAIXA DE DISTINÇÃO & CONFIANÇA (REFINADA E INTEGRADA) -->
+  <div
+    class="w-full bg-white/80 backdrop-blur-md border-y border-[var(--cor-secundaria)]/35 py-6 px-6 shadow-[0_4px_30px_-5px_rgba(224,193,90,0.12)]"
+  >
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 items-center"
+    >
+      <!-- Bloco 1 -->
+      <div
+        class="flex items-center justify-start lg:justify-center gap-3.5 group"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-[var(--cor-secundaria)]/15 border border-[var(--cor-secundaria)]/30 flex items-center justify-center text-[var(--cor-secundaria)] text-sm shadow-sm transition-transform duration-300 group-hover:scale-110"
+          >✦</span
+        >
+        <div class="flex flex-col text-left">
+          <span
+            class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)]"
+            >Tradição</span
+          >
+          <span
+            class="text-xs sm:text-sm font-serif font-medium text-[var(--cor-texto)]"
+            >Em Valongo desde 2006</span
+          >
+        </div>
+      </div>
+
+      <!-- Bloco 2 -->
+      <div
+        class="flex items-center justify-start lg:justify-center gap-3.5 group lg:border-l lg:border-[var(--cor-secundaria)]/25"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-sm shadow-sm transition-transform duration-300 group-hover:scale-110"
+          >💅</span
+        >
+        <div class="flex flex-col text-left">
+          <span
+            class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)]"
+            >Especialidade</span
+          >
+          <span
+            class="text-xs sm:text-sm font-serif font-medium text-[var(--cor-texto)]"
+            >Unhas de gel e nail art</span
+          >
+        </div>
+      </div>
+
+      <!-- Bloco 3 -->
+      <div
+        class="flex items-center justify-start lg:justify-center gap-3.5 group lg:border-l lg:border-[var(--cor-secundaria)]/25"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-[var(--cor-secundaria)]/15 border border-[var(--cor-secundaria)]/30 flex items-center justify-center text-[var(--cor-secundaria)] text-sm shadow-sm transition-transform duration-300 group-hover:scale-110"
+          >★</span
+        >
+        <div class="flex flex-col text-left">
+          <span
+            class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)]"
+            >Avaliação</span
+          >
+          <span
+            class="text-xs sm:text-sm font-serif font-medium text-[var(--cor-texto)]"
+            >Atendimento cinco estrelas</span
+          >
+        </div>
+      </div>
+
+      <!-- Bloco 4 -->
+      <div
+        class="flex items-center justify-start lg:justify-center gap-3.5 group lg:border-l lg:border-[var(--cor-secundaria)]/25"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-sm shadow-sm transition-transform duration-300 group-hover:scale-110"
+          >✧</span
+        >
+        <div class="flex flex-col text-left">
+          <span
+            class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)]"
+            >Compromisso</span
+          >
+          <span
+            class="text-xs sm:text-sm font-serif font-medium text-[var(--cor-texto)]"
+            >Tu+ bonita, todos os dias</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
