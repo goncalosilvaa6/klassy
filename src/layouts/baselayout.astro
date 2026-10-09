@@ -38,7 +38,6 @@ const imagemCompleta = new URL(imagem, urlSite).href;
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- OPEN GRAPH (FACEBOOK, WHATSAPP, LINKEDIN) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={titulo} />
@@ -47,19 +46,16 @@ const imagemCompleta = new URL(imagem, urlSite).href;
     <meta property="og:site_name" content="Klassy" />
     <meta property="og:locale" content="pt_PT" />
 
-    <!-- TWITTER / X CARDS -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={titulo} />
     <meta name="twitter:description" content={descricao} />
     <meta name="twitter:image" content={imagemCompleta} />
 
-    <!-- ICONS & TEMA -->
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- SCHEMA.ORG (SEO LOCAL PARA O GOOGLE MAPS & PESQUISA) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -86,7 +82,6 @@ const imagemCompleta = new URL(imagem, urlSite).href;
       }
     </script>
 
-    <!-- GOOGLE ANALYTICS (INICIALIZAÇÃO SEGURA DO DATALAYER) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       window.gtag = function () {
@@ -100,23 +95,17 @@ const imagemCompleta = new URL(imagem, urlSite).href;
     id="topo"
     class="bg-white text-[var(--cor-texto)] antialiased min-h-screen flex flex-col selection:bg-[var(--cor-destaque)]/20 selection:text-[var(--cor-destaque)]"
   >
-    <!-- CABEÇALHO GLOBAL -->
     <Header />
 
-    <!-- CONTEÚDO PRINCIPAL DAS PÁGINAS -->
     <main class="flex-1 w-full">
       <slot />
     </main>
 
-    <!-- RODAPÉ GLOBAL -->
     <Footer />
-
-    <!-- BANNER DE COOKIES -->
     <CookieBanner />
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a
-      href="https://wa.me/351919786224?text=Ol%C3%A1!+Gostaria+de+marcar+um+hor%C3%A1rio+na+Klassy."
+      href="https://wa.me/351919786224?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+marca%C3%A7%C3%A3o(escreva+aqui)"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
@@ -135,7 +124,6 @@ const imagemCompleta = new URL(imagem, urlSite).href;
       </svg>
     </a>
 
-    <!-- BOTÃO FLUTUANTE VOLTAR AO TOPO -->
     <a
       href="#topo"
       id="btn-voltar-topo"
@@ -150,7 +138,6 @@ const imagemCompleta = new URL(imagem, urlSite).href;
       </svg>
     </a>
 
-    <!-- SCRIPT DO SCROLL DO BOTÃO TOPO -->
     <script>
       const gerirBotaoTopo = () => {
         const btnTopo = document.getElementById("btn-voltar-topo");

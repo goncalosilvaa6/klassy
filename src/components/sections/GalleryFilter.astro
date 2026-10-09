@@ -57,7 +57,6 @@
 </nav>
 
 <script>
-  // Script para troca de estilo ativo nos botões de filtro
   const botoes = document.querySelectorAll<HTMLButtonElement>(".filtro-btn");
   const itens = document.querySelectorAll<HTMLElement>("[data-category]");
 
@@ -65,7 +64,6 @@
     botao.addEventListener("click", () => {
       const filtro = botao.getAttribute("data-filter");
 
-      // Atualiza o visual dos botões
       botoes.forEach((b) => {
         b.classList.remove("bg-[var(--cor-destaque)]", "text-white");
         b.classList.add(
@@ -83,7 +81,6 @@
       );
       botao.classList.add("bg-[var(--cor-destaque)]", "text-white");
 
-      // Filtra os itens da grelha
       itens.forEach((item) => {
         const categoria = item.getAttribute("data-category");
         if (filtro === "all" || categoria === filtro) {

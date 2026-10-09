@@ -2,130 +2,63 @@
 import LayoutBase from "../layouts/BaseLayout.astro";
 ---
 
-<LayoutBase titulo="Página Não Encontrada | Klassy">
-  <section class="erro-404">
-    <div class="container-404">
-      <h1 class="codigo-erro">404</h1>
-      <h2 class="titulo-erro">Página não encontrada</h2>
-      <p class="texto-erro">
-        O link que tentou aceder não existe ou foi alterado. Não deixe que isso
-        atrapalhe o seu momento de cuidado.
+<LayoutBase titulo="Página Não Encontrada · 404 - Klassy">
+  <main
+    class="relative min-h-[75vh] flex items-center justify-center bg-[var(--cor-fundo-suave)] py-16 px-6 overflow-hidden"
+  >
+    <div
+      class="absolute top-1/4 -left-20 w-80 h-80 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute bottom-1/4 -right-20 w-80 h-80 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none"
+    >
+    </div>
+
+    <div
+      class="relative z-10 max-w-lg mx-auto text-center flex flex-col items-center"
+    >
+
+      <span
+        class="font-serif text-8xl sm:text-9xl font-light text-[var(--cor-destaque)] tracking-tight leading-none mb-3 select-none"
+      >
+        404
+      </span>
+
+      <h1
+        class="font-serif text-2xl sm:text-3xl lg:text-4xl text-[var(--cor-texto)] mb-4 leading-snug"
+      >
+        Esta página não foi <span class="italic text-[var(--cor-destaque)]"
+          >encontrada</span
+        >
+      </h1>
+
+      <p
+        class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light leading-relaxed max-w-md mx-auto mb-10"
+      >
+        O endereço que tentou aceder pode ter sido alterado ou já não estar
+        disponível. Não deixe que isso interrompa o seu momento de cuidado.
       </p>
-      <div class="botoes-404">
-        <a href="/" class="btn-primario">Voltar ao Início</a>
-        <a href="/contact" class="btn-secundario">Agendar Serviço</a>
+
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto"
+      >
+        <a
+          href="/"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[rgba(212,49,136,0.25)] hover:shadow-lg hover:-translate-y-0.5"
+        >
+          <span>← Voltar ao Início</span>
+        </a>
+
+        <a
+          href="https://wa.me/351919786224?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+marca%C3%A7%C3%A3o(escreva+aqui)"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5"
+        >
+          <span>Agendar Marcação</span>
+        </a>
       </div>
     </div>
-  </section>
+  </main>
 </LayoutBase>
-
-<style>
-  .erro-404 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-    background-color: var(--cor-fundo-suave);
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-
-  .container-404 {
-    max-width: 600px;
-    animation: fadeUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .codigo-erro {
-    font-family: serif;
-    font-size: 8rem;
-    line-height: 1;
-    color: var(--cor-destaque);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 10px 30px rgba(212, 49, 136, 0.15);
-  }
-
-  .titulo-erro {
-    font-size: 2rem;
-    color: var(--cor-texto);
-    margin-bottom: 1.5rem;
-  }
-
-  .texto-erro {
-    color: var(--cor-texto-suave);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 3rem;
-  }
-
-  .botoes-404 {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primario,
-  .btn-secundario {
-    padding: 1rem 2.5rem;
-    border-radius: 4px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-primario {
-    background-color: var(--cor-destaque);
-    color: white;
-    border: 1px solid var(--cor-destaque);
-  }
-
-  .btn-primario:hover {
-    background-color: var(--cor-destaque-hover);
-    border-color: var(--cor-destaque-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 49, 136, 0.2);
-  }
-
-  .btn-secundario {
-    background-color: transparent;
-    color: var(--cor-texto);
-    border: 1px solid var(--cor-secundaria);
-  }
-
-  .btn-secundario:hover {
-    color: var(--cor-destaque);
-    border-color: var(--cor-destaque);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 600px) {
-    .codigo-erro {
-      font-size: 6rem;
-    }
-    .titulo-erro {
-      font-size: 1.6rem;
-    }
-    .botoes-404 {
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .btn-primario,
-    .btn-secundario {
-      width: 100%;
-    }
-  }
-</style>

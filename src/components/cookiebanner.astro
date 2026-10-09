@@ -7,7 +7,6 @@
   class="fixed z-[9999] bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl bg-white/95 backdrop-blur-md p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/35 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 transition-all duration-700 ease-out translate-y-36 opacity-0 pointer-events-none"
   role="alert"
 >
-  <!-- TEXTO & PRIVACIDADE -->
   <div class="text-center md:text-left flex-1">
     <div class="inline-flex items-center gap-2 mb-1.5">
       <span class="text-sm">🍪</span>
@@ -33,11 +32,9 @@
     </p>
   </div>
 
-  <!-- BOTÕES DE CONSENTIMENTO EM PÍLULA -->
   <div
     class="flex flex-col sm:flex-row md:flex-col gap-2.5 w-full md:w-auto shrink-0 min-w-[200px]"
   >
-    <!-- Aceitar Todos -->
     <button
       id="btn-aceitar-cookies"
       type="button"
@@ -46,7 +43,6 @@
       Aceitar Todos
     </button>
 
-    <!-- Apenas Essenciais -->
     <button
       id="btn-recusar-cookies"
       type="button"
@@ -65,7 +61,6 @@
     const btnAceitar = document.getElementById("btn-aceitar-cookies");
     const btnRecusar = document.getElementById("btn-recusar-cookies");
 
-    // 1. CARREGAMENTO DO GOOGLE ANALYTICS
     const carregarScriptsAnaliticos = () => {
       if (analyticsCarregado) return;
 
@@ -84,7 +79,6 @@
       analyticsCarregado = true;
     };
 
-    // 2. VERIFICAÇÃO DO CONSENTIMENTO GUARDADO
     const consentimento = localStorage.getItem("consentimento_cookies_klassy");
 
     if (consentimento === "todos") {
@@ -104,7 +98,6 @@
       }, 700);
     }
 
-    // 3. REGISTO DA ESCOLHA E ANIMAÇÃO DE SAÍDA
     const fecharBanner = (escolha: string) => {
       localStorage.setItem("consentimento_cookies_klassy", escolha);
 
@@ -134,7 +127,6 @@
     btnRecusar?.addEventListener("click", () => fecharBanner("essenciais"));
   };
 
-  // Suporte a carregamento inicial e View Transitions do Astro
   document.addEventListener("DOMContentLoaded", iniciarCookieBanner);
   document.addEventListener("astro:page-load", iniciarCookieBanner);
 </script>
