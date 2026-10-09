@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import imgFundadora from "../../assets/foto.jpeg";
+---
+
+<section
+  class="relative py-24 sm:py-32 px-6 lg:px-12 bg-white overflow-hidden border-b border-[var(--cor-secundaria)]/15"
+>
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center"
+  >
+    <div class="lg:col-span-5 relative w-full flex items-center justify-center">
+      <div class="relative w-full max-w-[420px] aspect-[4/5]">
+        <div
+          class="absolute -inset-3 border border-[var(--cor-secundaria)]/60 rounded-3xl rotate-1 pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white"
+        >
+          <Image
+            src={imgFundadora}
+            alt="Sandra Silva - Fundadora da Klassy"
+            class="w-full h-full object-cover block"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"
+          >
+          </div>
+        </div>
+
+        <div
+          class="absolute -bottom-6 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md border border-[var(--cor-secundaria)]/50 py-3.5 px-5 rounded-2xl shadow-xl flex items-center gap-3.5"
+        >
+          <div
+            class="text-right border-r border-[var(--cor-secundaria)]/30 pr-3.5"
+          >
+            <span
+              class="font-serif text-3xl text-[var(--cor-texto)] font-normal leading-none"
+              >19+</span
+            >
+            <span
+              class="block text-[9px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)] mt-0.5"
+              >Anos</span
+            >
+          </div>
+          <div class="text-left leading-tight">
+            <span
+              class="text-xs font-serif font-medium text-[var(--cor-texto)] block"
+              >Mãos que</span
+            >
+            <span
+              class="text-xs font-serif font-semibold text-[var(--cor-destaque)] block"
+              >Compreendem</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 flex flex-col items-start text-left">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-secundaria)]/15 border border-[var(--cor-secundaria)]/35 mb-6"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-secundaria)]"
+        ></span>
+        <span
+          class="text-[var(--cor-texto)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          A Alma por trás do Espaço
+        </span>
+      </div>
+
+      <h2
+        class="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] text-[var(--cor-texto)] leading-[1.2] mb-6 tracking-tight"
+      >
+        "A verdadeira beleza floresce quando a técnica se une à proximidade
+        humana."
+      </h2>
+
+      <p
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] leading-relaxed font-light mb-5"
+      >
+        Sou a <strong
+          class="text-[var(--cor-texto)] font-semibold border-b border-[var(--cor-destaque)]/40 pb-0.5"
+          >Sandra Silva</strong
+        >. Quando iniciei este caminho há quase duas décadas, o meu objetivo foi
+        claro: construir um espaço em Valongo onde cada mulher se sentisse
+        verdadeiramente acolhida, escutada e valorizada.
+      </p>
+
+      <p
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] leading-relaxed font-light mb-8"
+      >
+        Não acredito em soluções padronizadas. Da precisão de uma manicure ao
+        detalhe de um tratamento facial avançado, dedico tempo e rigor para
+        assegurar que cada visita seja um momento singular de renovação.
+      </p>
+
+      <div
+        class="p-6 rounded-2xl bg-[var(--cor-fundo-suave)] border-l-4 border-[var(--cor-destaque)] border-y border-r border-[var(--cor-secundaria)]/25 w-full max-w-xl"
+      >
+        <p
+          class="font-serif italic text-base text-[var(--cor-texto)] leading-relaxed"
+        >
+          "O maior privilégio da minha profissão é ver uma cliente olhar-se ao
+          espelho e sair do nosso espaço com a autoestima renovada e um sorriso
+          genuíno."
+        </p>
+        <span
+          class="block text-xs font-bold uppercase tracking-wider text-[var(--cor-destaque)] mt-3"
+        >
+          — Sandra Silva, Fundadora
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

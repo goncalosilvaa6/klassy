@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import imgSobre1 from "../../assets/foto.jpeg";
+import imgSobre2 from "../../assets/foto.jpeg";
+---
+
+<section
+  class="relative bg-[var(--cor-fundo-suave)] pt-16 lg:pt-24 pb-20 lg:pb-28 px-6 lg:px-12 overflow-hidden border-b border-[var(--cor-secundaria)]/20"
+>
+  <div
+    class="absolute top-10 right-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+  <div
+    class="absolute bottom-10 left-10 w-80 h-80 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+
+  <div
+    class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10"
+  >
+    <div class="lg:col-span-7 flex flex-col items-start text-left">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-6"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+        <span
+          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          A Nossa História &amp; Essência
+        </span>
+      </div>
+
+      <h1
+        class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-[var(--cor-texto)] leading-[1.14] mb-6 tracking-tight"
+      >
+        Mais de uma década a cuidar da confiança e <span
+          class="italic text-[var(--cor-destaque)]">autoestima feminina</span
+        > em Valongo.
+      </h1>
+
+      <p
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] leading-relaxed font-light max-w-xl mb-8"
+      >
+        Nascemos da convicção de que o cuidado estético deve ir muito além do
+        visual: é um ritual de tranquilidade, rigor técnico e valorização
+        pessoal que transforma o quotidiano de quem nos visita.
+      </p>
+
+      <div
+        class="flex items-center gap-6 pt-4 border-t border-[var(--cor-secundaria)]/30 w-full max-w-md"
+      >
+        <div>
+          <span
+            class="block text-[10px] font-bold tracking-[2px] uppercase text-[var(--cor-texto-suave)] mb-0.5"
+            >Fundação</span
+          >
+          <span class="font-serif text-2xl text-[var(--cor-texto)]"
+            >Valongo</span
+          >
+        </div>
+        <div class="border-l border-[var(--cor-secundaria)]/30 pl-6">
+          <span
+            class="block text-[10px] font-bold tracking-[2px] uppercase text-[var(--cor-texto-suave)] mb-0.5"
+            >Trajetória</span
+          >
+          <span class="font-serif text-2xl text-[var(--cor-texto)]"
+            >19+ Anos</span
+          >
+        </div>
+        <div class="border-l border-[var(--cor-secundaria)]/30 pl-6">
+          <span
+            class="block text-[10px] font-bold tracking-[2px] uppercase text-[var(--cor-texto-suave)] mb-0.5"
+            >Propósito</span
+          >
+          <span class="font-serif text-2xl text-[var(--cor-destaque)]"
+            >Exclusividade</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="lg:col-span-5 relative w-full flex items-center justify-center lg:justify-end"
+    >
+      <div class="relative w-full max-w-[420px] aspect-[4/5]">
+        <div
+          class="absolute -inset-3.5 border border-[var(--cor-secundaria)]/55 rounded-3xl -rotate-2 pointer-events-none"
+        >
+        </div>
+
+        <div
+          class="relative w-[85%] h-[85%] ml-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white"
+        >
+          <Image
+            src={imgSobre1}
+            alt="Ambiente e atendimento no espaço Klassy"
+            class="w-full h-full object-cover block"
+          />
+        </div>
+
+        <div
+          class="absolute -bottom-4 left-0 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-2xl ring-1 ring-black/10"
+        >
+          <Image
+            src={imgSobre2}
+            alt="Detalhe de tratamento estético"
+            class="w-full h-full object-cover block"
+          />
+        </div>
+
+        <div
+          class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm border border-[var(--cor-secundaria)]/40 rounded-full py-1.5 px-3.5 shadow-sm flex items-center gap-2"
+        >
+          <span class="text-[var(--cor-secundaria)] text-xs">✦</span>
+          <span
+            class="text-[10px] font-bold uppercase tracking-wider text-[var(--cor-texto)]"
+            >Refúgio de Bem-Estar</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

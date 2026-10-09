@@ -3,76 +3,177 @@ import { Image } from "astro:assets";
 import imgEspecialista from "../../assets/foto.jpeg";
 ---
 
-<section class="py-24 sm:py-32 px-6 lg:px-12 bg-[var(--cor-fundo)]">
+<section class="relative py-24 sm:py-32 px-6 lg:px-12 bg-white overflow-hidden">
+  <!-- GLOW SUAVE DE TRANSIÇÃO -->
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
+    class="absolute -top-24 left-1/4 w-96 h-96 bg-[var(--cor-fundo-suave)] rounded-full blur-3xl pointer-events-none -z-0"
   >
-    <!-- Imagem e Selo -->
-    <div class="relative group max-w-md lg:max-w-none mx-auto w-full">
-      <Image
-        src={imgEspecialista}
-        alt="Retrato da especialista fundadora do espaço"
-        class="w-full h-[480px] sm:h-[600px] object-cover rounded shadow-lg"
-      />
-      <div
-        class="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-[var(--cor-destaque)] text-white p-4 sm:p-6 text-center rounded-full w-32 h-32 sm:w-40 sm:h-40 flex flex-col justify-center items-center shadow-xl shadow-[rgba(212,49,136,0.3)] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-6"
-      >
-        <span class="text-3xl sm:text-4xl font-black leading-none">+15</span>
-        <span
-          class="text-[10px] sm:text-xs uppercase tracking-wider mt-1 font-semibold leading-tight"
+  </div>
+  <div
+    class="absolute bottom-0 right-10 w-80 h-80 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+
+  <div
+    class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-center z-10"
+  >
+    <!-- COLUNA DA IMAGEM COM MOLDURA DOURADA & SELO EDITORIAL (5 COLUNAS) -->
+    <div class="lg:col-span-5 relative w-full flex items-center justify-center">
+      <div class="relative w-full max-w-[420px] aspect-[4/5]">
+        <!-- Moldura Decorativa Dourada Traseira -->
+        <div
+          class="absolute -inset-3.5 border border-[var(--cor-secundaria)]/55 rounded-3xl rotate-1 pointer-events-none"
         >
-          Anos de<br />Experiência
-        </span>
+        </div>
+
+        <!-- Foto da Especialista com Sombra Luxuosa -->
+        <div
+          class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white group"
+        >
+          <Image
+            src={imgEspecialista}
+            alt="Sandra Silva - Fundadora e especialista da Klassy"
+            class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none"
+          >
+          </div>
+        </div>
+
+        <!-- Selo de Experiência em Vidro Fosco & Dourado (Substitui o círculo colado) -->
+        <div
+          class="absolute -bottom-6 -right-4 sm:-right-8 bg-white/95 backdrop-blur-md border border-[var(--cor-secundaria)]/50 py-4 px-6 rounded-2xl shadow-xl flex items-center gap-4 transition-transform duration-300 hover:scale-105"
+        >
+          <div
+            class="flex flex-col text-right border-r border-[var(--cor-secundaria)]/30 pr-4"
+          >
+            <span
+              class="font-serif text-3xl sm:text-4xl text-[var(--cor-texto)] font-normal leading-none tracking-tight"
+            >
+              19<span class="text-[var(--cor-destaque)] text-2xl font-sans"
+                >+</span
+              >
+            </span>
+            <span
+              class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)] mt-1"
+            >
+              Anos
+            </span>
+          </div>
+          <div class="flex flex-col text-left">
+            <span
+              class="text-xs font-serif font-medium text-[var(--cor-texto)] leading-snug"
+            >
+              Dedicação &amp;
+            </span>
+            <span
+              class="text-xs font-serif font-semibold text-[var(--cor-destaque)] leading-snug"
+            >
+              Excelência
+            </span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Texto e Vantagens -->
-    <div class="flex flex-col items-start text-left">
+    <!-- COLUNA DE TEXTO & AUTORIDADE (7 COLUNAS) -->
+    <div class="lg:col-span-7 flex flex-col items-start text-left">
+      <!-- Tag / Eyebrow Dourada -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-secundaria)]/15 border border-[var(--cor-secundaria)]/35 mb-6"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-secundaria)]"
+        ></span>
+        <span
+          class="text-[var(--cor-texto)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          Fundadora &amp; Especialista
+        </span>
+      </div>
+
+      <!-- Título Principal -->
       <h2
-        class="font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6 text-[var(--cor-texto)]"
+        class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] text-[var(--cor-texto)] leading-[1.18] mb-6 tracking-tight"
       >
-        A arte de cuidar de si, pelas mãos de quem a compreende.
+        A arte de cuidar de si, pelas mãos de quem a <span
+          class="italic text-[var(--cor-destaque)]">compreende</span
+        >.
       </h2>
+
+      <!-- Textos Descritivos -->
       <p
-        class="text-[var(--cor-texto-suave)] text-base sm:text-lg leading-relaxed mb-5"
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] leading-relaxed mb-5 font-light"
       >
-        Sou a <strong class="text-[var(--cor-destaque)] font-bold"
+        Sou a <strong
+          class="text-[var(--cor-texto)] font-semibold border-b border-[var(--cor-destaque)]/40 pb-0.5"
           >Sandra Silva</strong
         >, apaixonada por estética e fundadora deste espaço. Acredito que a
         verdadeira beleza floresce quando aliamos o conforto de um atendimento
-        próximo à perfeição técnica.
-      </p>
-      <p
-        class="text-[var(--cor-texto-suave)] text-base sm:text-lg leading-relaxed mb-6"
-      >
-        O meu compromisso é proporcionar-lhe um momento que é só seu. Com
-        produtos de excelência e um olhar atento a cada detalhe, trabalhamos
-        diariamente para que saia do nosso espaço com a confiança renovada e um
-        sorriso no rosto.
+        próximo e personalizado à perfeição técnica de cada detalhe.
       </p>
 
-      <ul
-        class="space-y-3.5 my-6 text-[var(--cor-texto)] font-medium text-sm sm:text-base"
+      <p
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] leading-relaxed mb-8 font-light"
       >
-        <li class="flex items-center gap-3">
-          <span class="text-[var(--cor-destaque)] font-bold text-lg">✓</span> Especialistas
-          em Estética Integrada
+        O meu compromisso diário é proporcionar-lhe uma pausa autêntica na
+        rotina. Com produtos de alta gama e um olhar atento a cada necessidade,
+        trabalhamos para que saia com a confiança renovada e um sorriso genuíno.
+      </p>
+
+      <!-- Lista de Vantagens com Micro-Ícones Suaves -->
+      <ul class="space-y-3.5 mb-10 w-full max-w-lg">
+        <li
+          class="flex items-center gap-3.5 text-sm sm:text-base text-[var(--cor-texto)]"
+        >
+          <span
+            class="w-6 h-6 rounded-full bg-[var(--cor-destaque)]/10 text-[var(--cor-destaque)] flex items-center justify-center text-xs font-bold shrink-0"
+            >✓</span
+          >
+          <span
+            >Especialistas em <strong class="font-medium"
+              >Estética Integrada e Avançada</strong
+            ></span
+          >
         </li>
-        <li class="flex items-center gap-3">
-          <span class="text-[var(--cor-destaque)] font-bold text-lg">✓</span> Produtos
-          de Alta Gama e Qualidade
+        <li
+          class="flex items-center gap-3.5 text-sm sm:text-base text-[var(--cor-texto)]"
+        >
+          <span
+            class="w-6 h-6 rounded-full bg-[var(--cor-destaque)]/10 text-[var(--cor-destaque)] flex items-center justify-center text-xs font-bold shrink-0"
+            >✓</span
+          >
+          <span
+            >Cosmética de <strong class="font-medium"
+              >Alta Gama e Eficácia Comprovada</strong
+            ></span
+          >
         </li>
-        <li class="flex items-center gap-3">
-          <span class="text-[var(--cor-destaque)] font-bold text-lg">✓</span> Atendimento
-          Único e Personalizado
+        <li
+          class="flex items-center gap-3.5 text-sm sm:text-base text-[var(--cor-texto)]"
+        >
+          <span
+            class="w-6 h-6 rounded-full bg-[var(--cor-destaque)]/10 text-[var(--cor-destaque)] flex items-center justify-center text-xs font-bold shrink-0"
+            >✓</span
+          >
+          <span
+            >Ambiente Exclusivo com <strong class="font-medium"
+              >Atendimento Personalizado</strong
+            ></span
+          >
         </li>
       </ul>
 
+      <!-- Botão Pílula Elegante com Seta -->
       <a
         href="/about"
-        class="mt-6 px-8 py-3.5 border border-[var(--cor-secundaria)] hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 hover:-translate-y-0.5"
+        class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:-translate-y-0.5 hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:shadow-md"
       >
-        Conhecer o Nosso Espaço
+        <span>Conhecer o Nosso Espaço</span>
+        <span
+          class="text-sm transition-transform duration-300 group-hover:translate-x-1"
+          >→</span
+        >
       </a>
     </div>
   </div>

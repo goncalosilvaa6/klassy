@@ -5,79 +5,188 @@ import imgGaleria2 from "../../assets/foto.jpeg";
 import imgGaleria3 from "../../assets/foto.jpeg";
 ---
 
-<section class="py-24 sm:py-32 px-6 lg:px-12 bg-white border-t border-gray-100">
+<section
+  class="relative py-24 sm:py-32 px-6 lg:px-12 bg-white overflow-hidden border-t border-[var(--cor-secundaria)]/20"
+>
+  <!-- GLOW SUAVE DECORATIVO DE TRANSIÇÃO -->
   <div
-    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center"
+    class="absolute -top-20 right-1/4 w-96 h-96 bg-[var(--cor-fundo-suave)] rounded-full blur-3xl pointer-events-none -z-0"
   >
-    <!-- Coluna de Texto -->
-    <div class="lg:col-span-1 flex flex-col items-start text-left">
+  </div>
+  <div
+    class="absolute bottom-10 left-10 w-80 h-80 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+
+  <div
+    class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10"
+  >
+    <!-- COLUNA DE TEXTO & CTAs (5 COLUNAS) -->
+    <div class="lg:col-span-5 flex flex-col items-start text-left">
+      <!-- Tag / Eyebrow -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-6"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+        <span
+          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          Galeria &amp; Resultados
+        </span>
+      </div>
+
+      <!-- Título Principal -->
       <h2
-        class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--cor-texto)] mb-6 leading-tight"
+        class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] text-[var(--cor-texto)] leading-[1.18] mb-6 tracking-tight"
       >
-        Inspire-se no Nosso Portefólio
+        Inspire-se no nosso <span class="italic text-[var(--cor-destaque)]"
+          >portefólio</span
+        >
       </h2>
+
+      <!-- Texto de Apoio -->
       <p
-        class="text-[var(--cor-texto-suave)] mb-8 text-base sm:text-lg leading-relaxed"
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] font-light leading-relaxed mb-8"
       >
-        Percorra a nossa galeria e descubra os detalhes que fazem a diferença.
-        Da manicura perfeita aos cuidados de corpo, o nosso foco é sempre a sua
-        melhor versão.
+        Cada fotografia reflete a dedicação e o cuidado colocados em cada
+        detalhe. Da manicura irrepreensível aos rituais de estética facial e
+        corporal, o nosso objetivo é valorizar a sua melhor versão.
       </p>
-      <div class="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto">
+
+      <!-- Destaque / Micro-Valor de Estilo -->
+      <div
+        class="flex items-center gap-3 p-4 rounded-2xl bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)]/30 mb-8 w-full max-w-md"
+      >
+        <span class="text-lg">✨</span>
+        <p class="text-xs sm:text-sm text-[var(--cor-texto)] font-medium">
+          Trabalhos executados com técnicas avançadas e produtos de topo de
+          gama.
+        </p>
+      </div>
+
+      <!-- Botões de Ação (Pílula) -->
+      <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <a
           href="/galery"
-          class="px-8 py-3.5 bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider rounded text-center transition-all duration-300 hover:-translate-y-0.5 shadow-md shadow-[rgba(212,49,136,0.2)]"
+          class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[rgba(212,49,136,0.25)] hover:shadow-lg hover:shadow-[rgba(212,49,136,0.35)] hover:-translate-y-0.5"
         >
-          Ver Galeria Completa
+          <span>Ver Galeria Completa</span>
+          <span
+            class="text-sm transition-transform duration-300 group-hover:translate-x-1"
+            >→</span
+          >
         </a>
+
         <a
           href="https://www.instagram.com/klassy.pt/"
           target="_blank"
-          rel="noopener"
-          class="px-8 py-3.5 bg-transparent text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] border border-[var(--cor-secundaria)] hover:border-[var(--cor-destaque)] text-xs font-bold uppercase tracking-wider rounded text-center transition-all duration-300 hover:-translate-y-0.5"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xs hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
         >
-          Seguir no Instagram
+          <svg
+            viewBox="0 0 24 24"
+            class="w-4 h-4 fill-current transition-transform duration-300 group-hover:scale-110"
+          >
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+            ></path>
+          </svg>
+          <span>@klassy.pt</span>
         </a>
       </div>
     </div>
 
-    <!-- Coluna Grelha de Imagens -->
-    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <!-- COLUNA DE IMAGENS EM MOSAICO EDITORIAL (7 COLUNAS) -->
+    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+      <!-- Foto Principal Vertical (Ocupa 2 Linhas no Desktop) -->
       <div
-        class="sm:row-span-2 overflow-hidden rounded relative group aspect-[3/4] sm:aspect-auto"
+        class="sm:row-span-2 relative overflow-hidden rounded-3xl group shadow-lg ring-1 ring-black/5 bg-gray-50 aspect-[3/4] sm:aspect-auto"
       >
         <Image
           src={imgGaleria1}
-          alt="Trabalho de estética facial"
+          alt="Trabalho de estética facial Klassy"
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
+        <!-- Véu Dourado e Gradiente -->
         <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"
         >
+        </div>
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+
+        <!-- Etiqueta Flutuante na Imagem -->
+        <div class="absolute bottom-5 left-5 right-5 flex flex-col items-start">
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-secundaria)] mb-1"
+          >
+            Estética Facial
+          </span>
+          <span class="font-serif text-lg text-white font-medium">
+            Luminosidade &amp; Cuidado
+          </span>
         </div>
       </div>
 
-      <div class="overflow-hidden rounded relative group aspect-[4/3]">
+      <!-- Foto 2 (Nail Design) -->
+      <div
+        class="relative overflow-hidden rounded-3xl group shadow-lg ring-1 ring-black/5 bg-gray-50 aspect-[4/3]"
+      >
         <Image
           src={imgGaleria2}
-          alt="Trabalho de manicure"
+          alt="Manicure e unhas de gel Klassy"
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300"
         >
+        </div>
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+
+        <div class="absolute bottom-4 left-4 right-4 flex flex-col items-start">
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-secundaria)] mb-0.5"
+          >
+            Nail Art
+          </span>
+          <span class="font-serif text-base text-white font-medium">
+            Unhas de Gel Impecáveis
+          </span>
         </div>
       </div>
 
-      <div class="overflow-hidden rounded relative group aspect-[4/3]">
+      <!-- Foto 3 (Cuidado Corporal) -->
+      <div
+        class="relative overflow-hidden rounded-3xl group shadow-lg ring-1 ring-black/5 bg-gray-50 aspect-[4/3]"
+      >
         <Image
           src={imgGaleria3}
-          alt="Tratamento corporal"
+          alt="Tratamento corporal e massagens Klassy"
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.15)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300"
         >
+        </div>
+        <div
+          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        >
+        </div>
+
+        <div class="absolute bottom-4 left-4 right-4 flex flex-col items-start">
+          <span
+            class="text-[10px] uppercase tracking-[2px] font-semibold text-[var(--cor-secundaria)] mb-0.5"
+          >
+            Bem-Estar
+          </span>
+          <span class="font-serif text-base text-white font-medium">
+            Massagens &amp; Relaxamento
+          </span>
         </div>
       </div>
     </div>

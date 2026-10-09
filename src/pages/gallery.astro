@@ -1,0 +1,16 @@
+---
+import LayoutBase from "../layouts/BaseLayout.astro";
+import GalleryHero from "../components/sections/GalleryHero.astro";
+import GalleryFilter from "../components/sections/GalleryFilter.astro";
+import GalleryGrid from "../components/sections/GalleryGrid.astro";
+import GalleryCTA from "../components/sections/GalleryCTA.astro";
+---
+
+<LayoutBase titulo="Galeria de Resultados & Lookbook - Klassy">
+  <main class="w-full flex flex-col">
+    <GalleryHero />
+    <GalleryFilter />
+    <GalleryGrid />
+    <GalleryCTA />
+  </main>
+</LayoutBase>

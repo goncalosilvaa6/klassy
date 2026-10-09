@@ -2,337 +2,245 @@
 const anoAtual = new Date().getFullYear();
 ---
 
-<footer class="rodape-klassy-premium">
-  <div class="glow-decorativo"></div>
+<footer
+  class="relative bg-[var(--cor-fundo-suave)] text-[var(--cor-texto)] overflow-hidden border-t border-[var(--cor-secundaria)]/30"
+>
+  <!-- GLOW DECORATIVO SUAVE (ROSA & OURO) -->
+  <div
+    class="absolute top-0 right-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-10 w-96 h-96 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
 
-  <div class="container-rodape">
-    <div class="rodape-cta">
-      <h2 class="texto-fluido">A sua melhor versão <em>começa aqui.</em></h2>
-      <a href="/contact" class="btn-rodape-luxo">Agendar serviço</a>
-    </div>
-
-    <div class="rodape-grelha">
-      <div class="coluna-marca">
-        <h3>KLASSY</h3>
-        <p>
-          Elevamos a estética a um padrão de excellence. Tratamentos premium,
-          resultados reais e uma experiência focada no seu bem-estar.
-        </p>
-      </div>
-
-      <div class="coluna-links">
-        <h4>Navegação</h4>
-        <nav>
-          <a href="/about">Sobre a Klassy</a>
-          <a href="/services">Serviços</a>
-          <a href="/galery">Galeria de Resultados</a>
-          <a href="/contact">Contactos</a>
-        </nav>
-      </div>
-
-      <div class="coluna-links">
-        <h4>Informação</h4>
-        <nav>
-          <a href="/terms">Termos e Condições</a>
-          <a href="/privacy_cookies">Política de Privacidade e Cookies</a>
-          <a
-            href="https://www.livroreclamacoes.pt/"
-            target="_blank"
-            rel="noopener">Livro de Reclamações</a
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-12 z-10">
+    <!-- GRELHA DE INFORMAÇÕES (3 COLUNAS) -->
+    <div
+      class="py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16 items-start"
+    >
+      <!-- COLUNA 1: IDENTIDADE / SOBRE (5 COLUNAS) -->
+      <div class="lg:col-span-5 flex flex-col items-start text-left">
+        <!-- Logótipo Monograma -->
+        <div class="flex items-center gap-3.5 mb-5">
+          <div
+            class="w-11 h-11 rounded-full border border-[var(--cor-secundaria)] flex items-center justify-center bg-white shadow-xs"
           >
+            <span
+              class="font-serif text-lg font-bold text-[var(--cor-destaque)]"
+              >K</span
+            >
+          </div>
+          <div class="flex flex-col text-left">
+            <span
+              class="font-serif text-xl tracking-[3px] text-[var(--cor-texto)] font-bold leading-tight"
+              >KLASSY</span
+            >
+            <span
+              class="text-[9px] tracking-[2px] uppercase text-[var(--cor-texto-suave)]"
+              >Nails · Beauty · Mind</span
+            >
+          </div>
+        </div>
+
+        <p
+          class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light leading-relaxed max-w-sm mb-6"
+        >
+          Centro de estética de referência em Valongo desde 2006 — unhas,
+          depilação, olhar e bem-estar, dirigidos à mulher moderna e exigente.
+        </p>
+
+        <!-- Redes Sociais em Micro-Pílulas Circulares Claras -->
+        <div class="flex items-center gap-2.5">
+          <a
+            href="https://www.instagram.com/klassy.pt/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="w-9 h-9 rounded-full bg-white hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/35 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+          >
+            IG
+          </a>
+          <a
+            href="https://www.facebook.com/klassy.pt"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="w-9 h-9 rounded-full bg-white hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/35 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+          >
+            FB
+          </a>
+          <a
+            href="https://www.tiktok.com/@klassypt"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="w-9 h-9 rounded-full bg-white hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/35 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+          >
+            TK
+          </a>
+          <a
+            href="https://wa.me/351919786224"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            class="w-9 h-9 rounded-full bg-white hover:bg-emerald-600 border border-[var(--cor-secundaria)]/35 hover:border-emerald-600 text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+          >
+            WA
+          </a>
+        </div>
+      </div>
+
+      <!-- COLUNA 2: EXPLORAR / LINKS (3 COLUNAS) -->
+      <div class="lg:col-span-3 flex flex-col items-start text-left">
+        <h3
+          class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--cor-texto)] mb-5"
+        >
+          Explorar
+        </h3>
+
+        <nav
+          class="flex flex-col gap-3 text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light"
+        >
+          <a
+            href="/services"
+            class="hover:text-[var(--cor-destaque)] transition-colors duration-200"
+          >
+            Serviços
+          </a>
+          <a
+            href="/about"
+            class="hover:text-[var(--cor-destaque)] transition-colors duration-200"
+          >
+            Sobre
+          </a>
+          <a
+            href="/galery"
+            class="hover:text-[var(--cor-destaque)] transition-colors duration-200"
+          >
+            Galeria
+          </a>
+          <a
+            href="/contact"
+            class="hover:text-[var(--cor-destaque)] transition-colors duration-200"
+          >
+            Visita-nos
+          </a>
+          <a
+            href="/contact"
+            class="hover:text-[var(--cor-destaque)] transition-colors duration-200"
+          >
+            Contactos
+          </a>
         </nav>
       </div>
 
-      <div class="coluna-contacto">
-        <h4>Linha Direta</h4>
-        <a href="mailto:klassypt@gmail.com" class="link-destaque"
-          >klassypt@gmail.com</a
+      <!-- COLUNA 3: CONTACTOS & MARCAÇÃO RÁPIDA (4 COLUNAS) -->
+      <div class="lg:col-span-4 flex flex-col items-start text-left">
+        <h3
+          class="text-[11px] font-bold uppercase tracking-[2px] text-[var(--cor-texto)] mb-5"
         >
-        <a href="tel:+351919786224" class="link-destaque">+351 919 786 224</a>
-        <address>
-          Av. 5 Outubro, 72 - Loja N | Edifício Vallis Longus<br />
-          4440-503 Valongo, Porto
-        </address>
+          Contactos
+        </h3>
+
+        <div
+          class="space-y-2 text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light mb-6"
+        >
+          <p class="leading-relaxed">
+            Av. 5 de Outubro 72, Loja N · Edifício Vallis Longus<br />
+            4440-503 Valongo, Porto
+          </p>
+          <a
+            href="tel:+351919786224"
+            class="block text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] font-semibold transition-colors"
+          >
+            +351 919 786 224
+          </a>
+          <a
+            href="mailto:klassypt@gmail.com"
+            class="block text-[var(--cor-texto-suave)] hover:text-[var(--cor-destaque)] transition-colors"
+          >
+            klassypt@gmail.com
+          </a>
+        </div>
+
+        <!-- Botão Rápido "Marcar Agora" -->
+        <a
+          href="https://wa.me/351919786224?text=Ol%C3%A1!+Gostaria+de+marcar+um+hor%C3%A1rio+na+Klassy."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-[11px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm shadow-[rgba(212,49,136,0.2)] hover:-translate-y-0.5"
+        >
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 fill-current">
+            <path
+              d="M.057 24l1.687-6.163A11.867 11.867 0 0 1 .157 11.892C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.48 11.82 11.82 0 0 1 3.48 8.413c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.683-1.448L.057 24zm6.547-3.893l.36.214a9.87 9.87 0 0 0 5.086 1.393c5.449 0 9.885-4.434 9.888-9.884a9.82 9.82 0 0 0-2.893-6.994 9.82 9.82 0 0 0-6.988-2.898c-5.452 0-9.887 4.435-9.888 9.884 0 1.884.524 3.714 1.516 5.289l.235.374-.999 3.65 3.681-.984z"
+            ></path>
+          </svg>
+          <span>Marcar agora</span>
+        </a>
       </div>
     </div>
 
-    <div class="rodape-base">
-      <!-- Agrupamos os textos do lado esquerdo -->
-      <div class="rodape-base-info">
+    <!-- ZONA BASE: COPYRIGHT, LINKS LEGAIS & DESENVOLVEDOR -->
+    <div
+      class="py-7 border-t border-[var(--cor-secundaria)]/25 flex flex-col lg:flex-row items-center justify-between gap-5 text-xs text-[var(--cor-texto-suave)] font-light"
+    >
+      <!-- Esquerda: Copyright & Dev -->
+      <div
+        class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center sm:text-left"
+      >
         <p>
-          &copy; {anoAtual} Klassy. Desenvolvido por
+          &copy; {anoAtual} Klassy — Nails, Beauty &amp; Mind. Todos os direitos reservados.
+        </p>
+        <span class="hidden sm:inline text-[var(--cor-secundaria)]">•</span>
+        <p>
+          Desenvolvido por
           <a
             href="https://github.com/goncalosilvaa6"
             target="_blank"
-            rel="noopener"
-            class="link-dev">Gonçalo Silva</a
+            rel="noopener noreferrer"
+            class="font-medium text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] transition-colors underline decoration-[var(--cor-secundaria)] underline-offset-2 ml-0.5"
           >
-        </p>
-        <p class="identificacao-legal">
-          Klassy Nails, Beauty & Mind | Valongo, Portugal | klassypt@gmail.com
+            Partecna
+          </a>
         </p>
       </div>
 
-      <!-- Redes sociais mantêm-se à direita -->
-      <div class="redes-sociais">
-        <a href="https://www.instagram.com/klassy.pt/">Instagram</a>
-        <span class="ponto">•</span>
-        <a href="https://www.facebook.com/klassy.pt">Facebook</a>
-        <span class="ponto">•</span>
-        <a href="https://wa.me/351919786224">WhatsApp</a>
+      <!-- Centro: Links Legais Obrigatórios (Discretos e Acessíveis em todas as páginas) -->
+      <div
+        class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px]"
+      >
+        <a
+          href="/terms"
+          class="hover:text-[var(--cor-destaque)] transition-colors"
+        >
+          Termos &amp; Condições
+        </a>
+        <span class="text-[var(--cor-secundaria)]/50">•</span>
+        <a
+          href="/privacy_cookies"
+          class="hover:text-[var(--cor-destaque)] transition-colors"
+        >
+          Privacidade &amp; Cookies
+        </a>
+        <span class="text-[var(--cor-secundaria)]/50">•</span>
+        <a
+          href="https://www.livroreclamacoes.pt/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-[var(--cor-destaque)] transition-colors"
+        >
+          Livro de Reclamações
+        </a>
       </div>
+
+      <!-- Direita: Cidade e Anos de Existência -->
+      <span
+        class="text-center lg:text-right tracking-wide text-[11px] font-medium text-[var(--cor-destaque)]"
+      >
+        Valongo · 2006–{anoAtual}
+      </span>
     </div>
   </div>
 </footer>
-
-<style>
-  /* FUNDO E GLOW CORRIGIDO */
-  .rodape-base-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .rodape-base-info a {
-    color: #888888;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-  }
-  .rodape-base-info a:hover {
-    color: var(--cor-destaque);
-  }
-
-  .identificacao-legal {
-    color: #555555;
-    font-size: 0.7rem;
-    margin: 0;
-    letter-spacing: 0.5px;
-  }
-
-  .rodape-klassy-premium {
-    position: relative;
-    background-color: #0a0a0a; /* Preto profundo, muito suave */
-    color: #ffffff;
-    overflow: hidden;
-    margin-top: 5rem;
-  }
-
-  /* O Glow agora usa o novo Rosa com opacidade ultra baixa */
-  .glow-decorativo {
-    position: absolute;
-    top: -20%;
-    left: -10%;
-    width: 50vw;
-    height: 50vw;
-    /* Substituído o RGB do verde pelo RGB do Rosa Destaque (212, 49, 136) */
-    background: radial-gradient(
-      circle,
-      rgba(212, 49, 136, 0.06) 0%,
-      transparent 60%
-    );
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  .container-rodape {
-    position: relative;
-    z-index: 1;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 6rem 2rem 2rem;
-  }
-
-  /* ZONA 1: CTA */
-  .rodape-cta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 4rem;
-    margin-bottom: 4rem;
-  }
-
-  .texto-fluido {
-    font-family: var(--fonte-principal, sans-serif);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 300;
-    letter-spacing: -1px;
-    max-width: 600px;
-    line-height: 1.1;
-  }
-
-  /* Em itálico usamos o Dourado para dar um toque de requinte no fundo escuro */
-  .texto-fluido em {
-    font-family: serif;
-    color: var(--cor-secundaria);
-    font-style: italic;
-  }
-
-  .btn-rodape-luxo {
-    display: inline-block;
-    padding: 1.2rem 2.5rem;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.4s ease;
-  }
-
-  .btn-rodape-luxo:hover {
-    background-color: var(--cor-destaque);
-    border-color: var(--cor-destaque);
-  }
-
-  /* ZONA 2: GRELHA */
-  .rodape-grelha {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 4rem;
-    margin-bottom: 5rem;
-  }
-
-  .coluna-marca h3 {
-    font-family: serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    color: var(--cor-destaque); /* Nome da clínica no rodapé a rosa */
-  }
-
-  .coluna-marca p {
-    color: #888888;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    max-width: 90%;
-  }
-
-  .coluna-links h4,
-  .coluna-contacto h4 {
-    color: #ffffff;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-  }
-
-  .coluna-links nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .coluna-links a {
-    color: #888888;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-  }
-
-  .coluna-links a:hover {
-    color: var(--cor-destaque);
-  }
-
-  .coluna-contacto .link-destaque {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s ease;
-  }
-
-  .coluna-contacto .link-destaque:hover {
-    color: var(--cor-destaque);
-  }
-
-  .coluna-contacto address {
-    font-style: normal;
-    color: #888888;
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-    line-height: 1.6;
-  }
-
-  /* ZONA 3: BASE */
-  .rodape-base {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 2rem;
-    color: #555555;
-    font-size: 0.85rem;
-  }
-
-  .rodape-base p {
-    color: #555555;
-    font-size: 0.85rem;
-  }
-
-  .link-dev {
-    color: #888888;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .link-dev:hover {
-    color: var(--cor-destaque);
-    text-decoration: underline;
-  }
-
-  .redes-sociais {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .redes-sociais a {
-    color: #888888;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-
-  .redes-sociais a:hover {
-    color: #ffffff;
-  }
-
-  .ponto {
-    color: #333333;
-  }
-
-  /* RESPONSIVIDADE */
-  @media (max-width: 1024px) {
-    .rodape-cta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-    .rodape-grelha {
-      grid-template-columns: 1fr 1fr;
-      row-gap: 3rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .rodape-grelha {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-    .rodape-base {
-      flex-direction: column-reverse;
-      gap: 1.5rem;
-      text-align: center;
-    }
-    .redes-sociais {
-      justify-content: center;
-    }
-  }
-</style>

@@ -1,0 +1,220 @@
+---
+
+---
+
+<section
+  class="relative bg-[var(--cor-fundo-suave)] py-16 lg:py-24 px-6 lg:px-12 overflow-hidden border-b border-[var(--cor-secundaria)]/20"
+>
+  <!-- GLOW DECORATIVO SUAVE (ROSA & OURO) -->
+  <div
+    class="absolute top-10 right-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+  <div
+    class="absolute bottom-10 left-10 w-96 h-96 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+  >
+  </div>
+
+  <div class="relative max-w-7xl mx-auto z-10">
+    <!-- CABEÇALHO DA SECÇÃO -->
+    <div class="flex flex-col items-start text-left mb-12 lg:mb-16">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-5"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+        <span
+          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+        >
+          Visita-nos
+        </span>
+      </div>
+
+      <h1
+        class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--cor-texto)] leading-tight tracking-tight"
+      >
+        Estamos a esperar por ti, em <span
+          class="italic text-[var(--cor-destaque)]">Valongo</span
+        >
+      </h1>
+    </div>
+
+    <!-- GRELHA: 3 CARTÕES LUMINOSOS À ESQUERDA + MAPA À DIREITA -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+      <!-- COLUNA ESQUERDA: CARTÕES BRANCOS ACETINADOS (5 COLUNAS) -->
+      <div class="lg:col-span-5 flex flex-col gap-5">
+        <!-- CARTÃO 1: HORÁRIO -->
+        <div
+          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+        >
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
+            >
+              🕒
+            </div>
+            <h2
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+            >
+              Horário
+            </h2>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div
+              class="flex justify-between items-center text-[var(--cor-texto)] pb-2.5 border-b border-[var(--cor-secundaria)]/20"
+            >
+              <span class="font-light">Terça a Sexta</span>
+              <span class="font-semibold text-[var(--cor-destaque)]"
+                >09h00 – 19h30</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center text-[var(--cor-texto)] pb-2.5 border-b border-[var(--cor-secundaria)]/20"
+            >
+              <span class="font-light">Sábado</span>
+              <span class="font-semibold text-[var(--cor-destaque)]"
+                >09h00 – 19h30</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-center text-[var(--cor-texto-suave)] pt-1"
+            >
+              <span class="font-light">Domingo e Segunda</span>
+              <span
+                class="uppercase tracking-wider text-[11px] font-bold text-rose-500 bg-rose-50 px-2.5 py-1 rounded-full"
+                >Encerrados</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTÃO 2: MORADA -->
+        <div
+          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
+            >
+              📍
+            </div>
+            <h2
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+            >
+              Morada
+            </h2>
+          </div>
+
+          <p
+            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-5"
+          >
+            Av. 5 de Outubro 72, Loja N<br />
+            Edifício Vallis Longus<br />
+            4440-503 Valongo, Porto
+          </p>
+
+          <a
+            href="https://maps.google.com/?q=Klassy+Nails+Beauty+Mind+Valongo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--cor-destaque)] hover:text-[var(--cor-destaque-hover)] transition-colors duration-300 group"
+          >
+            <span>Como Chegar</span>
+            <span
+              class="transition-transform duration-300 group-hover:translate-x-1"
+              >→</span
+            >
+          </a>
+        </div>
+
+        <!-- CARTÃO 3: CONTACTOS & REDES -->
+        <div
+          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <div
+              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
+            >
+              📞
+            </div>
+            <h2
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+            >
+              Contactos
+            </h2>
+          </div>
+
+          <div class="space-y-2 text-xs sm:text-sm mb-5">
+            <a
+              href="tel:+351919786224"
+              class="block text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] font-semibold transition-colors"
+            >
+              +351 919 786 224
+            </a>
+            <a
+              href="mailto:klassypt@gmail.com"
+              class="block text-[var(--cor-texto-suave)] hover:text-[var(--cor-destaque)] font-light transition-colors"
+            >
+              klassypt@gmail.com
+            </a>
+          </div>
+
+          <!-- REDES SOCIAIS EM MICRO-PÍLULAS LUMINOSAS -->
+          <div
+            class="flex items-center gap-2.5 pt-3 border-t border-[var(--cor-secundaria)]/20"
+          >
+            <a
+              href="https://www.instagram.com/klassy.pt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+            >
+              IG
+            </a>
+            <a
+              href="https://www.facebook.com/klassy.pt"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+            >
+              FB
+            </a>
+            <a
+              href="https://www.tiktok.com/@klassypt"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+            >
+              TK
+            </a>
+            <a
+              href="https://wa.me/351919786224"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-emerald-600 border border-[var(--cor-secundaria)]/30 hover:border-emerald-600 text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+            >
+              WA
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA: GOOGLE MAPS PANORÂMICO COM MOLDURA DOURADA SUAVE (7 COLUNAS) -->
+      <div
+        class="lg:col-span-7 h-full min-h-[460px] lg:min-h-[580px] rounded-3xl overflow-hidden border border-[var(--cor-secundaria)]/35 shadow-xl bg-white ring-1 ring-black/5"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.4475453363066!2d-8.500237123567883!3d41.19021540820164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2463fa38ca0c4d%3A0xe8f854a78a9a29fa!2sKlassy%20-%20Nails%2C%20Beauty%20%26%20Mind%20-%20Centro%20de%20Est%C3%A9tica%20%7C%20Tu%2B%20Bonita!5e0!3m2!1spt-PT!2spt!4v1780437611756!5m2!1spt-PT!2spt"
+          class="w-full h-full min-h-[460px] lg:min-h-[580px] border-0 block"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização da Klassy em Valongo no Google Maps"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

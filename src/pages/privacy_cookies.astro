@@ -1,234 +1,176 @@
 ---
-import LayoutBase from "../layouts/baselayout.astro";
+import LayoutBase from "../layouts/BaseLayout.astro";
+const dataAtualizacao = "Outubro de 2026";
 ---
 
 <LayoutBase titulo="Política de Privacidade e Cookies - Klassy">
-  <section class="pagina-legal">
-    <h1>Política de Privacidade e Cookies</h1>
-    <p class="intro-legal">Última atualização: Junho de 2026</p>
+  <main
+    class="w-full bg-[var(--cor-fundo-suave)] min-h-screen py-16 lg:py-24 px-6 lg:px-12"
+  >
+    <div class="max-w-4xl mx-auto">
+      <!-- CABEÇALHO -->
+      <header class="text-center mb-14 lg:mb-16">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-5"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"
+          ></span>
+          <span
+            class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+          >
+            Privacidade &amp; RGPD
+          </span>
+        </div>
 
-    <!-- SECÇÃO: PRIVACIDADE -->
-    <h2>1. Responsável pelo Tratamento</h2>
-    <p>
-      A <strong>Klassy</strong> é a entidade responsável pela recolha e tratamento
-      dos seus dados pessoais. O nosso compromisso é garantir a total transparência,
-      privacidade e segurança das suas informações no decorrer de todos os nossos
-      serviços.
-    </p>
+        <h1
+          class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--cor-texto)] mb-4 leading-tight tracking-tight"
+        >
+          Privacidade e <span class="italic text-[var(--cor-destaque)]"
+            >Cookies</span
+          >
+        </h1>
 
-    <h2>2. Dados Recolhidos e Finalidade</h2>
-    <p>
-      Recolhemos apenas os dados estritamente necessários para lhe prestar um
-      serviço de excelência, personalizado e seguro:
-    </p>
-    <ul>
-      <li>
-        <strong>Dados de Contacto:</strong> Nome, número de telefone e email. São
-        essenciais para a gestão de agendamentos, lembretes de marcações e apoio ao
-        cliente.
-      </li>
-      <li>
-        <strong>Dados de Saúde e Perfil:</strong> Informações relevantes em ficha
-        de cliente (ex: alergias ou restrições a produtos), recolhidas exclusivamente
-        para garantir a sua integridade física e segurança durante os procedimentos
-        de estética.
-      </li>
-      <li>
-        <strong>Dados Fiscais:</strong> NIF, solicitado estritamente para efeitos
-        de emissão de fatura e cumprimento de obrigações legais.
-      </li>
-    </ul>
+        <p class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light">
+          Última atualização: {dataAtualizacao} · Klassy – Nails, Beauty &amp; Mind
+        </p>
+      </header>
 
-    <h2>3. Base Legal e Comunicações</h2>
-    <p>
-      O tratamento dos seus dados baseia-se na necessidade de execução do nosso
-      serviço (marcação e realização dos tratamentos) e no cumprimento de
-      obrigações legais. O envio de comunicações de marketing (como campanhas,
-      novidades ou promoções) será efetuado <strong
-        >apenas com o seu consentimento expresso e explícito</strong
-      >, o qual pode ser retirado a qualquer instante.
-    </p>
+      <!-- CARTÕES DE CONTEÚDO -->
+      <div class="space-y-8">
+        <!-- PARTE 1: RGPD E DADOS PESSOAIS -->
+        <section
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span
+              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              >01</span
+            >
+            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
+              Tratamento de Dados Pessoais (RGPD)
+            </h2>
+          </div>
+          <div
+            class="space-y-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
+          >
+            <p>
+              A Klassy compromete-se a proteger a sua privacidade e a tratar os
+              seus dados pessoais em estrita conformidade com o Regulamento
+              Geral sobre a Proteção de Dados (Regulamento UE 2016/679).
+            </p>
+            <p>
+              <strong class="font-semibold text-[var(--cor-texto)]"
+                >Dados recolhidos:</strong
+              > Apenas recolhemos os dados que nos disponibiliza voluntariamente (como
+              nome, número de telemóvel e email) com a finalidade exclusiva de gestão
+              de agendamentos, confirmações de marcação via WhatsApp e emissão de
+              faturas legais.
+            </p>
+            <p>
+              <strong class="font-semibold text-[var(--cor-texto)]"
+                >Não partilha de dados:</strong
+              > Os seus dados nunca são vendidos ou cedidos a terceiros para efeitos
+              de publicidade ou marketing.
+            </p>
+          </div>
+        </section>
 
-    <h2>4. Partilha e Conservação de Dados</h2>
-    <p>
-      Garantimos que os seus dados <strong
-        >nunca serão vendidos ou partilhados indevidamente com terceiros</strong
-      >. Apenas recorremos a parceiros tecnológicos que cumprem rigorosamente o
-      RGPD (como o nosso software de faturação certificado ou plataforma interna
-      de agendamento). Os seus dados serão conservados apenas durante o período
-      necessário para as finalidades descritas ou conforme exigido por lei (por
-      exemplo, os dados de faturação são retidos por 10 anos, por exigência da
-      Autoridade Tributária).
-    </p>
+        <!-- PARTE 2: DIREITOS DO TITULAR -->
+        <section
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span
+              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              >02</span
+            >
+            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
+              Os Seus Direitos
+            </h2>
+          </div>
+          <p
+            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-4"
+          >
+            Tem o direito de, a qualquer momento, solicitar o acesso,
+            retificação, limitação ou eliminação dos seus dados pessoais dos
+            nossos registos. Para exercer qualquer um destes direitos, basta
+            enviar uma mensagem para <a
+              href="mailto:klassypt@gmail.com"
+              class="text-[var(--cor-destaque)] font-medium hover:underline"
+              >klassypt@gmail.com</a
+            >.
+          </p>
+        </section>
 
-    <h2>5. Os Seus Direitos e Autoridade de Controlo</h2>
-    <p>
-      De acordo com a legislação em vigor, garantimos-lhe o exercício pleno e
-      gratuito dos seus direitos. Pode, a qualquer momento: solicitar o <strong
-        >acesso</strong
-      >, a <strong>retificação</strong> ou o <strong>apagamento</strong> ("direito
-      ao esquecimento") dos seus dados, bem como <strong
-        >retirar o seu consentimento</strong
-      > para fins de marketing.
-    </p>
-    <p>
-      Caso considere que a nossa gestão dos seus dados não está em conformidade
-      com o RGPD, tem o direito legal de apresentar uma reclamação junto da
-      Comissão Nacional de Proteção de Dados (CNPD).
-    </p>
+        <!-- PARTE 3: POLÍTICA DE COOKIES -->
+        <section
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span
+              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              >03</span
+            >
+            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
+              O que são Cookies e como os usamos
+            </h2>
+          </div>
+          <div
+            class="space-y-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
+          >
+            <p>
+              Os cookies são pequenos ficheiros de texto guardados no seu
+              navegador quando visita um sítio web. A Klassy utiliza cookies com
+              o objetivo de assegurar o correto funcionamento da plataforma e
+              proporcionar uma navegação fluida.
+            </p>
 
-    <!-- SECÇÃO: COOKIES -->
-    <hr class="divisor-legal" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+              <div
+                class="p-4 rounded-2xl bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)]/30"
+              >
+                <span
+                  class="block text-xs font-bold uppercase tracking-wider text-[var(--cor-texto)] mb-1"
+                  >Cookies Estritamente Necessários</span
+                >
+                <p class="text-xs text-[var(--cor-texto-suave)]">
+                  Garantem a navegação básica e a integridade técnica do sítio
+                  web. Não recolhem informações para fins comerciais.
+                </p>
+              </div>
 
-    <h2>6. Política de Cookies e Tecnologias de Rastreio</h2>
-    <p>
-      Para garantir o correto funcionamento do nosso website e proporcionar uma
-      experiência de navegação otimizada, utilizamos cookies e tecnologias
-      semelhantes (como o Armazenamento Local ou <em>Local Storage</em> do seu navegador).
-    </p>
+              <div
+                class="p-4 rounded-2xl bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)]/30"
+              >
+                <span
+                  class="block text-xs font-bold uppercase tracking-wider text-[var(--cor-texto)] mb-1"
+                  >Cookies Analíticos &amp; Redes Sociais</span
+                >
+                <p class="text-xs text-[var(--cor-texto-suave)]">
+                  Ajudam-nos a compreender como o público interage com o sítio
+                  ou permitem a integração direta com o Instagram e WhatsApp.
+                </p>
+              </div>
+            </div>
 
-    <h3>6.1. O que são e para que servem?</h3>
-    <p>
-      Os cookies são pequenos ficheiros de texto transferidos para o seu
-      dispositivo quando visita o nosso site. Estas tecnologias permitem que o
-      site se "lembre" das suas ações e preferências durante um determinado
-      período, evitando que tenha de as reintroduzir sempre que regressa à
-      página.
-    </p>
+            <p>
+              Pode configurar o seu navegador de internet para recusar ou apagar
+              cookies a qualquer momento através das definições de privacidade
+              do mesmo.
+            </p>
+          </div>
+        </section>
+      </div>
 
-    <h3>6.2. Tipos de Tecnologias que Utilizamos</h3>
-    <ul>
-      <li>
-        <strong>Estritamente Necessários (Essenciais):</strong> São fundamentais para
-        o funcionamento do site. Por exemplo, utilizamos o armazenamento local (<code
-          >localStorage</code
-        >) exclusivamente para memorizar a sua escolha em relação ao próprio
-        banner de consentimento de privacidade, garantindo que não é incomodada
-        com o mesmo aviso repetidamente. Não podem ser desativados.
-      </li>
-      <li>
-        <strong>Analíticos e de Desempenho (Google Analytics):</strong> Apenas ativados
-        com o seu <strong>consentimento prévio e explícito</strong>.
-        Permitem-nos quantificar o número de visitas, as páginas mais procuradas
-        e a forma como as utilizadoras interagem com o site (ex: cliques e tempo
-        de permanência). Os dados recolhidos pelo Google são agregados e
-        anonimizados, servindo apenas para melhorarmos os nossos serviços
-        digitais.
-      </li>
-    </ul>
-
-    <h3>6.3. Transferência Internacional de Dados</h3>
-    <p>
-      Ao aceitar os cookies Analíticos, concorda que os dados de navegação
-      recolhidos possam ser processados pela Google Ireland Limited e, em certos
-      casos, transferidos para os Estados Unidos, estando a Google sujeita ao
-      Quadro de Privacidade de Dados UE-EUA para garantir a segurança da
-      informação.
-    </p>
-
-    <h3>6.4. Como Gerir ou Revogar o seu Consentimento</h3>
-    <p>
-      O seu consentimento é soberano. Pode alterar a sua escolha a qualquer
-      momento, revogando o acesso aos cookies analíticos de forma simples:
-    </p>
-    <ul>
-      <li>
-        Pode limpar o armazenamento local e os cookies diretamente nas
-        definições do seu navegador (Google Chrome, Safari, Firefox, etc.).
-      </li>
-      <li>
-        Ao fazê-lo, o nosso site assumirá que é uma nova visitante e voltará a
-        perguntar-lhe qual a sua preferência de privacidade, garantindo-lhe o
-        controlo total sobre o seu rastreamento.
-      </li>
-    </ul>
-
-    <hr class="divisor-legal" />
-
-    <h2>7. Contactos para Assuntos de Privacidade</h2>
-    <p>
-      Para exercer qualquer um dos seus direitos (relativos a dados pessoais ou
-      cookies), ou para esclarecer qualquer dúvida sobre estas políticas,
-      estamos à sua inteira disposição. Envie-nos um email para: <strong
-        >klassypt@gmail.com</strong
-      >.
-    </p>
-  </section>
+      <!-- VOLTAR ATRÁS -->
+      <div class="mt-12 text-center">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] transition-colors"
+        >
+          <span>← Voltar à Página Inicial</span>
+        </a>
+      </div>
+    </div>
+  </main>
 </LayoutBase>
-
-<style>
-  .pagina-legal {
-    max-width: 850px;
-    margin: 6rem auto;
-    padding: 0 2rem;
-  }
-
-  h1 {
-    font-family: serif;
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    color: var(--cor-texto);
-  }
-
-  .intro-legal {
-    font-size: 0.9rem;
-    color: #999;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: var(--cor-destaque); /* O texto fica no Rosa principal */
-    /* A barra lateral passa a Dourado para dar o toque de elegância e contraste */
-    border-left: 3px solid var(--cor-secundaria);
-    padding-left: 1rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
-    color: var(--cor-texto);
-  }
-
-  p {
-    color: var(--cor-texto-suave);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-  }
-
-  ul {
-    margin-bottom: 2rem;
-    padding-left: 1.5rem;
-  }
-
-  li {
-    color: var(--cor-texto-suave);
-    line-height: 1.7;
-    margin-bottom: 0.8rem;
-    font-size: 1.05rem;
-  }
-
-  strong {
-    color: var(--cor-texto);
-  }
-
-  .divisor-legal {
-    margin: 4rem 0;
-    border: 0;
-    border-top: 1px solid #eee;
-  }
-
-  code {
-    background-color: #f4f4f4;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: #555;
-  }
-</style>

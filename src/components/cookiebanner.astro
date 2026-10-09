@@ -1,206 +1,140 @@
-<div id="cookie-banner" class="cookie-banner">
-  <div class="cookie-conteudo">
-    <h4>A sua privacidade é importante</h4>
-    <p>
+---
+
+---
+
+<div
+  id="cookie-banner"
+  class="fixed z-[9999] bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl bg-white/95 backdrop-blur-md p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/35 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 transition-all duration-700 ease-out translate-y-36 opacity-0 pointer-events-none"
+  role="alert"
+>
+  <!-- TEXTO & PRIVACIDADE -->
+  <div class="text-center md:text-left flex-1">
+    <div class="inline-flex items-center gap-2 mb-1.5">
+      <span class="text-sm">🍪</span>
+      <h3
+        class="font-serif text-lg sm:text-xl text-[var(--cor-texto)] font-medium"
+      >
+        A sua privacidade é importante
+      </h3>
+    </div>
+
+    <p
+      class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light leading-relaxed"
+    >
       Utilizamos cookies essenciais para o funcionamento do site e, com o seu
       consentimento, cookies analíticos para melhorar a sua experiência. Pode
       ler mais na nossa
-      <a href="/privacy_cookies" class="link-privacidade">Política de Privacidade</a
-      >.
+      <a
+        href="/privacy_cookies"
+        class="text-[var(--cor-destaque)] font-medium underline decoration-[var(--cor-secundaria)]/60 underline-offset-2 hover:text-[var(--cor-destaque-hover)] transition-colors ml-0.5"
+      >
+        Política de Privacidade
+      </a>.
     </p>
   </div>
-  <div class="cookie-botoes">
-    <button id="btn-aceitar-cookies" class="botao-cookie-primario"
-      >Aceitar Todos</button
+
+  <!-- BOTÕES DE CONSENTIMENTO EM PÍLULA -->
+  <div
+    class="flex flex-col sm:flex-row md:flex-col gap-2.5 w-full md:w-auto shrink-0 min-w-[200px]"
+  >
+    <!-- Aceitar Todos -->
+    <button
+      id="btn-aceitar-cookies"
+      type="button"
+      class="w-full inline-flex items-center justify-center px-6 py-3 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[rgba(212,49,136,0.25)] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer text-center"
     >
-    <button id="btn-recusar-cookies" class="botao-cookie-secundario"
-      >Apenas Essenciais</button
+      Aceitar Todos
+    </button>
+
+    <!-- Apenas Essenciais -->
+    <button
+      id="btn-recusar-cookies"
+      type="button"
+      class="w-full inline-flex items-center justify-center px-6 py-3 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5 cursor-pointer text-center"
     >
+      Apenas Essenciais
+    </button>
   </div>
 </div>
 
-<style>
-  /* ESTILOS DO BANNER DE LUXO */
-  .cookie-banner {
-    position: fixed;
-    bottom: -100%; /* Começa escondido fora do ecrã */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    /* Borda subtil com o tom dourado (com muita transparência) */
-    border: 1px solid rgba(224, 193, 90, 0.3);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 2rem;
-    z-index: 10001; /* Acima de tudo, até do WhatsApp */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    transition: bottom 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  /* Classe ativada pelo JavaScript para mostrar o banner */
-  .cookie-banner.mostrar {
-    bottom: 2rem;
-  }
-
-  .cookie-conteudo h4 {
-    font-family: serif;
-    color: var(--cor-texto);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .cookie-conteudo p {
-    color: var(--cor-texto-suave);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .link-privacidade {
-    color: var(--cor-destaque);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .link-privacidade:hover {
-    text-decoration: underline;
-  }
-
-  .cookie-botoes {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    min-width: 200px;
-  }
-
-  /* Botão Primário (Aceitar) */
-  .botao-cookie-primario {
-    background-color: var(--cor-destaque);
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-family: var(--fonte-principal, sans-serif);
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .botao-cookie-primario:hover {
-    background-color: var(--cor-destaque-hover);
-    transform: translateY(-2px);
-    /* Sombra rosada suave adaptada à nova cor principal */
-    box-shadow: 0 5px 15px rgba(212, 49, 136, 0.25);
-  }
-
-  /* Botão Secundário (Recusar) */
-  .botao-cookie-secundario {
-    background-color: transparent;
-    color: var(--cor-texto-suave);
-    border: 1px solid #ccc;
-    padding: 0.8rem 1.5rem;
-    font-family: var(--fonte-principal, sans-serif);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .botao-cookie-secundario:hover {
-    background-color: #f5f5f5;
-    color: var(--cor-texto);
-  }
-
-  /* RESPONSIVIDADE */
-  @media (max-width: 768px) {
-    .cookie-banner {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .cookie-banner.mostrar {
-      bottom: 1rem;
-    }
-
-    .cookie-botoes {
-      width: 100%;
-      flex-direction: column;
-    }
-  }
-</style>
-
 <script>
-  // 1. Variável de controlo para não carregar o Google Analytics múltiplas vezes
   let analyticsCarregado = false;
 
-  document.addEventListener("DOMContentLoaded", () => {
+  const iniciarCookieBanner = () => {
     const banner = document.getElementById("cookie-banner");
     const btnAceitar = document.getElementById("btn-aceitar-cookies");
     const btnRecusar = document.getElementById("btn-recusar-cookies");
 
-    // 2. FUNÇÃO QUE ATIVA O GOOGLE ANALYTICS NA PRÁTICA
+    // 1. CARREGAMENTO DO GOOGLE ANALYTICS
     const carregarScriptsAnaliticos = () => {
       if (analyticsCarregado) return;
 
       console.log("🟢 Consentimento dado: A carregar Google Analytics...");
 
-      // A. Injetar o ficheiro externo do Google
       const scriptGA = document.createElement("script");
       scriptGA.async = true;
       scriptGA.src = "https://www.googletagmanager.com/gtag/js?id=G-CD48HF372K";
       document.head.appendChild(scriptGA);
 
-      // B. Aceder à window de forma que o TypeScript aceite (usando 'as any')
       const win = window as any;
-
       if (typeof win.gtag === "function") {
         win.gtag("config", "G-CD48HF372K");
       }
 
       analyticsCarregado = true;
     };
-    // 3. VERIFICAÇÃO INICIAL (Ao carregar a página)
+
+    // 2. VERIFICAÇÃO DO CONSENTIMENTO GUARDADO
     const consentimento = localStorage.getItem("consentimento_cookies_klassy");
 
     if (consentimento === "todos") {
       carregarScriptsAnaliticos();
     } else if (!consentimento && banner) {
       setTimeout(() => {
-        banner.classList.add("mostrar");
+        banner.classList.remove(
+          "translate-y-36",
+          "opacity-0",
+          "pointer-events-none",
+        );
+        banner.classList.add(
+          "translate-y-0",
+          "opacity-100",
+          "pointer-events-auto",
+        );
       }, 700);
     }
 
-    // 4. FUNÇÃO DO CLIQUE NOS BOTÕES
+    // 3. REGISTO DA ESCOLHA E ANIMAÇÃO DE SAÍDA
     const fecharBanner = (escolha: string) => {
       localStorage.setItem("consentimento_cookies_klassy", escolha);
-      banner?.classList.remove("mostrar");
+
+      if (banner) {
+        banner.classList.add(
+          "translate-y-36",
+          "opacity-0",
+          "pointer-events-none",
+        );
+        banner.classList.remove(
+          "translate-y-0",
+          "opacity-100",
+          "pointer-events-auto",
+        );
+      }
 
       if (escolha === "todos") {
         carregarScriptsAnaliticos();
       } else {
-        console.log("🔴 Consentimento recusado: Nenhum rastreamento ativo.");
+        console.log(
+          "🔴 Consentimento recusado: Apenas cookies essenciais ativos.",
+        );
       }
     };
 
-    if (btnAceitar && banner) {
-      btnAceitar.addEventListener("click", () => fecharBanner("todos"));
-    }
+    btnAceitar?.addEventListener("click", () => fecharBanner("todos"));
+    btnRecusar?.addEventListener("click", () => fecharBanner("essenciais"));
+  };
 
-    if (btnRecusar && banner) {
-      btnRecusar.addEventListener("click", () => fecharBanner("essenciais"));
-    }
-  });
+  // Suporte a carregamento inicial e View Transitions do Astro
+  document.addEventListener("DOMContentLoaded", iniciarCookieBanner);
+  document.addEventListener("astro:page-load", iniciarCookieBanner);
 </script>

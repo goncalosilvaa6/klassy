@@ -1,0 +1,99 @@
+---
+
+---
+
+<nav
+  aria-label="Filtrar trabalhos da galeria"
+  class="sticky top-20 z-30 bg-[var(--cor-fundo-suave)]/90 backdrop-blur-md border-y border-[var(--cor-secundaria)]/30 py-3.5 px-6"
+>
+  <div
+    class="max-w-7xl mx-auto flex items-center justify-start lg:justify-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth"
+  >
+    <button
+      type="button"
+      data-filter="all"
+      class="filtro-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--cor-destaque)] text-white text-xs font-semibold whitespace-nowrap shadow-xs transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+    >
+      <span>✦</span>
+      <span>Todos os Trabalhos</span>
+    </button>
+
+    <button
+      type="button"
+      data-filter="unhas"
+      class="filtro-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white hover:bg-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-xs font-semibold whitespace-nowrap shadow-xs transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+    >
+      <span>💅</span>
+      <span>Unhas &amp; Nail Design</span>
+    </button>
+
+    <button
+      type="button"
+      data-filter="facial"
+      class="filtro-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white hover:bg-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-xs font-semibold whitespace-nowrap shadow-xs transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+    >
+      <span>✨</span>
+      <span>Estética Facial</span>
+    </button>
+
+    <button
+      type="button"
+      data-filter="corpo"
+      class="filtro-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white hover:bg-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-xs font-semibold whitespace-nowrap shadow-xs transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+    >
+      <span>🌿</span>
+      <span>Corpo &amp; Bem-Estar</span>
+    </button>
+
+    <button
+      type="button"
+      data-filter="espaco"
+      class="filtro-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white hover:bg-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-xs font-semibold whitespace-nowrap shadow-xs transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+    >
+      <span>🌸</span>
+      <span>O Nosso Espaço</span>
+    </button>
+  </div>
+</nav>
+
+<script>
+  // Script para troca de estilo ativo nos botões de filtro
+  const botoes = document.querySelectorAll<HTMLButtonElement>(".filtro-btn");
+  const itens = document.querySelectorAll<HTMLElement>("[data-category]");
+
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", () => {
+      const filtro = botao.getAttribute("data-filter");
+
+      // Atualiza o visual dos botões
+      botoes.forEach((b) => {
+        b.classList.remove("bg-[var(--cor-destaque)]", "text-white");
+        b.classList.add(
+          "bg-white",
+          "text-[var(--cor-texto)]",
+          "border",
+          "border-[var(--cor-secundaria)]/40",
+        );
+      });
+      botao.classList.remove(
+        "bg-white",
+        "text-[var(--cor-texto)]",
+        "border",
+        "border-[var(--cor-secundaria)]/40",
+      );
+      botao.classList.add("bg-[var(--cor-destaque)]", "text-white");
+
+      // Filtra os itens da grelha
+      itens.forEach((item) => {
+        const categoria = item.getAttribute("data-category");
+        if (filtro === "all" || categoria === filtro) {
+          item.classList.remove("hidden");
+          item.classList.add("flex");
+        } else {
+          item.classList.add("hidden");
+          item.classList.remove("flex");
+        }
+      });
+    });
+  });
+</script>
