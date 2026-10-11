@@ -1,0 +1,92 @@
+---
+const faqs = [
+  {
+    pergunta: "Onde fica situado o centro Klassy em Valongo?",
+    resposta:
+      "O espaço Klassy está localizado na Avenida 5 de Outubro n.º 72, Loja N, dentro do Edifício Vallis Longus (4440-503 Valongo), junto a zonas de estacionamento e acessos rápidos de transportes.",
+  },
+  {
+    pergunta: "Como posso agendar uma marcação de unhas ou depilação?",
+    resposta:
+      "O agendamento é feito de forma rápida e conveniente através do nosso WhatsApp oficial (+351 919 786 224) ou por contacto telefónico direto durante o horário de funcionamento.",
+  },
+  {
+    pergunta: "Quanto tempo dura a aplicação e manutenção de Unhas de Gel?",
+    resposta:
+      "Uma sessão de modelagem ou manutenção de unhas de gel na Klassy demora entre 75 a 105 minutos, garantindo acabamento anatómico e durabilidade superior sem lascar.",
+  },
+  {
+    pergunta: "A tecnologia de Laser Díodo é adequada para mulher e homem?",
+    resposta:
+      "Sim, os nossos protocolos de Laser Díodo com ponteira refrigerada são indicados tanto para público feminino como masculino, em sessões isoladas ou packs de corpo inteiro.",
+  },
+  {
+    pergunta: "Qual é o horário de atendimento da Klassy?",
+    resposta:
+      "Estamos abertos de terça-feira a sábado, das 09h00 às 19h30. Encerramos aos domingos e segundas-feiras para descanso da equipa.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.pergunta,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.resposta,
+    },
+  })),
+};
+---
+
+<section
+  class="relative bg-white py-16 sm:py-24 px-6 lg:px-12 border-t border-[var(--cor-secundaria)]/25"
+>
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12 sm:mb-16">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
+        <span
+          class="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--cor-texto)]"
+        >
+          Dúvidas &amp; Informações
+        </span>
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
+      </div>
+
+      <h2
+        class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--cor-texto)] leading-tight tracking-tight mb-4"
+      >
+        Perguntas Frequentes
+      </h2>
+      <p
+        class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light max-w-lg mx-auto"
+      >
+        Tudo o que precisa de saber sobre os nossos rituais de beleza, horários
+        e localização em Valongo.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {
+        faqs.map((faq, index) => (
+          <details class="group bg-[var(--cor-fundo-suave)]/70 rounded-2xl border border-[var(--cor-secundaria)]/30 p-5 sm:p-6 transition-all duration-300 open:bg-white open:shadow-xs">
+            <summary class="flex items-center justify-between cursor-pointer list-none font-serif text-base sm:text-lg text-[var(--cor-texto)] font-normal group-hover:text-[var(--cor-destaque)] transition-colors">
+              <span class="pr-4">{faq.pergunta}</span>
+              <span class="text-sm text-[var(--cor-destaque)] font-mono transition-transform duration-300 group-open:rotate-45 shrink-0">
+                +
+              </span>
+            </summary>
+            <p class="pt-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light leading-relaxed border-t border-[var(--cor-secundaria)]/20 mt-4">
+              {faq.resposta}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>

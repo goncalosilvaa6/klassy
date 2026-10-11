@@ -6,7 +6,7 @@ import imgGaleria3 from "../../assets/foto.jpeg";
 ---
 
 <section
-  class="relative py-24 sm:py-32 px-6 lg:px-12 bg-white overflow-hidden border-t border-[var(--cor-secundaria)]/20"
+  class="relative py-20 lg:py-32 px-6 lg:px-12 bg-white overflow-hidden border-t border-[var(--cor-secundaria)]/20"
 >
   <div
     class="absolute -top-20 right-1/4 w-96 h-96 bg-[var(--cor-fundo-suave)] rounded-full blur-3xl pointer-events-none -z-0"
@@ -21,12 +21,10 @@ import imgGaleria3 from "../../assets/foto.jpeg";
     class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10"
   >
     <div class="lg:col-span-5 flex flex-col items-start text-left">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-6"
-      >
-        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
         <span
-          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+          class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--cor-texto)]"
         >
           Galeria &amp; Resultados
         </span>
@@ -35,13 +33,13 @@ import imgGaleria3 from "../../assets/foto.jpeg";
       <h2
         class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] text-[var(--cor-texto)] leading-[1.18] mb-6 tracking-tight"
       >
-        Inspire-se no nosso <span class="italic text-[var(--cor-destaque)]"
-          >portefólio</span
+        Inspire-se no nosso <span
+          class="italic font-normal text-[var(--cor-destaque)]">portefólio</span
         >
       </h2>
 
       <p
-        class="text-base sm:text-lg text-[var(--cor-texto-suave)] font-light leading-relaxed mb-8"
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] font-light leading-relaxed mb-7"
       >
         Cada fotografia reflete a dedicação e o cuidado colocados em cada
         detalhe. Da manicura irrepreensível aos rituais de estética facial e
@@ -49,19 +47,20 @@ import imgGaleria3 from "../../assets/foto.jpeg";
       </p>
 
       <div
-        class="flex items-center gap-3 p-4 rounded-2xl bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)]/30 mb-8 w-full max-w-md"
+        class="border-l-2 border-[var(--cor-secundaria)] pl-4 py-1 mb-8 w-full max-w-md"
       >
-        <span class="text-lg">✨</span>
-        <p class="text-xs sm:text-sm text-[var(--cor-texto)] font-medium">
-          Trabalhos executados com técnicas avançadas e produtos de topo de
+        <p
+          class="text-xs sm:text-sm text-[var(--cor-texto)] font-medium leading-relaxed"
+        >
+          Trabalhos executados com técnicas avançadas e cosmética de topo de
           gama.
         </p>
       </div>
 
       <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <a
-          href="/galery"
-          class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[rgba(212,49,136,0.25)] hover:shadow-lg hover:shadow-[rgba(212,49,136,0.35)] hover:-translate-y-0.5"
+          href="/gallery"
+          class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[var(--cor-destaque)] hover:bg-[var(--cor-destaque-hover)] text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[rgba(212,49,136,0.25)] hover:shadow-lg hover:-translate-y-0.5"
         >
           <span>Ver Galeria Completa</span>
           <span
@@ -74,7 +73,7 @@ import imgGaleria3 from "../../assets/foto.jpeg";
           href="https://www.instagram.com/klassy.pt/"
           target="_blank"
           rel="noopener noreferrer"
-          class="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xs hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
+          class="group inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
         >
           <svg
             viewBox="0 0 24 24"
@@ -99,11 +98,7 @@ import imgGaleria3 from "../../assets/foto.jpeg";
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-        >
-        </div>
-        <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"
         >
         </div>
 
@@ -128,11 +123,7 @@ import imgGaleria3 from "../../assets/foto.jpeg";
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-        >
-        </div>
-        <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-75 group-hover:opacity-100 transition-opacity duration-300"
         >
         </div>
 
@@ -157,11 +148,7 @@ import imgGaleria3 from "../../assets/foto.jpeg";
           class="w-full h-full object-cover block transition-transform duration-700 group-hover:scale-105"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300"
-        >
-        </div>
-        <div
-          class="absolute inset-0 bg-[rgba(224,193,90,0.12)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-75 group-hover:opacity-100 transition-opacity duration-300"
         >
         </div>
 

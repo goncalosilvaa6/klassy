@@ -3,7 +3,7 @@
 ---
 
 <section
-  class="relative bg-[var(--cor-fundo-suave)] py-16 lg:py-24 px-6 lg:px-12 overflow-hidden border-b border-[var(--cor-secundaria)]/20"
+  class="relative bg-[var(--cor-fundo-suave)] py-20 lg:py-32 px-6 lg:px-12 overflow-hidden border-b border-[var(--cor-secundaria)]/20"
 >
   <div
     class="absolute top-10 right-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
@@ -15,92 +15,93 @@
   </div>
 
   <div class="relative max-w-7xl mx-auto z-10">
-    <div class="flex flex-col items-start text-left mb-12 lg:mb-16">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-5"
-      >
-        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+    <div class="flex flex-col items-start text-left mb-14 lg:mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
         <span
-          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+          class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--cor-texto)]"
         >
-          Visita-nos
+          Visite-nos &amp; Contactos
         </span>
       </div>
 
       <h1
-        class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--cor-texto)] leading-tight tracking-tight"
+        class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-[var(--cor-texto)] leading-[1.15] tracking-tight max-w-3xl"
       >
-        Estamos a esperar por ti, em <span
-          class="italic text-[var(--cor-destaque)]">Valongo</span
+        Estamos à sua espera, em <span
+          class="italic font-normal text-[var(--cor-destaque)]">Valongo</span
         >
       </h1>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-      <div class="lg:col-span-5 flex flex-col gap-5">
+      <div class="lg:col-span-5 flex flex-col gap-6">
         <div
-          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+          class="bg-white/95 backdrop-blur-sm p-7 sm:p-8 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500"
         >
-          <div class="flex items-center gap-3 mb-5">
-            <div
-              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
-            >
-              🕒
-            </div>
+          <div
+            class="flex items-baseline justify-between mb-6 pb-3 border-b border-[var(--cor-secundaria)]/20"
+          >
             <h2
-              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-normal"
             >
               Horário
             </h2>
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+              >Atendimento</span
+            >
           </div>
 
-          <div class="space-y-3 text-xs sm:text-sm">
+          <div class="space-y-3.5 text-xs sm:text-sm">
             <div
-              class="flex justify-between items-center text-[var(--cor-texto)] pb-2.5 border-b border-[var(--cor-secundaria)]/20"
+              class="flex justify-between items-center text-[var(--cor-texto)] pb-3 border-b border-[var(--cor-secundaria)]/20"
             >
               <span class="font-light">Terça a Sexta</span>
-              <span class="font-semibold text-[var(--cor-destaque)]"
+              <span class="font-medium text-[var(--cor-destaque)]"
                 >09h00 – 19h30</span
               >
             </div>
             <div
-              class="flex justify-between items-center text-[var(--cor-texto)] pb-2.5 border-b border-[var(--cor-secundaria)]/20"
+              class="flex justify-between items-center text-[var(--cor-texto)] pb-3 border-b border-[var(--cor-secundaria)]/20"
             >
               <span class="font-light">Sábado</span>
-              <span class="font-semibold text-[var(--cor-destaque)]"
+              <span class="font-medium text-[var(--cor-destaque)]"
                 >09h00 – 19h30</span
               >
             </div>
             <div
-              class="flex justify-between items-center text-[var(--cor-texto-suave)] pt-1"
+              class="flex justify-between items-center text-[var(--cor-texto-suave)] pt-0.5"
             >
               <span class="font-light">Domingo e Segunda</span>
               <span
-                class="uppercase tracking-wider text-[11px] font-bold text-rose-500 bg-rose-50 px-2.5 py-1 rounded-full"
-                >Encerrados</span
+                class="text-[10px] uppercase tracking-[1.5px] font-semibold text-[var(--cor-texto-suave)]"
               >
+                Encerrado
+              </span>
             </div>
           </div>
         </div>
 
         <div
-          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+          class="bg-white/95 backdrop-blur-sm p-7 sm:p-8 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500"
         >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
-            >
-              📍
-            </div>
+          <div
+            class="flex items-baseline justify-between mb-4 pb-3 border-b border-[var(--cor-secundaria)]/20"
+          >
             <h2
-              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-normal"
             >
-              Morada
+              Localização
             </h2>
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+              >Morada</span
+            >
           </div>
 
           <p
-            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-5"
+            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-6"
           >
             Av. 5 de Outubro 72, Loja N<br />
             Edifício Vallis Longus<br />
@@ -111,36 +112,37 @@
             href="https://maps.google.com/?q=Klassy+Nails+Beauty+Mind+Valongo"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--cor-destaque)] hover:text-[var(--cor-destaque-hover)] transition-colors duration-300 group"
+            class="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--cor-destaque)] hover:text-[var(--cor-destaque-hover)] transition-colors duration-300"
           >
             <span>Como Chegar</span>
             <span
-              class="transition-transform duration-300 group-hover:translate-x-1"
+              class="text-sm transition-transform duration-300 group-hover:translate-x-1"
               >→</span
             >
           </a>
         </div>
 
         <div
-          class="bg-white/95 backdrop-blur-sm p-6 sm:p-7 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-300"
+          class="bg-white/95 backdrop-blur-sm p-7 sm:p-8 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500"
         >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-2xl bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 flex items-center justify-center text-[var(--cor-destaque)] text-base"
-            >
-              📞
-            </div>
+          <div
+            class="flex items-baseline justify-between mb-5 pb-3 border-b border-[var(--cor-secundaria)]/20"
+          >
             <h2
-              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-medium"
+              class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] font-normal"
             >
-              Contactos
+              Linha Direta
             </h2>
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+              >Contacto</span
+            >
           </div>
 
-          <div class="space-y-2 text-xs sm:text-sm mb-5">
+          <div class="space-y-2.5 text-xs sm:text-sm mb-6">
             <a
               href="tel:+351919786224"
-              class="block text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] font-semibold transition-colors"
+              class="block text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] font-medium transition-colors"
             >
               +351 919 786 224
             </a>
@@ -153,14 +155,14 @@
           </div>
 
           <div
-            class="flex items-center gap-2.5 pt-3 border-t border-[var(--cor-secundaria)]/20"
+            class="flex items-center gap-2.5 pt-4 border-t border-[var(--cor-secundaria)]/20"
           >
             <a
               href="https://www.instagram.com/klassy.pt/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+              class="w-8 h-8 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-[10px] font-semibold tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5"
             >
               IG
             </a>
@@ -169,7 +171,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+              class="w-8 h-8 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-[10px] font-semibold tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5"
             >
               FB
             </a>
@@ -178,7 +180,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
-              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+              class="w-8 h-8 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-[10px] font-semibold tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5"
             >
               TK
             </a>
@@ -187,7 +189,7 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              class="w-9 h-9 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-emerald-600 border border-[var(--cor-secundaria)]/30 hover:border-emerald-600 text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-xs font-semibold transition-all duration-300 hover:scale-110 shadow-2xs"
+              class="w-8 h-8 rounded-full bg-[var(--cor-fundo-suave)] hover:bg-[var(--cor-destaque)] border border-[var(--cor-secundaria)]/40 hover:border-[var(--cor-destaque)] text-[var(--cor-texto)] hover:text-white flex items-center justify-center text-[10px] font-semibold tracking-wider transition-all duration-300 shadow-2xs hover:-translate-y-0.5"
             >
               WA
             </a>

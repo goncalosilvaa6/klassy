@@ -3,7 +3,7 @@
 ---
 
 <section
-  class="relative py-24 sm:py-32 px-6 lg:px-12 bg-[var(--cor-fundo-suave)] overflow-hidden border-t border-[var(--cor-secundaria)]/20"
+  class="relative py-20 lg:py-32 px-6 lg:px-12 bg-[var(--cor-fundo-suave)] overflow-hidden border-t border-[var(--cor-secundaria)]/20"
 >
   <div
     class="absolute top-1/2 left-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
@@ -16,29 +16,28 @@
 
   <div class="relative max-w-7xl mx-auto z-10">
     <div
-      class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16 lg:mb-20"
+      class="flex flex-col items-center text-center max-w-2xl mx-auto mb-16 lg:mb-24"
     >
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-5"
-      >
-        <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"></span>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
         <span
-          class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+          class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--cor-texto)]"
         >
           Experiências Reais
         </span>
+        <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
       </div>
 
       <h2
-        class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] text-[var(--cor-texto)] leading-tight mb-4 tracking-tight"
+        class="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] text-[var(--cor-texto)] leading-[1.15] mb-5 tracking-tight"
       >
-        O que dizem as nossas <span class="italic text-[var(--cor-destaque)]"
-          >clientes</span
+        O que dizem as nossas <span
+          class="italic font-normal text-[var(--cor-destaque)]">clientes</span
         >
       </h2>
 
       <p
-        class="text-base sm:text-lg text-[var(--cor-texto-suave)] font-light leading-relaxed"
+        class="text-base sm:text-lg text-[var(--cor-texto-suave)] font-light leading-relaxed max-w-xl"
       >
         Histórias genuínas de quem confia na Klassy para os seus momentos únicos
         de cuidado, beleza e bem-estar.
@@ -49,19 +48,41 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
     >
       <div
-        class="group relative bg-white/90 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-sm hover:shadow-xl hover:shadow-[rgba(212,49,136,0.08)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+        class="group relative bg-white/95 backdrop-blur-sm p-8 sm:p-9 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
       >
         <div>
-          <div class="flex justify-between items-center mb-6">
-            <div
-              class="flex items-center gap-1 text-[var(--cor-secundaria)] text-base tracking-widest"
-            >
-              <span>★</span><span>★</span><span>★</span><span>★</span><span
-                >★</span
+          <div
+            class="flex justify-between items-center mb-7 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
+            <div class="flex items-center gap-1 text-[var(--cor-secundaria)]">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
               >
             </div>
             <div
-              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-50 border border-gray-200/80 shadow-2xs"
+              class="flex items-center gap-1.5 text-[var(--cor-texto-suave)]"
             >
               <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true">
                 <path
@@ -82,7 +103,7 @@
                 ></path>
               </svg>
               <span
-                class="text-[10px] font-semibold text-gray-500 uppercase tracking-wider"
+                class="text-[10px] font-medium tracking-wider uppercase text-[var(--cor-texto-suave)]"
                 >Google</span
               >
             </div>
@@ -98,7 +119,7 @@
         </div>
 
         <div
-          class="pt-5 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
+          class="pt-4 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
         >
           <span
             class="font-serif text-sm font-semibold tracking-wide text-[var(--cor-texto)]"
@@ -106,7 +127,7 @@
             Maria Santos
           </span>
           <span
-            class="text-[11px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
+            class="text-[10px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
           >
             Cliente Verificada
           </span>
@@ -114,19 +135,41 @@
       </div>
 
       <div
-        class="group relative bg-white/90 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-sm hover:shadow-xl hover:shadow-[rgba(212,49,136,0.08)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+        class="group relative bg-white/95 backdrop-blur-sm p-8 sm:p-9 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
       >
         <div>
-          <div class="flex justify-between items-center mb-6">
-            <div
-              class="flex items-center gap-1 text-[var(--cor-secundaria)] text-base tracking-widest"
-            >
-              <span>★</span><span>★</span><span>★</span><span>★</span><span
-                >★</span
+          <div
+            class="flex justify-between items-center mb-7 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
+            <div class="flex items-center gap-1 text-[var(--cor-secundaria)]">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
               >
             </div>
             <div
-              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-50 border border-gray-200/80 shadow-2xs"
+              class="flex items-center gap-1.5 text-[var(--cor-texto-suave)]"
             >
               <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true">
                 <path
@@ -147,7 +190,7 @@
                 ></path>
               </svg>
               <span
-                class="text-[10px] font-semibold text-gray-500 uppercase tracking-wider"
+                class="text-[10px] font-medium tracking-wider uppercase text-[var(--cor-texto-suave)]"
                 >Google</span
               >
             </div>
@@ -163,7 +206,7 @@
         </div>
 
         <div
-          class="pt-5 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
+          class="pt-4 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
         >
           <span
             class="font-serif text-sm font-semibold tracking-wide text-[var(--cor-texto)]"
@@ -171,7 +214,7 @@
             Ana Rita Freitas
           </span>
           <span
-            class="text-[11px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
+            class="text-[10px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
           >
             Cliente Verificada
           </span>
@@ -179,19 +222,41 @@
       </div>
 
       <div
-        class="group relative bg-white/90 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-sm hover:shadow-xl hover:shadow-[rgba(212,49,136,0.08)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+        class="group relative bg-white/95 backdrop-blur-sm p-8 sm:p-9 rounded-3xl border border-[var(--cor-secundaria)]/30 hover:border-[var(--cor-destaque)]/40 shadow-xs hover:shadow-2xl hover:shadow-[rgba(212,49,136,0.06)] transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between"
       >
         <div>
-          <div class="flex justify-between items-center mb-6">
-            <div
-              class="flex items-center gap-1 text-[var(--cor-secundaria)] text-base tracking-widest"
-            >
-              <span>★</span><span>★</span><span>★</span><span>★</span><span
-                >★</span
+          <div
+            class="flex justify-between items-center mb-7 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
+            <div class="flex items-center gap-1 text-[var(--cor-secundaria)]">
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
+              >
+              <svg viewBox="0 0 20 20" class="w-4 h-4 fill-current"
+                ><path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path></svg
               >
             </div>
             <div
-              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-50 border border-gray-200/80 shadow-2xs"
+              class="flex items-center gap-1.5 text-[var(--cor-texto-suave)]"
             >
               <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" aria-hidden="true">
                 <path
@@ -212,7 +277,7 @@
                 ></path>
               </svg>
               <span
-                class="text-[10px] font-semibold text-gray-500 uppercase tracking-wider"
+                class="text-[10px] font-medium tracking-wider uppercase text-[var(--cor-texto-suave)]"
                 >Google</span
               >
             </div>
@@ -228,7 +293,7 @@
         </div>
 
         <div
-          class="pt-5 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
+          class="pt-4 border-t border-[var(--cor-secundaria)]/20 flex items-center justify-between"
         >
           <span
             class="font-serif text-sm font-semibold tracking-wide text-[var(--cor-texto)]"
@@ -236,7 +301,7 @@
             Joana Silva
           </span>
           <span
-            class="text-[11px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
+            class="text-[10px] font-medium text-[var(--cor-destaque)] tracking-wider uppercase"
           >
             Cliente Verificada
           </span>
@@ -249,7 +314,7 @@
         href="https://www.google.com/search?q=Klassy+-+Nails,+Beauty+%26+Mind"
         target="_blank"
         rel="noopener noreferrer"
-        class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
+        class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:shadow-md hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
       >
         <span>Ver todas as avaliações no Google</span>
         <span

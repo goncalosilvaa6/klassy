@@ -5,97 +5,133 @@ const dataAtualizacao = "Outubro de 2026";
 
 <LayoutBase titulo="Termos e Condições - Klassy">
   <main
-    class="w-full bg-[var(--cor-fundo-suave)] min-h-screen py-16 lg:py-24 px-6 lg:px-12"
+    class="relative w-full bg-[var(--cor-fundo-suave)] min-h-screen py-16 lg:py-24 px-6 lg:px-12 overflow-hidden border-b border-[var(--cor-secundaria)]/20"
   >
-    <div class="max-w-4xl mx-auto">
-      <header class="text-center mb-14 lg:mb-16">
-        <div
-          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--cor-destaque)]/10 border border-[var(--cor-destaque)]/20 mb-5"
-        >
-          <span class="w-1.5 h-1.5 rounded-full bg-[var(--cor-destaque)]"
-          ></span>
+    <div
+      class="absolute top-10 right-10 w-96 h-96 bg-[var(--cor-destaque)]/5 rounded-full blur-3xl pointer-events-none -z-0"
+    >
+    </div>
+    <div
+      class="absolute bottom-10 left-10 w-96 h-96 bg-[var(--cor-secundaria)]/10 rounded-full blur-3xl pointer-events-none -z-0"
+    >
+    </div>
+
+    <div class="relative max-w-4xl mx-auto z-10">
+      <header class="text-center mb-14 lg:mb-20">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
           <span
-            class="text-[var(--cor-destaque)] font-bold tracking-[2px] uppercase text-[11px]"
+            class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[var(--cor-texto)]"
           >
             Enquadramento Legal
           </span>
+          <span class="w-8 h-px bg-[var(--cor-secundaria)]"></span>
         </div>
 
         <h1
-          class="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--cor-texto)] mb-4 leading-tight tracking-tight"
+          class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-[var(--cor-texto)] mb-4 leading-[1.15] tracking-tight"
         >
-          Termos e <span class="italic text-[var(--cor-destaque)]"
+          Termos e <span class="italic font-normal text-[var(--cor-destaque)]"
             >Condições</span
           >
         </h1>
 
-        <p class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light">
+        <p
+          class="text-xs sm:text-sm text-[var(--cor-texto-suave)] font-light tracking-wide"
+        >
           Última atualização: {dataAtualizacao} · Klassy – Nails, Beauty &amp; Mind
         </p>
       </header>
 
       <div class="space-y-8">
         <section
-          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs hover:border-[var(--cor-destaque)]/30 transition-all duration-300"
         >
-          <div class="flex items-center gap-3 mb-4">
+          <div
+            class="flex items-baseline justify-between mb-6 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
             <span
-              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              class="font-serif text-2xl text-[var(--cor-destaque)] font-light"
               >01</span
             >
-            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
-              Identificação da Entidade
-            </h2>
-          </div>
-          <p
-            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-4"
-          >
-            O presente sítio web é operado pela <strong
-              class="font-semibold text-[var(--cor-texto)]"
-              >Klassy – Nails, Beauty &amp; Mind</strong
-            >, com espaço físico situado na Avenida 5 de Outubro, n.º 72, Loja N
-            (Edifício Vallis Longus), 4440-503 Valongo, Porto, Portugal.
-          </p>
-          <p
-            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
-          >
-            Para qualquer questão ou esclarecimento, poderá contactar-nos
-            através do endereço de correio eletrónico <a
-              href="mailto:klassypt@gmail.com"
-              class="text-[var(--cor-destaque)] font-medium hover:underline"
-              >klassypt@gmail.com</a
-            > ou pelo telefone <a
-              href="tel:+351919786224"
-              class="text-[var(--cor-destaque)] font-medium hover:underline"
-              >+351 919 786 224</a
-            >.
-          </p>
-        </section>
-
-        <section
-          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
-        >
-          <div class="flex items-center gap-3 mb-4">
             <span
-              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
-              >02</span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
             >
-            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
-              Marcações, Tolerância e Cancelamentos
-            </h2>
+              Identificação
+            </span>
           </div>
+
+          <h2
+            class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] mb-4 leading-snug"
+          >
+            Identificação da Entidade
+          </h2>
+
           <div
             class="space-y-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
           >
             <p>
-              <strong class="font-semibold text-[var(--cor-texto)]"
+              O presente sítio web é operado pela <strong
+                class="font-medium text-[var(--cor-texto)]"
+                >Klassy – Nails, Beauty &amp; Mind</strong
+              >, com espaço físico situado na Avenida 5 de Outubro, n.º 72, Loja
+              N (Edifício Vallis Longus), 4440-503 Valongo, Porto, Portugal.
+            </p>
+            <p>
+              Para qualquer questão ou esclarecimento, poderá contactar-nos
+              através do endereço de correio eletrónico
+              <a
+                href="mailto:klassypt@gmail.com"
+                class="font-medium text-[var(--cor-texto)] underline decoration-[var(--cor-secundaria)] underline-offset-2 hover:text-[var(--cor-destaque)] transition-colors mx-1"
+              >
+                klassypt@gmail.com
+              </a>
+              ou pelo telefone
+              <a
+                href="tel:+351919786224"
+                class="font-medium text-[var(--cor-texto)] underline decoration-[var(--cor-secundaria)] underline-offset-2 hover:text-[var(--cor-destaque)] transition-colors ml-1"
+              >
+                +351 919 786 224
+              </a>.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs hover:border-[var(--cor-destaque)]/30 transition-all duration-300"
+        >
+          <div
+            class="flex items-baseline justify-between mb-6 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
+            <span
+              class="font-serif text-2xl text-[var(--cor-destaque)] font-light"
+              >02</span
+            >
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+            >
+              Protocolo &amp; Marcações
+            </span>
+          </div>
+
+          <h2
+            class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] mb-4 leading-snug"
+          >
+            Marcações, Tolerância e Cancelamentos
+          </h2>
+
+          <div
+            class="space-y-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
+          >
+            <p>
+              <strong class="font-medium text-[var(--cor-texto)]"
                 >Marcações:</strong
               > Os agendamentos de serviços podem ser efetuados via WhatsApp, telefone
               ou presencialmente, ficando sujeitos à confirmação de disponibilidade
               da nossa equipa.
             </p>
             <p>
-              <strong class="font-semibold text-[var(--cor-texto)]"
+              <strong class="font-medium text-[var(--cor-texto)]"
                 >Pontualidade:</strong
               > De forma a respeitar o horário de cada cliente, agradecemos a chegada
               atempada. É concedida uma tolerância máxima de 10 minutos. Ultrapassado
@@ -103,9 +139,9 @@ const dataAtualizacao = "Outubro de 2026";
               para não comprometer as clientes seguintes.
             </p>
             <p>
-              <strong class="font-semibold text-[var(--cor-texto)]"
+              <strong class="font-medium text-[var(--cor-texto)]"
                 >Cancelamentos e Remarcações:</strong
-              > Pedimos a gentileza de avisar qualquer cancelamento com um mínimo
+              > Pedimos a gentileza de comunicar qualquer cancelamento com um mínimo
               de 24 horas de antecedência, permitindo disponibilizar a vaga a outras
               clientes em lista de espera.
             </p>
@@ -113,68 +149,96 @@ const dataAtualizacao = "Outubro de 2026";
         </section>
 
         <section
-          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs hover:border-[var(--cor-destaque)]/30 transition-all duration-300"
         >
-          <div class="flex items-center gap-3 mb-4">
+          <div
+            class="flex items-baseline justify-between mb-6 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
             <span
-              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              class="font-serif text-2xl text-[var(--cor-destaque)] font-light"
               >03</span
             >
-            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
-              Preçários e Pagamentos
-            </h2>
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+            >
+              Valores &amp; Pagamentos
+            </span>
           </div>
-          <p
-            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light mb-4"
+
+          <h2
+            class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] mb-4 leading-snug"
           >
-            Todos os preços dos tratamentos encontram-se afixados no nosso
-            espaço físico e são apresentados em euros (€), incluindo as taxas
-            legais em vigor. A Klassy reserva-se o direito de atualizar
-            preçários e promoções sem aviso prévio, salvaguardando marcações
-            previamente confirmadas.
-          </p>
-          <p
-            class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
+            Preçários e Pagamentos
+          </h2>
+
+          <div
+            class="space-y-4 text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
           >
-            Disponibilizamos métodos de pagamento práticos, incluindo MB WAY,
-            numerário e transferência bancária.
-          </p>
+            <p>
+              Todos os preços dos tratamentos encontram-se afixados no nosso
+              espaço físico e são apresentados em euros (€), incluindo as taxas
+              legais em vigor. A Klassy reserva-se o direito de atualizar
+              preçários e condições promocionais sem aviso prévio,
+              salvaguardando marcações previamente confirmadas.
+            </p>
+            <p>
+              Disponibilizamos métodos de pagamento práticos, incluindo MB WAY,
+              numerário e transferência bancária.
+            </p>
+          </div>
         </section>
 
         <section
-          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs"
+          class="bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-[var(--cor-secundaria)]/30 shadow-xs hover:border-[var(--cor-destaque)]/30 transition-all duration-300"
         >
-          <div class="flex items-center gap-3 mb-4">
+          <div
+            class="flex items-baseline justify-between mb-6 pb-4 border-b border-[var(--cor-secundaria)]/20"
+          >
             <span
-              class="font-serif text-xl text-[var(--cor-secundaria)] font-light"
+              class="font-serif text-2xl text-[var(--cor-destaque)] font-light"
               >04</span
             >
-            <h2 class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)]">
-              Livro de Reclamações
-            </h2>
+            <span
+              class="text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--cor-texto-suave)]"
+            >
+              Transparência &amp; Reclamações
+            </span>
           </div>
+
+          <h2
+            class="font-serif text-xl sm:text-2xl text-[var(--cor-texto)] mb-4 leading-snug"
+          >
+            Livro de Reclamações
+          </h2>
+
           <p
             class="text-xs sm:text-sm text-[var(--cor-texto-suave)] leading-relaxed font-light"
           >
             Em conformidade com a legislação portuguesa, dispomos de Livro de
             Reclamações em formato físico no nosso estabelecimento e
-            disponibilizamos o acesso à respetiva plataforma eletrónica em <a
+            disponibilizamos o acesso à respetiva plataforma eletrónica em
+            <a
               href="https://www.livroreclamacoes.pt"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-[var(--cor-destaque)] font-medium hover:underline"
-              >www.livroreclamacoes.pt</a
-            >.
+              class="font-medium text-[var(--cor-texto)] underline decoration-[var(--cor-secundaria)] underline-offset-2 hover:text-[var(--cor-destaque)] transition-colors ml-1"
+            >
+              www.livroreclamacoes.pt
+            </a>.
           </p>
         </section>
       </div>
 
-      <div class="mt-12 text-center">
+      <div class="mt-14 text-center">
         <a
           href="/"
-          class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--cor-texto)] hover:text-[var(--cor-destaque)] transition-colors"
+          class="group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-white hover:bg-[var(--cor-fundo-suave)] border border-[var(--cor-secundaria)] text-[var(--cor-texto)] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-2xs hover:border-[var(--cor-destaque)] hover:text-[var(--cor-destaque)] hover:-translate-y-0.5"
         >
-          <span>← Voltar à Página Inicial</span>
+          <span
+            class="text-sm transition-transform duration-300 group-hover:-translate-x-1"
+            >←</span
+          >
+          <span>Voltar à Página Inicial</span>
         </a>
       </div>
     </div>

@@ -5,14 +5,19 @@ import HomeSpecialist from "../components/sections/HomeSpecialist.astro";
 import HomeReviews from "../components/sections/HomeReviews.astro";
 import HomeGallery from "../components/sections/HomeGallery.astro";
 import HomeServices from "../components/sections/HomeServices.astro";
+import HomeFAQ from "../components/HomeFAQ.astro";
 ---
 
-<LayoutBase titulo="Estética e Beleza Avançada - Klassy">
+<LayoutBase
+  titulo="Klassy Valongo | Unhas de Gel, Estética, Laser & Cabelo"
+  descricao="Centro de estética de referência em Valongo desde 2006. Especialistas em unhas de gel, verniz gel, depilação laser díodo, pestanas e bem-estar. Agende no WhatsApp."
+>
   <main class="w-full flex flex-col">
     <HomeHero />
-    <HomeServices/>
+    <HomeServices />
     <HomeSpecialist />
     <HomeReviews />
     <HomeGallery />
+    <HomeFAQ />
   </main>
 </LayoutBase>
